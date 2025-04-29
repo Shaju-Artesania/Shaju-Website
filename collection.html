@@ -26,8 +26,8 @@
                             <a href="join-us.html">Join Us</a>
                         </div>
                     </li>
-                    <li><a href="collection.html"class="active">Collection</a></li>
-                    <li><a href="events.html" >Events</a></li>
+                    <li><a href="collection.html" class="active">Collection</a></li>
+                    <li><a href="events.html">Events</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
@@ -52,78 +52,33 @@
             <h2>Our <span class="highlight">Collection</span></h2>
             <p>Discover the beauty and craftsmanship behind our handcrafted artisanal creations. Each piece is thoughtfully designed and carefully made, blending tradition, passion, and creativity to offer you something truly unique. Explore our collection and experience the artistry that sets us apart.</p>
         </section>
-
+        
         <section class="collection-filter">
             <div class="filter-container">
                 <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="ceramics">Ceramics</button>
-                <button class="filter-btn" data-filter="textiles">Textiles</button>
-                <button class="filter-btn" data-filter="baskets">Baskets</button>
-                <button class="filter-btn" data-filter="jewelry">Jewelry</button>
+                <div id="dynamic-filters"></div>
+            </div>
+            
+            <div class="search-container">
+                <input type="text" id="search-box" placeholder="Search collection..." class="search-box">
             </div>
         </section>
 
-        <section class="collection-grid">
-            <div class="collection-item">
-                <div class="item-image"></div>
-                <img src="Images/Ceramic bowl.jpg" alt="Product" class="product-image">
-                <div class="item-details">
-                    <p>Handcrafted Ceramic Bowl</p>
-                </div>
-            </div>
-            <div class="collection-item">
-                <div class="item-image"></div>
-                <img src="Images/wallhanging.webp" alt="Product" class="product-image">
-                <div class="item-details">
-                    <p>Hand-woven Wall Hanging</p>
-                </div>
-            </div>
-            <div class="collection-item">
-                <div class="item-image"></div>
-                <img src="Images/wovenbasket.webp" alt="Product" class="product-image">
-                <div class="item-details">
-                    <p>Woven Storage Basket</p>
-                </div>
-            </div>
-            <div class="collection-item">
-                <div class="item-image"></div>
-                <img src="Images/beated necklace.jpg" alt="Product" class="product-image">
-                <div class="item-details">
-                    <p>Handmade Beaded Necklace</p>
-                </div>
-            </div>
-            <div class="collection-item">
-                <div class="item-image"></div>
-                <img src="Images/ceramicvase.jpg" alt="Product" class="product-image">
-                <div class="item-details">
-                    <p>Ceramic Vase Set</p>
-                </div>
-            </div>
-            <div class="collection-item">
-                <div class="item-image"></div>
-                <img src="Images/DIY-Tablecloth-Runner-on-table-in-outdoor-kitchen-2.jpg" alt="Product" class="product-image">
-                <div class="item-details">
-                    <p>Hand-dyed Table Runner</p>
-                </div>
-            </div>
-            <div class="collection-item">
-                <div class="item-image"></div>
-                <img src="Images/Wall-Basket-with-faux-flowers-and-blue-and-white-plate-wall.jpg" alt="Product" class="product-image">
-                <div class="item-details">
-                    <p>Decorative Wall Basket</p>
-                </div>
-            </div>
-            <div class="collection-item">
-                <div class="item-image"></div>
-                <img src="Images/telanaari-handmade-earrings-fabric-fantasia-black-default-title-39831475028124_1800x1800.webp" alt="Product" class="product-image">
-                <div class="item-details">
-                    <p>Artisanal Earrings</p>
-                </div>
-            </div>
+        <!-- Loading indicator -->
+        <div id="loading-indicator" class="loading-indicator">
+            <div class="spinner"></div>
+            <p>Loading collection items...</p>
+        </div>
+
+        <!-- Error message container -->
+        <div id="error-message" class="error-message" style="display: none;"></div>
+
+        <!-- Collection grid will be populated dynamically -->
+        <section id="collection-grid" class="collection-grid">
+            <!-- Items will be loaded from Google Sheets -->
         </section>
 
         <section class="custom-orders">
-
             <div class="custom-text">
                 <h3>Custom Orders</h3>
                 <p>Looking for something unique? We offer custom-made pieces tailored to your preferences. Contact us to discuss your ideas and requirements.</p>
@@ -187,36 +142,306 @@
                 document.querySelector('.main-nav').classList.remove('active');
             }
         });
-    </script>
-    <script>
-        // Mobile menu toggle
-        document.querySelector('.hamburger').addEventListener('click', function() {
-            document.querySelector('.nav-links').classList.toggle('active');
-            this.classList.toggle('active');
-        });
 
-        // Collection filter
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const collectionItems = document.querySelectorAll('.collection-item');
-
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                // Remove active class from all buttons
-                filterBtns.forEach(btn => btn.classList.remove('active'));
-                // Add active class to clicked button
-                btn.classList.add('active');
+        // Google Sheets Integration - REPLACE API_KEY with your actual key
+        const SHEET_ID = '1sr8KmlhHWJGA5Jq747ORQdy888wD3YPrHKrbjRRNgkM'; // Sheet ID
+        const API_KEY = 'AIzaSyAjRUZbE-kmkSTmAkA7Adq4GPJeinkEZIE';   //API Key
+        const SHEET_RANGE = 'Blad1!A2:F'; // Range
+        
+        // Global variables to store data
+        let collectionItems = [];
+        let categories = new Set(['footwear']); // Default categories based on your sheet
+        
+        // Function to fetch data from Google Sheets with enhanced error handling
+        async function fetchSheetData() {
+            try {
+                showLoading(true);
+                showError(false);
                 
-                const filter = btn.getAttribute('data-filter');
+                // Log the URL we're fetching from (remove in production)
+                const url = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${SHEET_RANGE}?key=${API_KEY}`;
+                console.log("Fetching from URL:", url);
                 
-                collectionItems.forEach(item => {
-                    if (filter === 'all' || item.classList.contains(filter)) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
+                const response = await fetch(url);
+                
+                if (!response.ok) {
+                    let errorMessage = `HTTP error! Status: ${response.status}`;
+                    try {
+                        const errorData = await response.json();
+                        console.error("API Error Response:", errorData);
+                        errorMessage = `API Error: ${errorData.error.message} (${errorData.error.status})`;
+                    } catch (e) {
+                        console.error("Could not parse error response:", e);
                     }
+                    throw new Error(errorMessage);
+                }
+                
+                const data = await response.json();
+                console.log("Data successfully fetched:", data);
+                return data.values || [];
+            } catch (error) {
+                console.error("Error fetching sheet data:", error);
+                showError(true, `Error loading collection: ${error.message}`);
+                throw error;
+            } finally {
+                showLoading(false);
+            }
+        }
+        
+        // Function to process the sheet data into usable format
+        function processSheetData(rows) {
+            return rows.map(row => {
+                const item = {
+                    id: row[0],
+                    title: row[1],
+                    description: row[2],
+                    image: row[3],
+                    price: row[4],
+                    category: (row[5] || 'uncategorized').toLowerCase()
+                };
+                
+                // Add category to our set of categories
+                if (item.category) {
+                    categories.add(item.category);
+                }
+                
+                return item;
+            });
+        }
+        
+        // Function to populate category filters
+        function populateCategoryFilters() {
+            const dynamicFilters = document.getElementById('dynamic-filters');
+            dynamicFilters.innerHTML = ''; // Clear existing filters
+            
+            // Sort categories alphabetically and remove 'all' if it exists
+            const sortedCategories = Array.from(categories)
+                .filter(category => category !== 'all')
+                .sort();
+            
+            // Add each category as a button
+            sortedCategories.forEach(category => {
+                const button = document.createElement('button');
+                button.className = 'filter-btn';
+                button.setAttribute('data-filter', category);
+                button.textContent = category.charAt(0).toUpperCase() + category.slice(1); // Capitalize first letter
+                dynamicFilters.appendChild(button);
+            });
+            
+            // Re-attach event listeners to all filter buttons
+            attachFilterListeners();
+        }
+        
+        // Add this function to your existing JavaScript
+        function getProperImageUrl(url) {
+            // Check if it's a Google Drive URL
+            if (url && url.includes('drive.google.com')) {
+                // Extract the file ID
+                let fileId = '';
+                
+                // Pattern 1: https://drive.google.com/file/d/FILE_ID/view
+                if (url.includes('/file/d/')) {
+                    const match = url.match(/\/file\/d\/([^\/]+)/);
+                    if (match && match[1]) {
+                        fileId = match[1];
+                    }
+                } 
+                // Pattern 2: https://drive.google.com/open?id=FILE_ID
+                else if (url.includes('open?id=')) {
+                    const match = url.match(/open\?id=([^&]+)/);
+                    if (match && match[1]) {
+                        fileId = match[1];
+                    }
+                }
+                // Pattern 3: Already in the correct format
+                else if (url.includes('uc?export=view&id=')) {
+                    return url; // Already in the correct format
+                }
+                
+                // If we found a file ID, convert to the proper format
+                if (fileId) {
+                    return `https://drive.google.com/uc?export=view&id=${fileId}`;
+                }
+            }
+            
+            // Return the original URL if it's not a Google Drive URL or we couldn't parse it
+            return url;
+        }
+
+        // Update the renderCollection function to use the new function
+        function renderCollection(items) {
+            const collectionGrid = document.getElementById('collection-grid');
+            collectionGrid.innerHTML = '';
+            
+            if (items.length === 0) {
+                collectionGrid.innerHTML = `
+                    <div class="no-items-message">
+                        No items found matching your criteria.
+                    </div>
+                `;
+                return;
+            }
+            
+            items.forEach(item => {
+                const itemElement = document.createElement('div');
+                itemElement.className = `collection-item ${item.category}`;
+                
+                // Use the getProperImageUrl function here
+                const properImageUrl = getProperImageUrl(item.image);
+                
+                itemElement.innerHTML = `
+                    <div class="item-image"></div>
+                    <img src="${properImageUrl}" alt="${item.title}" class="product-image" onerror="this.src='https://via.placeholder.com/300x300?text=Image+Not+Found'">
+                    <div class="item-details">
+                        <p>${item.title}</p>
+                        <p class="item-price">${item.price ? `$${item.price}` : ''}</p>
+                    </div>
+                `;
+                
+                collectionGrid.appendChild(itemElement);
+            });
+        }
+        
+        // Function to filter items based on category and search
+        function filterItems() {
+            const activeFilter = document.querySelector('.filter-btn.active').getAttribute('data-filter');
+            const searchTerm = document.getElementById('search-box').value.toLowerCase();
+            
+            const filteredItems = collectionItems.filter(item => {
+                const matchesCategory = activeFilter === 'all' || item.category === activeFilter;
+                const matchesSearch = 
+                    item.title.toLowerCase().includes(searchTerm) || 
+                    item.description.toLowerCase().includes(searchTerm);
+                
+                return matchesCategory && matchesSearch;
+            });
+            
+            renderCollection(filteredItems);
+        }
+        
+        // Function to attach event listeners to filter buttons
+        function attachFilterListeners() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    btn.classList.add('active');
+                    
+                    // Filter items
+                    filterItems();
                 });
             });
-        });
+        }
+        
+        // Function to show/hide loading indicator
+        function showLoading(show) {
+            document.getElementById('loading-indicator').style.display = show ? 'flex' : 'none';
+        }
+        
+        // Function to show/hide error message
+        function showError(show, message = '') {
+            const errorElement = document.getElementById('error-message');
+            errorElement.style.display = show ? 'block' : 'none';
+            if (show) {
+                errorElement.innerHTML = `
+                    <p>${message}</p>
+                    <p>Please check your API key and Sheet ID, or try again later.</p>
+                    <button onclick="initializePage()" class="retry-button">Retry</button>
+                `;
+            }
+        }
+        
+        // Initialize the page
+        async function initializePage() {
+            try {
+                // Fetch data from Google Sheets
+                const sheetData = await fetchSheetData();
+                
+                // Process the data
+                collectionItems = processSheetData(sheetData);
+                
+                // Populate category filters
+                populateCategoryFilters();
+                
+                // Render all items initially
+                renderCollection(collectionItems);
+                
+                // Set up event listener for search box
+                document.getElementById('search-box').addEventListener('input', filterItems);
+                
+                // Make sure "All" button is active initially
+                document.querySelector('.filter-btn[data-filter="all"]').classList.add('active');
+                
+            } catch (error) {
+                console.error('Failed to initialize page:', error);
+            }
+        }
+        
+        // Load everything when the page loads
+        document.addEventListener('DOMContentLoaded', initializePage);
     </script>
+    
+    <style>
+        .item-price {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-top: 5px;
+        }
+        
+        .loading-indicator {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            display: none;
+        }
+        
+        .spinner {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border-left-color: var(--primary-color);
+            animation: spin 1s linear infinite;
+            margin-bottom: 1rem;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .error-message {
+            background-color: #fff0f0;
+            border: 1px solid #ffcccc;
+            color: #cc0000;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+            text-align: center;
+        }
+        
+        .retry-button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            margin-top: 0.5rem;
+            cursor: pointer;
+        }
+        
+        .no-items-message {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 3rem;
+            color: #666;
+            font-style: italic;
+        }
+    </style>
 </body>
 </html>

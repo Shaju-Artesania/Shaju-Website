@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaju - Creaciones Artesanales</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- ENCABEZADO -->
+    <header>
+        <div class="logo-container">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo.png-IkmbjchCYB5E5rfVFkBDm0DAoo9PPD.jpeg" alt="Logo Shaju" class="logo-image">
+        </div>
+        
+        <div class="header-right">
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index-es.html" class="active">Inicio</a></li>
+                    <li class="dropdown">
+                        <a href="about-es.html">Sobre Nosotros</a>
+                        <div class="dropdown-content">
+                            <a href="our-story-es.html">Nuestra Historia</a>
+                            <a href="join-us-es.html">Únete</a>
+                        </div>
+                    </li>
+                    <li><a href="collection-es.html">Colección</a></li>
+                    <li><a href="events-es.html">Eventos</a></li>
+                    <li><a href="contact-es.html">Contacto</a></li>
+                </ul>
+            </nav>
+    
+            <!-- Selector de idioma -->
+            <div class="language-selector">
+                <select id="language-dropdown" onchange="changeLanguage(this.value, window.location.pathname.split('/').pop())">
+                    <option value="en">English</option>
+                    <option value="es" selected>Español</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-badge">Excelencia Artesanal</div>
+                <h2>Hecho a mano con <span class="highlight">respeto</span></h2>
+                <p>Descubre creaciones artesanales únicas que cuentan una historia de responsabilidad social y ambiental</p>
+                <a href="collection.html" class="btn">Explorar Colección</a>
+            </div>
+        </section>
+
+        <section class="featured">
+            <h2>Creaciones <span class="highlight">únicas</span></h2>
+            <div class="featured-items">
+                <div class="item">
+                    <div class="item-img product1-img"></div>
+                    <div class="item-tag">Material 1</div>
+                    <h3>Sombrero artesanal</h3>
+                    <p>Diseñado con materiales sostenibles</p>
+                </div>
+                <div class="item">
+                    <div class="item-img product2-img"></div>
+                    <div class="item-tag">Material 2</div>
+                    <h3>Zapatillas peruanas</h3>
+                    <p>Cada pieza hecha con esmero</p>
+                </div>
+                <div class="item">
+                    <div class="item-img product3-img"></div>
+                    <div class="item-tag">Material 3</div>
+                    <h3>Bolso artesanal</h3>
+                    <p>Lleva contigo un pedacito de Perú</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-preview">
+            <div class="about-text">
+                <h2>Nuestra <span class="highlight">Pasión</span></h2>
+                <p>En Shaju, creemos en preservar la artesanía tradicional mientras abrazamos diseños innovadores. Cada pieza cuenta una historia de dedicación, creatividad y herencia cultural.</p>
+                <a href="our-story.html" class="btn-secondary">Conoce Más</a>
+            </div>
+            <div class="about-image"></div>
+        </section>
+
+        <section class="upcoming-events">
+            <h2>Próximos <span class="highlight">Eventos</span></h2>
+            <div class="event">
+                <div class="event-date">
+                    <span class="day">15</span>
+                    <span class="month">JUN</span>
+                </div>
+                <div class="event-details">
+                    <h3>Taller de Artesanía de Verano</h3>
+                    <p>Únete a nosotros para un día de creatividad y aprende técnicas tradicionales de artesanía.</p>
+                    <a href="events.html" class="btn-text">Detalles →</a>
+                </div>
+            </div>
+            <div class="event">
+                <div class="event-date">
+                    <span class="day">22</span>
+                    <span class="month">JUL</span>
+                </div>
+                <div class="event-details">
+                    <h3>Mercado Artesanal</h3>
+                    <p>Explora y compra de artesanos locales mostrando sus creaciones únicas.</p>
+                    <a href="events.html" class="btn-text">Detalles →</a>
+                </div>
+            </div>
+            <a href="events.html" class="btn-secondary view-all">Ver Todos los Eventos</a>
+        </section>
+
+        <section class="newsletter-banner">
+            <div class="newsletter-content">
+                <h3>Únete a Nuestra Comunidad</h3>
+                <p>Suscríbete para recibir actualizaciones sobre nuevas colecciones, eventos y ofertas exclusivas.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Tu Correo Electrónico">
+                    <button type="submit" class="btn">Suscribirse</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo.png-IkmbjchCYB5E5rfVFkBDm0DAoo9PPD.jpeg" alt="Logo Shaju" class="footer-logo-image">
+                <div class="social-icons">
+                    <a href="https://instagram.com/shaju.artesania" target="_blank" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://facebook.com/shaju.artesania" target="_blank" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="about.html">Sobre Nosotros</a></li>
+                    <li><a href="collection.html">Colección</a></li>
+                    <li><a href="events.html">Eventos</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Mantente Actualizado</h3>
+                <p>Suscríbete a nuestro boletín para recibir las últimas noticias y ofertas exclusivas.</p>
+                <form>
+                    <input type="email" placeholder="Tu Correo Electrónico">
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Shaju. Todos los Derechos Reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Navegación toggle
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('.main-nav').classList.toggle('active');
+        });
+
+        // Cerrar menú al hacer clic fuera
+        document.addEventListener('click', function(event) {
+            const isClickInsideNav = document.querySelector('.main-nav').contains(event.target);
+            const isClickOnToggle = document.querySelector('.nav-toggle').contains(event.target);
+            
+            if (!isClickInsideNav && !isClickOnToggle && document.querySelector('.main-nav').classList.contains('active')) {
+                document.querySelector('.nav-toggle').classList.remove('active');
+                document.querySelector('.main-nav').classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

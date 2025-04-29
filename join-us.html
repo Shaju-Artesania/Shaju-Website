@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Us - Shaju</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="logo-container">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo.png-IkmbjchCYB5E5rfVFkBDm0DAoo9PPD.jpeg" alt="Shaju Logo" class="logo-image">
+        </div>
+        
+        <div class="header-right">
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="about.html" class="active">About</a>
+                        <div class="dropdown-content">
+                            <a href="our-story.html" class="active">Our Story</a>
+                            <a href="join-us.html">Join Us</a>
+                        </div>
+                    </li>
+                    <li><a href="collection.html">Collection</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+    
+            <!-- Language Selector -->
+            <div class="language-selector">
+                <select id="language-dropdown" onchange="changeLanguage(this.value, window.location.pathname.split('/').pop())">
+                    <option value="en" selected>English</option>
+                    <option value="es">Español</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h2>Join Our <span class="highlight">Team</span></h2>
+            <p>Become part of our vibrant creative community, where passion, craftsmanship, and inspiration come together. Connect with like-minded individuals, share in the artistry, and celebrate the beauty of handmade creations.</p>
+        </section>
+
+        <section class="join-content">
+            <div class="join-text">
+                <h3>Why Join Shaju?</h3>
+                <p>At Shaju, we believe in nurturing talent and providing a supportive environment where creativity can flourish. Joining our team means becoming part of a community that values:</p>
+                <ul>
+                    <li><strong>Creativity:</strong> Freedom to explore and innovate within your craft</li>
+                    <li><strong>Growth:</strong> Continuous learning and skill development opportunities</li>
+                    <li><strong>Collaboration:</strong> Working alongside talented artisans from diverse backgrounds</li>
+                    <li><strong>Purpose:</strong> Contributing to the preservation of traditional crafts and sustainable practices</li>
+                </ul>
+            </div>
+            <div class="join-image"></div>
+        </section>
+
+        <section class="opportunities">
+            <h3>Current Opportunities</h3>
+            <div class="opportunity-cards">
+                <div class="opportunity-card">
+                    <h4>Artisan Apprentice</h4>
+                    <p>Learn traditional crafting techniques under the guidance of our master artisans. Perfect for those starting their journey in artisanal crafts.</p>
+                    <a href="#" class="btn-secondary">Apply Now</a>
+                </div>
+                <div class="opportunity-card">
+                    <h4>Workshop Facilitator</h4>
+                    <p>Share your knowledge and passion by leading workshops for our community. Ideal for experienced artisans with teaching skills.</p>
+                    <a href="#" class="btn-secondary">Apply Now</a>
+                </div>
+                <div class="opportunity-card">
+                    <h4>Design Collaborator</h4>
+                    <p>Bring your unique design perspective to collaborate on special collections and innovative projects.</p>
+                    <a href="#" class="btn-secondary">Apply Now</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="application-form">
+            <h3>General Application</h3>
+            <p>Don't see a position that fits your skills? We're always interested in connecting with talented individuals. Submit a general application and tell us how you'd like to contribute to Shaju.</p>
+            <form>
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="interest">Area of Interest</label>
+                    <select id="interest" name="interest">
+                        <option value="">Select an option</option>
+                        <option value="crafting">Crafting</option>
+                        <option value="design">Design</option>
+                        <option value="teaching">Teaching/Facilitation</option>
+                        <option value="marketing">Marketing</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Tell us about yourself and your interest in Shaju</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="portfolio">Portfolio Link (optional)</label>
+                    <input type="url" id="portfolio" name="portfolio">
+                </div>
+                <button type="submit" class="btn">Submit Application</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo.png-IkmbjchCYB5E5rfVFkBDm0DAoo9PPD.jpeg" alt="Shaju Logo" class="footer-logo-image">
+                <div class="social-icons">
+                    <a href="https://instagram.com/shaju.artesania" target="_blank" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://facebook.com/shaju.artesania" target="_blank" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="collection.html">Collection</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for the latest updates and exclusive offers.</p>
+                <form>
+                    <input type="email" placeholder="Your Email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Shaju. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+    <script>
+        // Navigation toggle
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('.main-nav').classList.toggle('active');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const isClickInsideNav = document.querySelector('.main-nav').contains(event.target);
+            const isClickOnToggle = document.querySelector('.nav-toggle').contains(event.target);
+            
+            if (!isClickInsideNav && !isClickOnToggle && document.querySelector('.main-nav').classList.contains('active')) {
+                document.querySelector('.nav-toggle').classList.remove('active');
+                document.querySelector('.main-nav').classList.remove('active');
+            }
+        });
+    </script>
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+            this.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

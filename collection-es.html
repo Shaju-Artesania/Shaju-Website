@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colección - Shaju</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo.png-IkmbjchCYB5E5rfVFkBDm0DAoo9PPD.jpeg" alt="Logo Shaju" class="logo-image">
+        </div>
+
+        <div class="header-right">
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index-es.html">Inicio</a></li>
+                    <li class="dropdown">
+                        <a href="about-es.html">Sobre Nosotros</a>
+                        <div class="dropdown-content">
+                            <a href="our-story-es.html">Nuestra Historia</a>
+                            <a href="join-us-es.html">Súmate</a>
+                        </div>
+                    </li>
+                    <li><a href="collection-es.html" class="active">Colección</a></li>
+                    <li><a href="events-es.html">Eventos</a></li>
+                    <li><a href="contact-es.html">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="language-selector">
+                <select id="language-dropdown" onchange="changeLanguage(this.value, window.location.pathname.split('/').pop())">
+                    <option value="en">English</option>
+                    <option value="es" selected>Español</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h2>Nuestra <span class="highlight">Colección</span></h2>
+            <p>Descubre la belleza y el arte de nuestras creaciones artesanales hechas a mano. Cada pieza está diseñada con esmero y elaborada cuidadosamente, combinando tradición, pasión y creatividad para ofrecerte algo verdaderamente único. Explora nuestra colección y experimenta el arte que nos distingue.</p>
+        </section>
+
+        <section class="collection-filter">
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="ceramics">Cerámica</button>
+                <button class="filter-btn" data-filter="textiles">Textiles</button>
+                <button class="filter-btn" data-filter="baskets">Cestas</button>
+                <button class="filter-btn" data-filter="jewelry">Joyería</button>
+            </div>
+        </section>
+
+        <section class="collection-grid">
+            <div class="collection-item">
+                <div class="item-image"></div>
+                <img src="/Images/Ceramic bowl.jpg" alt="Producto" class="product-image">
+                <div class="item-details">
+                    <p>Cuenco Cerámico Hecho a Mano</p>
+                </div>
+            </div>
+            <div class="collection-item">
+                <div class="item-image"></div>
+                <img src="/Images/wallhanging.webp" alt="Producto" class="product-image">
+                <div class="item-details">
+                    <p>Tapiz de Pared Tejido a Mano</p>
+                </div>
+            </div>
+            <div class="collection-item">
+                <div class="item-image"></div>
+                <img src="/Images/wovenbasket.webp" alt="Producto" class="product-image">
+                <div class="item-details">
+                    <p>Cesta de Almacenaje Tejida</p>
+                </div>
+            </div>
+            <div class="collection-item">
+                <div class="item-image"></div>
+                <img src="/Images/beated necklace.jpg" alt="Producto" class="product-image">
+                <div class="item-details">
+                    <p>Collar de Cuentas Artesanal</p>
+                </div>
+            </div>
+            <div class="collection-item">
+                <div class="item-image"></div>
+                <img src="/Images/ceramicvase.jpg" alt="Producto" class="product-image">
+                <div class="item-details">
+                    <p>Set de Jarrones Cerámicos</p>
+                </div>
+            </div>
+            <div class="collection-item">
+                <div class="item-image"></div>
+                <img src="/Images/DIY-Tablecloth-Runner-on-table-in-outdoor-kitchen-2.jpg" alt="Producto" class="product-image">
+                <div class="item-details">
+                    <p>Caminero de Mesa Teñido a Mano</p>
+                </div>
+            </div>
+            <div class="collection-item">
+                <div class="item-image"></div>
+                <img src="/Images/Wall-Basket-with-faux-flowers-and-blue-and-white-plate-wall.jpg" alt="Producto" class="product-image">
+                <div class="item-details">
+                    <p>Cesta Decorativa de Pared</p>
+                </div>
+            </div>
+            <div class="collection-item">
+                <div class="item-image"></div>
+                <img src="/Images/telanaari-handmade-earrings-fabric-fantasia-black-default-title-39831475028124_1800x1800.webp" alt="Producto" class="product-image">
+                <div class="item-details">
+                    <p>Pendientes Artesanales</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="custom-orders">
+            <div class="custom-text">
+                <h3>Pedidos Personalizados</h3>
+                <p>¿Buscas algo único? Ofrecemos piezas hechas a medida según tus preferencias. Contáctanos para comentar tus ideas y necesidades.</p>
+                <a href="contact-es.html" class="btn">Consultar Ahora</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo.png-IkmbjchCYB5E5rfVFkBDm0DAoo9PPD.jpeg" alt="Logo Shaju" class="footer-logo-image">
+                <div class="social-icons">
+                    <a href="https://instagram.com/shaju.artesania" target="_blank" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://facebook.com/shaju.artesania" target="_blank" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="index-es.html">Inicio</a></li>
+                    <li><a href="about-es.html">Sobre Nosotros</a></li>
+                    <li><a href="collection-es.html">Colección</a></li>
+                    <li><a href="events-es.html">Eventos</a></li>
+                    <li><a href="contact-es.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Mantente Actualizado</h3>
+                <p>Suscríbete a nuestro boletín para recibir las últimas novedades y ofertas exclusivas.</p>
+                <form>
+                    <input type="email" placeholder="Tu correo electrónico">
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Shaju. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Collection filter
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const collectionItems = document.querySelectorAll('.collection-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(btn => btn.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+
+                collectionItems.forEach(item => {
+                    if (filter === 'all' || item.classList.contains(filter)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

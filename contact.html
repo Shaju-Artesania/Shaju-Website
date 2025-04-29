@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Shaju</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo.png-IkmbjchCYB5E5rfVFkBDm0DAoo9PPD.jpeg" alt="Shaju Logo" class="logo-image">
+        </div>
+        
+        <div class="header-right">
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="about.html">About</a>
+                        <div class="dropdown-content">
+                            <a href="our-story.html">Our Story</a>
+                            <a href="join-us.html">Join Us</a>
+                        </div>
+                    </li>
+                    <li><a href="collection.html">Collection</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="contact.html"class="active">Contact</a>
+                </ul>
+            </nav>
+    
+            <!-- Language Selector -->
+            <div class="language-selector">
+                <select id="language-dropdown" onchange="changeLanguage(this.value, window.location.pathname.split('/').pop())">
+                    <option value="en" selected>English</option>
+                    <option value="es">Español</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h2>Get in <span class="highlight">Touch</span></h2>
+            <p>We'd love to hear from you. Reach out to us with any questions, inquiries, or feedback. We will get back to you as soon as possible.</p>
+        </section>
+
+        <section class="contact-content">
+            <div class="contact-info">
+                <h3> <span class="highlight">Contact Information</span></h3>
+                
+                <div class="info-item">
+                    <h4>Come visit us</h4>
+                    <p>123 Artisan Street</p>
+                    <p>Craftsville, CR 12345</p>
+                </div>
+                
+                <div class="info-item">
+                    <h4>Opening Hours</h4>
+                    <p>Monday - Friday: 9am - 6pm</p>
+                    <p>Saturday: 10am - 4pm</p>
+                    <p>Sunday: Closed</p>
+                </div>
+                
+                <div class="info-item">
+                    <h4>Contact Details</h4>
+                    <p>Email: hello@shaju.com</p>
+                    <p>Phone: 949 917 932</p>
+                </div>
+                
+                <div class="social-links-section">
+                    <h4>Connect With Us</h4>
+                    <div class="social-media-icons">
+                        <a href="https://www.instagram.com/shaju.artesanias/" target="_blank" class="social-media-icon instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/shaju.artesania" target="_blank" class="social-media-icon facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <h3>Send us a <span class="highlight">message</span></h3>
+                <div id="form-message" class="form-message"></div>
+                <form id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                            <div class="error-text" id="name-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" required>
+                            <div class="error-text" id="email-error"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                        <div class="error-text" id="subject-error"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                        <div class="error-text" id="message-error"></div>
+                    </div>
+                    <button type="submit" class="btn" id="submitBtn">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <h3>Find <span class="highlight">Us</span></h3>
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49190.836436766294!2d-73.31178116660539!3d-3.756866615549177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ea10b0e440c1cb%3A0x9210b8d7040a6692!2sIquitos%2C%20Peru!5e1!3m2!1sen!2sbe!4v1745930318284!5m2!1sen!2sbe"
+                        width="1500" 
+                        height="400" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <div class="map-info">
+                    <p><i class="fas fa-info-circle"></i> Click on the map to get directions to our location.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <h3>Frequently Asked <span class="highlight">Questions</span></h3>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h4>Do you ship internationally?</h4>
+                    <p>Yes, we ship to most countries worldwide. Shipping costs and delivery times vary depending on the destination.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Can I request custom orders?</h4>
+                    <p>We love creating custom pieces. Please contact us with your ideas and requirements.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>What payment methods do you accept?</h4>
+                    <p>We accept credit cards, PayPal, and bank transfers. All payments are secure and encrypted.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>What is your return policy?</h4>
+                    <p>We offer a 30-day return policy for most items. Custom orders are non-refundable.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo.png-IkmbjchCYB5E5rfVFkBDm0DAoo9PPD.jpeg" alt="Shaju Logo" class="footer-logo-image">
+                <p>Brought to you with the passion to make an impact</p>
+                <div class="social-icons">
+                    <a href="https://instagram.com/shaju.artesania" target="_blank" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://facebook.com/shaju.artesania" target="_blank" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="collection.html">Collection</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for the latest updates and exclusive offers.</p>
+                <form>
+                    <input type="email" placeholder="Your Email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Shaju. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Navigation toggle
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('.main-nav').classList.toggle('active');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const isClickInsideNav = document.querySelector('.main-nav').contains(event.target);
+            const isClickOnToggle = document.querySelector('.nav-toggle').contains(event.target);
+            
+            if (!isClickInsideNav && !isClickOnToggle && document.querySelector('.main-nav').classList.contains('active')) {
+                document.querySelector('.nav-toggle').classList.remove('active');
+                document.querySelector('.main-nav').classList.remove('active');
+            }
+        });
+
+        // Form validation and submission
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            const submitBtn = document.getElementById('submitBtn');
+            const formMessage = document.getElementById('form-message');
+            
+            // Clear error messages when input changes
+            const inputs = contactForm.querySelectorAll('input, textarea');
+            inputs.forEach(input => {
+                input.addEventListener('input', function() {
+                    const errorElement = document.getElementById(`${input.id}-error`);
+                    if (errorElement) {
+                        errorElement.textContent = '';
+                    }
+                    input.classList.remove('error');
+                });
+            });
+            
+            // Form submission with validation
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                let isValid = true;
+                
+                // Validate name
+                const nameInput = document.getElementById('name');
+                if (!nameInput.value.trim()) {
+                    document.getElementById('name-error').textContent = 'Please enter your name';
+                    nameInput.classList.add('error');
+                    isValid = false;
+                }
+                
+                // Validate email
+                const emailInput = document.getElementById('email');
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailInput.value.trim()) {
+                    document.getElementById('email-error').textContent = 'Please enter your email';
+                    emailInput.classList.add('error');
+                    isValid = false;
+                } else if (!emailRegex.test(emailInput.value.trim())) {
+                    document.getElementById('email-error').textContent = 'Please enter a valid email address';
+                    emailInput.classList.add('error');
+                    isValid = false;
+                }
+                
+                // Validate subject
+                const subjectInput = document.getElementById('subject');
+                if (!subjectInput.value.trim()) {
+                    document.getElementById('subject-error').textContent = 'Please enter a subject';
+                    subjectInput.classList.add('error');
+                    isValid = false;
+                }
+                
+                // Validate message
+                const messageInput = document.getElementById('message');
+                if (!messageInput.value.trim()) {
+                    document.getElementById('message-error').textContent = 'Please enter your message';
+                    messageInput.classList.add('error');
+                    isValid = false;
+                }
+                
+                if (!isValid) {
+                    return;
+                }
+                
+                // Change button text and disable it
+                submitBtn.textContent = 'Sending...';
+                submitBtn.disabled = true;
+                
+                // Get form data
+                const formData = new FormData(contactForm);
+                
+                // Send form data using fetch API
+                fetch('send-email.php', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        formMessage.innerHTML = '<div class="success-message">Your message has been sent successfully! We\'ll get back to you soon.</div>';
+                        contactForm.reset();
+                    } else {
+                        formMessage.innerHTML = `<div class="error-message">${data.message || 'There was an error sending your message. Please try again later.'}</div>`;
+                    }
+                    
+                    // Reset button
+                    submitBtn.textContent = 'Send Message';
+                    submitBtn.disabled = false;
+                    
+                    // Scroll to the message
+                    formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                })
+                .catch(error => {
+                    formMessage.innerHTML = '<div class="error-message">There was an error sending your message. Please try again later.</div>';
+                    
+                    // Reset button
+                    submitBtn.textContent = 'Send Message';
+                    submitBtn.disabled = false;
+                    
+                    // Scroll to the message
+                    formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

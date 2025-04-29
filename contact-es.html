@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos - Shaju</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo.png-IkmbjchCYB5E5rfVFkBDm0DAoo9PPD.jpeg" alt="Logo Shaju" class="logo-image">
+        </div>
+        
+        <div class="header-right">
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index-es.html">Inicio</a></li>
+                    <li class="dropdown">
+                        <a href="about-es.html">Sobre Nosotros</a>
+                        <div class="dropdown-content">
+                            <a href="our-story-es.html">Nuestra Historia</a>
+                            <a href="join-us-es.html">Únete</a>
+                        </div>
+                    </li>
+                    <li><a href="collection-es.html">Colección</a></li>
+                    <li><a href="events-es.html">Eventos</a></li>
+                    <li><a href="contact-es.html" class="active">Contacto</a></li>
+                </ul>
+            </nav>
+    
+            <!-- Selector de idioma -->
+            <div class="language-selector">
+                <select id="language-dropdown" onchange="changeLanguage(this.value, window.location.pathname.split('/').pop())">
+                    <option value="en">English</option>
+                    <option value="es" selected>Español</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h2>Ponte en <span class="highlight">Contacto</span></h2>
+            <p>Nos encantaría saber de ti. Contáctanos con cualquier pregunta, consulta o comentario. Te responderemos lo antes posible.</p>
+        </section>
+
+        <section class="contact-content">
+            <div class="contact-info">
+                <h3><span class="highlight">Información de Contacto</span></h3>
+                
+                <div class="info-item">
+                    <h4>Ven a visitarnos</h4>
+                    <p>Calle Artisan 123</p>
+                    <p>Craftsville, CR 12345</p>
+                </div>
+                
+                <div class="info-item">
+                    <h4>Horario de Atención</h4>
+                    <p>Lunes - Viernes: 9:00 - 18:00</p>
+                    <p>Sábado: 10:00 - 16:00</p>
+                    <p>Domingo: Cerrado</p>
+                </div>
+                
+                <div class="info-item">
+                    <h4>Datos de Contacto</h4>
+                    <p>Email: hello@shaju.com</p>
+                    <p>Teléfono: 949 917 932</p>
+                </div>
+                
+                <div class="social-links-section">
+                    <h4>Conéctate con Nosotros</h4>
+                    <div class="social-media-icons">
+                        <a href="https://www.instagram.com/shaju.artesanias/" target="_blank" class="social-media-icon instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/shaju.artesania" target="_blank" class="social-media-icon facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <h3>Envíanos un <span class="highlight">mensaje</span></h3>
+                <div id="form-message" class="form-message"></div>
+                <form id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Tu Nombre</label>
+                            <input type="text" id="name" name="name" required>
+                            <div class="error-text" id="name-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Tu Correo Electrónico</label>
+                            <input type="email" id="email" name="email" required>
+                            <div class="error-text" id="email-error"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Asunto</label>
+                        <input type="text" id="subject" name="subject" required>
+                        <div class="error-text" id="subject-error"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Tu Mensaje</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                        <div class="error-text" id="message-error"></div>
+                    </div>
+                    <button type="submit" class="btn" id="submitBtn">Enviar Mensaje</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <h3>Encuéntranos</h3>
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49190.836436766294!2d-73.31178116660539!3d-3.756866615549177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ea10b0e440c1cb%3A0x9210b8d7040a6692!2sIquitos%2C%20Peru!5e1!3m2!1sen!2sbe!4v1745930318284!5m2!1sen!2sbe"
+                        width="1500" 
+                        height="400" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <div class="map-info">
+                    <p><i class="fas fa-info-circle"></i> Haz clic en el mapa para obtener indicaciones a nuestra ubicación.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <h3>Preguntas <span class="highlight">Frecuentes</span></h3>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h4>¿Realizan envíos internacionales?</h4>
+                    <p>Sí, enviamos a la mayoría de países del mundo. Los costes y tiempos de entrega varían según el destino.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>¿Puedo solicitar pedidos personalizados?</h4>
+                    <p>Nos encanta crear piezas personalizadas. Contáctanos con tus ideas y requisitos.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>¿Qué métodos de pago aceptan?</h4>
+                    <p>Aceptamos tarjetas de crédito, PayPal y transferencias bancarias. Todos los pagos son seguros y cifrados.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>¿Cuál es su política de devoluciones?</h4>
+                    <p>Ofrecemos una política de devolución de 30 días para la mayoría de los artículos. Los pedidos personalizados no son reembolsables.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo.png-IkmbjchCYB5E5rfVFkBDm0DAoo9PPD.jpeg" alt="Logo Shaju" class="footer-logo-image">
+                <p>Hecho con pasión para generar un impacto</p>
+                <div class="social-icons">
+                    <a href="https://instagram.com/shaju.artesania" target="_blank" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://facebook.com/shaju.artesania" target="_blank" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="index-es.html">Inicio</a></li>
+                    <li><a href="about-es.html">Sobre Nosotros</a></li>
+                    <li><a href="collection-es.html">Colección</a></li>
+                    <li><a href="events-es.html">Eventos</a></li>
+                    <li><a href="contact-es.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Mantente Actualizado</h3>
+                <p>Suscríbete a nuestro boletín para recibir las últimas novedades y ofertas exclusivas.</p>
+                <form>
+                    <input type="email" placeholder="Tu correo electrónico">
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Shaju. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Navigation toggle
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('.main-nav').classList.toggle('active');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const isClickInsideNav = document.querySelector('.main-nav').contains(event.target);
+            const isClickOnToggle = document.querySelector('.nav-toggle').contains(event.target);
+            
+            if (!isClickInsideNav && !isClickOnToggle && document.querySelector('.main-nav').classList.contains('active')) {
+                document.querySelector('.nav-toggle').classList.remove('active');
+                document.querySelector('.main-nav').classList.remove('active');
+            }
+        });
+
+        // Validación y envío del formulario
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            const submitBtn = document.getElementById('submitBtn');
+            const formMessage = document.getElementById('form-message');
+            
+            // Limpiar errores al modificar campos
+            const inputs = contactForm.querySelectorAll('input, textarea');
+            inputs.forEach(input => {
+                input.addEventListener('input', function() {
+                    const errorElement = document.getElementById(`${input.id}-error`);
+                    if (errorElement) {
+                        errorElement.textContent = '';
+                    }
+                    input.classList.remove('error');
+                });
+            });
+            
+            // Envío del formulario con validación
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                let isValid = true;
+                
+                // Validar nombre
+                const nameInput = document.getElementById('name');
+                if (!nameInput.value.trim()) {
+                    document.getElementById('name-error').textContent = 'Por favor, ingresa tu nombre';
+                    nameInput.classList.add('error');
+                    isValid = false;
+                }
+                
+                // Validar correo electrónico
+                const emailInput = document.getElementById('email');
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailInput.value.trim()) {
+                    document.getElementById('email-error').textContent = 'Por favor, ingresa tu correo electrónico';
+                    emailInput.classList.add('error');
+                    isValid = false;
+                } else if (!emailRegex.test(emailInput.value.trim())) {
+                    document.getElementById('email-error').textContent = 'Por favor, ingresa un correo electrónico válido';
+                    emailInput.classList.add('error');
+                    isValid = false;
+                }
+                
+                // Validar asunto
+                const subjectInput = document.getElementById('subject');
+                if (!subjectInput.value.trim()) {
+                    document.getElementById('subject-error').textContent = 'Por favor, ingresa un asunto';
+                    subjectInput.classList.add('error');
+                    isValid = false;
+                }
+                
+                // Validar mensaje
+                const messageInput = document.getElementById('message');
+                if (!messageInput.value.trim()) {
+                    document.getElementById('message-error').textContent = 'Por favor, ingresa tu mensaje';
+                    messageInput.classList.add('error');
+                    isValid = false;
+                }
+                
+                if (!isValid) {
+                    return;
+                }
+                
+                // Cambiar texto del botón y deshabilitarlo
+                submitBtn.textContent = 'Enviando...';
+                submitBtn.disabled = true;
+                
+                // Obtener datos del formulario
+                const formData = new FormData(contactForm);
+                
+                // Enviar datos con fetch
+                fetch('send-email.php', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        formMessage.innerHTML = '<div class="success-message">¡Tu mensaje ha sido enviado con éxito! Te responderemos pronto.</div>';
+                        contactForm.reset();
+                    } else {
+                        formMessage.innerHTML = `<div class="error-message">${data.message || 'Hubo un error al enviar tu mensaje. Por favor, inténtalo más tarde.'}</div>`;
+                    }
+                    
+                    submitBtn.textContent = 'Enviar Mensaje';
+                    submitBtn.disabled = false;
+                    
+                    formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                })
+                .catch(error => {
+                    formMessage.innerHTML = '<div class="error-message">Hubo un error al enviar tu mensaje. Por favor, inténtalo más tarde.</div>';
+                    submitBtn.textContent = 'Enviar Mensaje';
+                    submitBtn.disabled = false;
+                    formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

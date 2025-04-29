@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Historia - Shaju</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<header>
+    <div class="logo-container">
+        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo.png-IkmbjchCYB5E5rfVFkBDm0DAoo9PPD.jpeg" alt="Logo Shaju" class="logo-image">
+    </div>
+    <div class="header-right">
+        <nav class="main-nav">
+            <ul class="nav-links">
+                <li><a href="index-es.html">Inicio</a></li>
+                <li class="dropdown">
+                    <a href="about-es.html" class="active">Sobre Nosotros</a>
+                    <div class="dropdown-content">
+                        <a href="our-story-es.html" class="active">Nuestra Historia</a>
+                        <a href="join-us-es.html">Únete</a>
+                    </div>
+                </li>
+                <li><a href="collection-es.html">Colección</a></li>
+                <li><a href="events-es.html">Eventos</a></li>
+                <li><a href="contact-es.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="language-selector">
+            <select id="language-dropdown" onchange="changeLanguage(this.value, window.location.pathname.split('/').pop())">
+                <option value="en">English</option>
+                <option value="es" selected>Español</option>
+            </select>
+        </div>
+    </div>
+</header>
+<main>
+    <section class="page-header">
+        <h2>Nuestra <span class="highlight">historia</span></h2>
+        <p>En 2016, Olga Vidurizzaga encontró inspiración en una feria artesanal. Tres años más tarde, en 2019, esa inspiración dio lugar a su propio emprendimiento: Shajú.</p>
+        <br>
+        <p>Impulsada por la necesidad personal de empoderar a las comunidades artesanas locales, Olga, a través de Shajú, se centra en transformar la artesanía tradicional en moda social y ambientalmente consciente. Brindando capacitación en métodos tradicionales de recolección y procesamiento de recursos locales, Shajú busca preservar el patrimonio cultural y al mismo tiempo ofrecer a los artesanos la oportunidad de obtener ingresos sostenibles.</p>
+    </section>
+
+    <section class="about-preview">
+        <div class="about-image"></div>
+        <div class="about-text">
+            <h2>Creciendo <span class="highlight">juntos</span> como comunidad</h2>
+            <p>Shajú trabaja con 22 artesanos locales de 4 comunidades indígenas:</p>
+            <li>Puerto Prado</li>
+            <li>Amazonas</li>
+            <li>Manacamiri</li>
+            <li>Comunidad Bora en Pebas Pucarquillo</li>
+            <br>
+            <p>Junto con estos artesanos, ofrecemos una variedad de productos elaborados con materiales locales como la chambira y el huambe, asegurando que nuestros productos reflejen el alma de la Amazonía y ayuden a mantener viva nuestra herencia cultural.</p>
+        </div>
+    </section>
+
+    <section class="quote-section">
+        <div class="container">
+            <blockquote>
+                <p><b>"¡Para cambiar el mundo, solo necesitas dar el primer paso!"</b></p>
+                <cite><b>— Olga Vidurizzaga, Fundadora</b></cite>
+            </blockquote>
+            <p>Buscamos proteger nuestras materias primas, garantizando longevidad y sostenibilidad en cada comunidad con la que trabajamos.</p>
+        </div>
+    </section>
+
+    <section class="dual-section">
+        <div class="container">
+            <div class="mission-vision-grid">
+                <div class="mission-box">
+                    <div class="mission-content">
+                        <h3>Nuestra <span class="highlight">Misión</span></h3>
+                        <p>Rescatar y recuperar técnicas artesanales ancestrales tradicionales (extractivas y de pigmentación). Buscamos valorar estas técnicas mediante la creación de diseños y piezas de alta calidad y únicas.</p>
+                    </div>
+                </div>
+                <div class="vision-box">
+                    <div class="vision-content">
+                        <h3>Nuestra <span class="highlight">Visión</span></h3>
+                        <p>Expandir nuestro papel como una empresa que refleja la identidad cultural de la Amazonía peruana y brinda a cada cliente una sensación de seguridad, calidad y confianza.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slideshow-section">
+        <div class="container">
+            <h2>Usando <span class="highlight">materiales naturales</span> con respeto por nuestro planeta</h2>
+            <div class="slideshow-container">
+                <div class="slide">
+                    <img src="./Images/chambira1.jpg" alt="about-image">
+                    <div class="slide-caption">La palma de chambira es la principal fuente de fibra para nuestros productos. La obtenemos de comunidades locales que cosechan la palma de manera sostenible.</div>
+                </div>
+                <div class="slide">
+                    <img src="./Images/chambira2.jpg" alt="about-image">
+                    <div class="slide-caption">El hilado de la fibra de chambira se realiza a mano. Sentados con las piernas extendidas, los artesanos colocan las puntas de algunas fibras entre sus dedos para mantenerlas en su lugar.</div>
+                </div>
+                <div class="slide">
+                    <img src="./Images/waaier.jpg" alt="about-image">
+                    <div class="slide-caption">Abanico hecho a mano de fibra de chambira.</div>
+                </div>
+                <div class="slide">
+                    <img src="./Images/slippers.jpg" alt="about-image">
+                    <div class="slide-caption">Sandalias hechas de fibra de chambira.</div>
+                </div>
+                <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                <a class="next" onclick="changeSlide(1)">&#10095;</a>
+            </div>
+            <div class="dots-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo.png-IkmbjchCYB5E5rfVFkBDm0DAoo9PPD.jpeg" alt="Logo Shaju" class="footer-logo-image">
+            <p>Hecho con pasión para generar impacto</p>
+            <div class="social-icons">
+                <a href="https://instagram.com/shaju.artesania" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://facebook.com/shaju.artesania" target="_blank" class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-links">
+            <h3>Enlaces Rápidos</h3>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="about.html">Sobre Nosotros</a></li>
+                <li><a href="collection.html">Colección</a></li>
+                <li><a href="events.html">Eventos</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="footer-newsletter">
+            <h3>Mantente Actualizado</h3>
+            <p>Suscríbete a nuestro boletín para recibir las últimas noticias y ofertas exclusivas.</p>
+            <form>
+                <input type="email" placeholder="Tu Correo Electrónico">
+                <button type="submit">Suscribirse</button>
+            </form>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Shaju. Todos los Derechos Reservados.</p>
+    </div>
+</footer>
+<script src="script.js"></script>
+<script>
+    // Slideshow functionality
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function changeSlide(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("slide");
+        let dots = document.getElementsByClassName("dot");
+        
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
+
+    // Auto-advance slides every 5 seconds
+    setInterval(function() {
+        changeSlide(1);
+    }, 10000);
+</script>
+</body>
+</html>

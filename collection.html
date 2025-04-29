@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection - Shaju</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo.png-IkmbjchCYB5E5rfVFkBDm0DAoo9PPD.jpeg" alt="Shaju Logo" class="logo-image">
+        </div>
+        
+        <div class="header-right">
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a>
+                    <li class="dropdown">
+                        <a href="about.html">About</a>
+                        <div class="dropdown-content">
+                            <a href="our-story.html">Our story</a>
+                            <a href="join-us.html">Join Us</a>
+                        </div>
+                    </li>
+                    <li><a href="collection.html"class="active">Collection</a></li>
+                    <li><a href="events.html" >Events</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+    
+            <!-- Language Selector -->
+            <div class="language-selector">
+                <select id="language-dropdown" onchange="changeLanguage(this.value, window.location.pathname.split('/').pop())">
+                    <option value="en" selected>English</option>
+                    <option value="es">Español</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h2>Our <span class="highlight">Collection</span></h2>
+            <p>Discover the beauty and craftsmanship behind our handcrafted artisanal creations. Each piece is thoughtfully designed and carefully made, blending tradition, passion, and creativity to offer you something truly unique. Explore our collection and experience the artistry that sets us apart.</p>
+        </section>
+
+        <section class="collection-filter">
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="ceramics">Ceramics</button>
+                <button class="filter-btn" data-filter="textiles">Textiles</button>
+                <button class="filter-btn" data-filter="baskets">Baskets</button>
+                <button class="filter-btn" data-filter="jewelry">Jewelry</button>
+            </div>
+        </section>
+
+        <section class="collection-grid">
+            <div class="collection-item">
+                <div class="item-image"></div>
+                <img src="/Images/Ceramic bowl.jpg" alt="Product" class="product-image">
+                <div class="item-details">
+                    <p>Handcrafted Ceramic Bowl</p>
+                </div>
+            </div>
+            <div class="collection-item">
+                <div class="item-image"></div>
+                <img src="/Images/wallhanging.webp" alt="Product" class="product-image">
+                <div class="item-details">
+                    <p>Hand-woven Wall Hanging</p>
+                </div>
+            </div>
+            <div class="collection-item">
+                <div class="item-image"></div>
+                <img src="/Images/wovenbasket.webp" alt="Product" class="product-image">
+                <div class="item-details">
+                    <p>Woven Storage Basket</p>
+                </div>
+            </div>
+            <div class="collection-item">
+                <div class="item-image"></div>
+                <img src="/Images/beated necklace.jpg" alt="Product" class="product-image">
+                <div class="item-details">
+                    <p>Handmade Beaded Necklace</p>
+                </div>
+            </div>
+            <div class="collection-item">
+                <div class="item-image"></div>
+                <img src="/Images/ceramicvase.jpg" alt="Product" class="product-image">
+                <div class="item-details">
+                    <p>Ceramic Vase Set</p>
+                </div>
+            </div>
+            <div class="collection-item">
+                <div class="item-image"></div>
+                <img src="/Images/DIY-Tablecloth-Runner-on-table-in-outdoor-kitchen-2.jpg" alt="Product" class="product-image">
+                <div class="item-details">
+                    <p>Hand-dyed Table Runner</p>
+                </div>
+            </div>
+            <div class="collection-item">
+                <div class="item-image"></div>
+                <img src="/Images/Wall-Basket-with-faux-flowers-and-blue-and-white-plate-wall.jpg" alt="Product" class="product-image">
+                <div class="item-details">
+                    <p>Decorative Wall Basket</p>
+                </div>
+            </div>
+            <div class="collection-item">
+                <div class="item-image"></div>
+                <img src="/Images/telanaari-handmade-earrings-fabric-fantasia-black-default-title-39831475028124_1800x1800.webp" alt="Product" class="product-image">
+                <div class="item-details">
+                    <p>Artisanal Earrings</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="custom-orders">
+
+            <div class="custom-text">
+                <h3>Custom Orders</h3>
+                <p>Looking for something unique? We offer custom-made pieces tailored to your preferences. Contact us to discuss your ideas and requirements.</p>
+                <a href="contact.html" class="btn">Inquire Now</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo.png-IkmbjchCYB5E5rfVFkBDm0DAoo9PPD.jpeg" alt="Shaju Logo" class="footer-logo-image">
+                <div class="social-icons">
+                    <a href="https://instagram.com/shaju.artesania" target="_blank" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://facebook.com/shaju.artesania" target="_blank" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="collection.html">Collection</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for the latest updates and exclusive offers.</p>
+                <form>
+                    <input type="email" placeholder="Your Email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Shaju. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+    <script>
+        // Navigation toggle
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('.main-nav').classList.toggle('active');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const isClickInsideNav = document.querySelector('.main-nav').contains(event.target);
+            const isClickOnToggle = document.querySelector('.nav-toggle').contains(event.target);
+            
+            if (!isClickInsideNav && !isClickOnToggle && document.querySelector('.main-nav').classList.contains('active')) {
+                document.querySelector('.nav-toggle').classList.remove('active');
+                document.querySelector('.main-nav').classList.remove('active');
+            }
+        });
+    </script>
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+            this.classList.toggle('active');
+        });
+
+        // Collection filter
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const collectionItems = document.querySelectorAll('.collection-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+                
+                const filter = btn.getAttribute('data-filter');
+                
+                collectionItems.forEach(item => {
+                    if (filter === 'all' || item.classList.contains(filter)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

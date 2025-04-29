@@ -270,7 +270,6 @@ header {
     color: #333;
     white-space: nowrap;
 }
-
 .dropdown-content a:hover {
     background-color: #f0f0f0;
 }
@@ -289,13 +288,16 @@ header {
         top: 100%;
         left: 0;
         width: 100%;
-        background-color: #fff !important; /* White background for the navigation pane */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.679); /* Optional: Add shadow for better visibility */
+        background-color: var(--light-color)!important; /* White background for the navigation pane */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for better visibility */
         z-index: 100;
+        transition: all 0.3s ease-in-out;
+        padding-bottom: 10px;
+        padding-top: 10px;
     }
 
     .main-nav.active {
-        display: flex; /* Show navigation when active */
+        display: block; /* Show navigation when active */
     }
 
     .nav-links {
@@ -310,11 +312,21 @@ header {
     .nav-links a {
         padding: 4px 0; /* Add padding for better spacing */
         color: var(--text-color); /* Ensure links are visible */
-        background-color: #fff;
+        background-color: transparent !important;
     }
 
     .nav-links a:hover {
         background-color: var(--gray-light); /* Optional: Add hover effect */
+    }
+    .dropdown-content {
+        position: static; /* Position dropdown content within the flow */
+        display: none; /* Hidden by default */
+        box-shadow: none;
+        font-size: 13px;
+    }
+
+    .dropdown.active .dropdown-content {
+        display: block; /* Show dropdown when active */
     }
 }
 /* Language Selector Styling */

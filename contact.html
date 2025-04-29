@@ -38,6 +38,11 @@
                     <option value="es">Español</option>
                 </select>
             </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
 
@@ -196,22 +201,6 @@
 
     <script src="script.js"></script>
     <script>
-        // Navigation toggle
-        document.querySelector('.nav-toggle').addEventListener('click', function() {
-            this.classList.toggle('active');
-            document.querySelector('.main-nav').classList.toggle('active');
-        });
-
-        // Close menu when clicking outside
-        document.addEventListener('click', function(event) {
-            const isClickInsideNav = document.querySelector('.main-nav').contains(event.target);
-            const isClickOnToggle = document.querySelector('.nav-toggle').contains(event.target);
-            
-            if (!isClickInsideNav && !isClickOnToggle && document.querySelector('.main-nav').classList.contains('active')) {
-                document.querySelector('.nav-toggle').classList.remove('active');
-                document.querySelector('.main-nav').classList.remove('active');
-            }
-        });
 
         // Form validation and submission
         document.addEventListener('DOMContentLoaded', function() {

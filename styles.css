@@ -368,7 +368,7 @@ header {
 }
 
 .hero-content {
-    max-width: 800px;
+    max-width: 1000px;
     padding: 0 20px;
     position: relative;
     z-index: 1;

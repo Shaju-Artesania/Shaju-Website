@@ -502,7 +502,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(255, 0, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+    background: var(--light-color);
     z-index: 0;
 }
 
@@ -523,51 +523,28 @@ header {
     margin-bottom: 30px;
 }
 
-.about-image {
-    background-color: var(--gray-medium);
+.olga-image {
+    position: relative;
     border-radius: 12px;
-    background-image: url('Images/loreto.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
     z-index: 1;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    height: 500px;
-    min-height: 500px;
+    height: auto;
+    width: auto;
 }
 
-.about-image::after {
-    content: '';
-    position: absolute;
-    top: 30px;
-    right: -20px;
-    width: 100%;
-    height: 100%;
-    border: 3px solid var(--primary-color);
-    border-radius: 8px;
-    z-index: -1;
-}
-.about-olgaImage {
-    background-color: var(--gray-medium);
-    border-radius: 12px;
-    background-image: url('Images/FotoOlga.jpg');
-    background-size: cover;
-    background-position: center;
-    z-index: 1;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    height: 500px;
-    min-height: 500px;
-}
 .about-ourstory {
-      max-width: 600px;
   font-size: 1rem;
   line-height: 1.6;
 }
 .ourstory {
-  display: flex;
-  align-items: flex-start;    /* aligns image and paragraph to the top */
-  gap: 30px;                  /* spacing between image and paragraph */
-  padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    position: relative;
+    padding: 0px;
 }
 /* Our Story Page Specific Styles */
 
@@ -1144,6 +1121,32 @@ footer {
 }
 
 /* Page Header */
+
+.about-image {
+    background-color: var(--gray-medium);
+    border-radius: 12px;
+    background-image: url('Images/loreto.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    height: 500px;
+    min-height: 500px;
+}
+
+.about-image::after {
+    content: '';
+    position: absolute;
+    top: 30px;
+    right: -20px;
+    width: 100%;
+    height: 100%;
+    border: 3px solid var(--primary-color);
+    border-radius: 8px;
+    z-index: -1;
+}
+
 .page-header {
     background-color: var(--gray-light);
     text-align: justify;
@@ -1182,7 +1185,7 @@ footer {
 .page-header p {
     font-size: 1.2rem;
     color: var(--gray-dark);
-    max-width: 700px;
+    padding-bottom: 20px;
     margin: 0 auto;
     position: relative;
     text-align: justify;

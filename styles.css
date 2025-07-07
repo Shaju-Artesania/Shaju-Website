@@ -548,15 +548,14 @@ header {
     z-index: -1;
 }
 .about-olgaImage {
-    background-color: var(--gray-medium);
     border-radius: 12px;
     background-image: url('Images/FotoOlga.jpg');
     background-size: cover;
     background-position: center;
     z-index: 1;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    height: 500px;
-    min-height: 500px;
+    height: 300px;
+    min-height: 400px;
 }
 .about-ourstory {
       max-width: 600px;

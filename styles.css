@@ -502,7 +502,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(255, 0, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+    background: var(--light-color);
     z-index: 0;
 }
 
@@ -547,26 +547,23 @@ header {
     border-radius: 8px;
     z-index: -1;
 }
-.about-olgaImage {
-    border-radius: 12px;
-    background-image: url('Images/FotoOlga.jpg');
-    background-size: cover;
-    background-position: center;
-    z-index: 1;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    height: 300px;
-    min-height: 400px;
+.olga-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
 }
 .about-ourstory {
-      max-width: 600px;
-  font-size: 1rem;
-  line-height: 1.6;
+
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 700px;
 }
 .ourstory {
   display: flex;
   align-items: flex-start;    /* aligns image and paragraph to the top */
-  gap: 30px;                  /* spacing between image and paragraph */
-  padding: 20px;
+  gap: 50px;                  /* spacing between image and paragraph */
+
 }
 /* Our Story Page Specific Styles */
 
@@ -667,7 +664,7 @@ header {
 }
 
 .vision-box {
-    background-color: #dcd8d4;
+    background-color: #f1d9f369;
     border-left: 4px solid var(--primary-color);
 }
 
@@ -774,6 +771,7 @@ header {
 .slide-caption {
     text-align: center;
     padding: 15px;
+    height: 80px;
     background-color: var(--light-color);
     color: var(--text-color);
 }
@@ -783,13 +781,15 @@ header {
     position: absolute;
     top: 50%;
     width: auto;
+    margin-left: 120px;
     margin-top: -22px;
+    margin-right: 120px;
     padding: 16px;
     color: white;
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
+    border-radius: 30px;
     user-select: none;
     background-color: rgba(0, 0, 0, 0.3);
     z-index: 2;
@@ -797,11 +797,11 @@ header {
 
 .next {
     right: 0;
-    border-radius: 3px 0 0 3px;
+    border-radius: 30px;
 }
 
 .prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: var(--primary-color);
 }
 
 .dots-container {
@@ -1163,12 +1163,28 @@ footer {
 .page-header p {
     font-size: 1.2rem;
     color: var(--gray-dark);
-    max-width: 700px;
     margin: 0 auto;
     position: relative;
     text-align: justify;
     width: 100%;
     z-index: 1;
+    margin-bottom: 20px;
+}
+.lefty {
+    text-align: left;
+    margin-bottom: 80px;
+    margin-top: 70px;
+}
+.lefty p {
+    text-align: left;
+}
+
+.righty {
+    text-align: right;
+}
+
+.righty p {
+    text-align: right;
 }
 
 /* Contact Page Styles */
@@ -1643,7 +1659,6 @@ footer {
 }
 .filter-container {
     margin-top: 50px;
-    margin-left: 65px;
     display: flex;
     justify-content: left;
     align-items: left;

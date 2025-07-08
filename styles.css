@@ -557,12 +557,13 @@ header {
 
     font-size: 1rem;
     line-height: 1.6;
+    max-width: 700px;
 }
 .ourstory {
   display: flex;
   align-items: flex-start;    /* aligns image and paragraph to the top */
   gap: 50px;                  /* spacing between image and paragraph */
-  padding: 20px;
+
 }
 /* Our Story Page Specific Styles */
 
@@ -1187,8 +1188,20 @@ footer {
     z-index: 1;
     margin-bottom: 20px;
 }
+.lefty {
+    text-align: left;
+    margin-bottom: 80px;
+    margin-top: 70px;
+}
+.lefty p {
+    text-align: left;
+}
 
 .righty {
+    text-align: right;
+}
+
+.righty p {
     text-align: right;
 }
 

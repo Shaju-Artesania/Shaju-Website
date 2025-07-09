@@ -108,7 +108,7 @@
       }
 
       data.forEach(row => {
-        const [id, title, description, month, day, location, imageUrl] = row;
+        const [id, title, description, month, day, location, price, imageUrl] = row;
         const imgSrc = getDriveImage(imageUrl) || 'https://via.placeholder.com/400x200?text=No+Image';
 
         const card = document.createElement('div');
@@ -121,8 +121,9 @@
             </div>
             <div class="event-info">
             <div class="event-title">${title || 'Untitled Event'}</div>
-            <div class="event-location">${location || 'Location TBD'}</div>
+            <div class="event-location"> <b>Location: </b>${location || 'Location TBD'}</div>
             <div class="event-description">${description || ''}</div>
+            <div class="event-price"> <b>Price: </b>${price}</div>
             </div>
           </div>
         `;

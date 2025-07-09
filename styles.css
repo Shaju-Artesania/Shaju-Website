@@ -940,9 +940,10 @@ header {
 }
 
 .event-title {
-  font-size: 1.1rem;
-  margin-bottom: 0.5px;
-  font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-weight: 1000;
 }
 
 .event-info {

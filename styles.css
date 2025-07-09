@@ -892,17 +892,33 @@ header {
 }
 /* Upcoming Events Section */
 
+.center-title p{
+    font-size: 2rem;
+    margin: 75px;
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+.center-title p::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 15px 0 0 18px; /* Aligns the line to the left */
+}
+
 .events-grid {
   margin: 0 auto;
   display: flex;
-
   flex-direction: column;
-  gap: 20px;
+  gap: 0px;
   padding: 0 1rem 3rem 1rem;
 }
 
 .events-grid {
     padding: 80px 5%;
+    padding-top: 0px;
 }
 
 .event-content {
@@ -911,7 +927,7 @@ header {
     align-items: stretch;
     margin-bottom: 30px;
     background-color: var(--light-color);
-    border-radius: 8px;
+    border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: var(--transition);
@@ -942,7 +958,7 @@ header {
 .event-title {
     color: var(--primary-color);
     margin-bottom: 10px;
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     font-weight: 1000;
 }
 
@@ -953,7 +969,6 @@ header {
 
 .event-price {
     margin-bottom: 15px;
-    color: var(--gray-dark);
 }
 
 .view-all {

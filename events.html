@@ -46,14 +46,13 @@
       <p>Join us for inspiring creative experiences and welcoming community gatherings.</p>
     </section>
 
-    <h1 class="center-title">Upcoming Events</h1>
+    <div class="center-title"> <p>Upcoming Events</p></div>
 
     <div class="search-container">
       <input type="text" id="search-box" placeholder="Search events..." class="search-box">
     </div>
-
+    
     <div class="events-grid" id="events-grid">
-  
     </div>
 
     <div id="loading-indicator" class="loading-indicator">Loading events...</div>
@@ -64,7 +63,7 @@
   <script>
     const SHEET_ID = '1F4Ei3R4v4vrkNjczs0CodsSp6xp9pgkOpw_d5q0b6nA';
     const API_KEY = 'AIzaSyCH4dn81XRgUP7KjkTUyANicwUr0bvgiSM';
-    const SHEET_RANGE = 'Español!A2:F';
+    const SHEET_RANGE = 'English!A2:I';
 
     const eventsGrid = document.getElementById('events-grid');
     const loadingIndicator = document.getElementById('loading-indicator');
@@ -109,7 +108,7 @@
       }
 
       data.forEach(row => {
-        const [id, title, description, month, day, location, price, imageUrl] = row;
+        const [id, title, description, month, day, time, location, price, imageUrl] = row;
         const imgSrc = getDriveImage(imageUrl) || 'https://via.placeholder.com/400x200?text=No+Image';
 
         const card = document.createElement('div');
@@ -122,9 +121,10 @@
             </div>
             <div class="event-info">
             <div class="event-title">${title || 'Untitled Event'}</div>
+            <div class="event-time"> <b>Time: </b>${time || 'Time TBD'}</div>
             <div class="event-location"> <b>Location: </b>${location || 'Location TBD'}</div>
+            <div class="event-price"> <b>Price: </b>S/ ${price || 'Price TBD'}</div>
             <div class="event-description">${description || ''}</div>
-            <div class="event-price"> <b>Price: </b>${price || 'Price TBD'}</div>
             </div>
           </div>
         `;

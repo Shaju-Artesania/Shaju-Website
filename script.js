@@ -26,3 +26,4 @@ document.addEventListener('click', function(event) {
         document.querySelector('.main-nav').classList.remove('active');
     }
 });
+

@@ -92,28 +92,10 @@
 
         <section class="upcoming-events">
             <h2>Upcoming <span class="highlight">Events</span></h2>
-            <div class="event">
-                <div class="event-date">
-                    <span class="day">15</span>
-                    <span class="month">JUN</span>
-                </div>
-                <div class="event-details">
-                    <h3>Summer Craft Workshop</h3>
-                    <p>Join us for a day of creativity and learn traditional crafting techniques.</p>
-                    <a href="events.html" class="btn-text">Details →</a>
-                </div>
+            <div class="events-grid" id="events-grid">
             </div>
-            <div class="event">
-                <div class="event-date">
-                    <span class="day">22</span>
-                    <span class="month">JUL</span>
-                </div>
-                <div class="event-details">
-                    <h3>Artisan Market</h3>
-                    <p>Explore and shop from various local artisans showcasing their unique creations.</p>
-                    <a href="events.html" class="btn-text">Details →</a>
-                </div>
-            </div>
+            <div id="loading-indicator" class="loading-indicator">Loading events...</div>
+            <div id="error-message" class="error-message">Failed to load events. Please try again.</div>
             <a href="events.html" class="btn-secondary view-all">View All Events</a>
         </section>
 
@@ -167,5 +149,92 @@
     </footer>
     
     <script src="script.js"></script>
+    <script>
+        const SHEET_ID = '1F4Ei3R4v4vrkNjczs0CodsSp6xp9pgkOpw_d5q0b6nA';
+        const API_KEY = 'AIzaSyCH4dn81XRgUP7KjkTUyANicwUr0bvgiSM';
+        const SHEET_RANGE = 'English!A2:I3';
+
+        const eventsGrid = document.getElementById('events-grid');
+        const loadingIndicator = document.getElementById('loading-indicator');
+        const errorMessage = document.getElementById('error-message');
+        const searchBox = document.getElementById('search-box');
+
+        let eventsData = [];
+
+        function getDriveImage(url) {
+        if (!url) return '';
+        const match = url.match(/\/d\/(.*?)\//) || url.match(/id=([^&]+)/);
+        if (match && match[1]) return `https://drive.google.com/uc?export=view&id=${match[1]}`;
+        return url.includes('uc?export=view&id=') ? url : url;
+        }
+
+        async function fetchEvents() {
+        loadingIndicator.style.display = 'block';
+        errorMessage.style.display = 'none';
+
+        const url = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${SHEET_RANGE}?key=${API_KEY}`;
+
+        try {
+            const res = await fetch(url);
+            if (!res.ok) throw new Error(`HTTP Error ${res.status}`);
+            const data = await res.json();
+            eventsData = data.values || [];
+            renderEvents(eventsData);
+        } catch (error) {
+            console.error(error);
+            errorMessage.style.display = 'block';
+        } finally {
+            loadingIndicator.style.display = 'none';
+        }
+        }
+
+        function renderEvents(data) {
+        eventsGrid.innerHTML = '';
+
+        if (data.length === 0) {
+            eventsGrid.innerHTML = '<p class="no-events">No events found.</p>';
+            return;
+        }
+
+        data.forEach(row => {
+            const [id, title, description, month, day, time, location, price, imageUrl] = row;
+            const imgSrc = getDriveImage(imageUrl) || 'https://via.placeholder.com/400x200?text=No+Image';
+
+            const card = document.createElement('div');
+            card.className = 'event-card';
+            card.innerHTML = `
+            <div class="event-content">
+                <div class="event-date">
+                <span class="day">${day || 'Date not set'}</span>
+                <span class="month">${month || 'Date not set'}</span>
+                </div>
+                <div class="event-info">
+                <div class="event-title">${title || 'Untitled Event'}</div>
+                <div class="event-time"> <b>Time: </b>${time || 'Time TBD'}</div>
+                <div class="event-location"> <b>Location: </b>${location || 'Location TBD'}</div>
+                <div class="event-price"> <b>Price: </b>S/ ${price || 'Price TBD'}</div>
+                <div class="event-description">${description || ''}</div>
+                </div>
+            </div>
+            `;
+            eventsGrid.appendChild(card);
+        });
+        }
+
+        function filterEvents() {
+        const term = searchBox.value.toLowerCase();
+        const filtered = eventsData.filter(row => {
+            const title = (row[1] || '').toLowerCase();
+            const desc = (row[2] || '').toLowerCase();
+            return title.includes(term) || desc.includes(term);
+        });
+        renderEvents(filtered);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+        fetchEvents();
+        searchBox.addEventListener('input', filterEvents);
+        });
+    </script>
 </body>
 </html>

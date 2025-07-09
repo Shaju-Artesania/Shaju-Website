@@ -59,7 +59,7 @@
     <div id="error-message" class="error-message">Failed to load events. Please try again.</div>
   </main>
   
-
+  <script src="script.js"></script>
   <script>
     const SHEET_ID = '1F4Ei3R4v4vrkNjczs0CodsSp6xp9pgkOpw_d5q0b6nA';
     const API_KEY = 'AIzaSyCH4dn81XRgUP7KjkTUyANicwUr0bvgiSM';
@@ -108,19 +108,22 @@
       }
 
       data.forEach(row => {
-        const [id, title, description, date, location, imageUrl] = row;
+        const [id, title, description, month, day, location, imageUrl] = row;
         const imgSrc = getDriveImage(imageUrl) || 'https://via.placeholder.com/400x200?text=No+Image';
 
         const card = document.createElement('div');
         card.className = 'event-card';
         card.innerHTML = `
           <div class="event-content">
+            <div class="event-date">
+              <span class="day">${day || 'Date not set'}</span>
+              <span class="month">${month || 'Date not set'}</span>
+            </div>
+            <div class="event-info">
             <div class="event-title">${title || 'Untitled Event'}</div>
-            <div class="event-date">${date || 'Date not set'}</div>
-              <div class="day">
-              <div class="month" >
             <div class="event-location">${location || 'Location TBD'}</div>
             <div class="event-description">${description || ''}</div>
+            </div>
           </div>
         `;
         eventsGrid.appendChild(card);

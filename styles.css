@@ -893,12 +893,15 @@ header {
 /* Upcoming Events Section */
 
 .events-grid {
-  max-width: 1000px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 20px;
   padding: 0 1rem 3rem 1rem;
+}
+
+.events-grid {
+    padding: 80px 5%;
 }
 
 .event-card {
@@ -910,9 +913,6 @@ header {
   flex-direction: column;
   transition: transform 0.2s ease;
 }
-.event-card:hover{
-    transform: translateY(-3px);
-}
 
 .event-card img {
   width: 250px;
@@ -921,31 +921,58 @@ header {
   flex-shrink: 0
 }
 
-.event-content {
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 .event-title {
   font-size: 1.1rem;
   margin-bottom: 0.5px;
   font-weight: bold;
 }
-
-.event-date,
-.event-location {
-  font-size: 0.9rem;
-  color: #666;
-  margin-bottom: 5px;
+.view-all {
+    display: block;
+    margin: 30px auto 0;
+    text-align: center;
+    max-width: 200px;
+}
+.event-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 20px;
+    min-width: 100px;
 }
 
-.event-description {
-  font-size: 0.95rem;
-  margin-top: 0.8rem;
-  color: #444;
+.day {
+    font-size: 2rem;
+    font-weight: 700;
 }
+
+.month {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.event-info {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.event-info h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.event-info p {
+    margin-bottom: 15px;
+    color: var(--gray-dark);
+}
+.event-price {
+    margin-bottom: 15px;
+    color: var(--gray-dark);
+}
+
 .view-all {
     display: block;
     margin: 30px auto 0;
@@ -1538,91 +1565,6 @@ footer {
         text-align: left;
     }
 }
-/* Events & Workshops Section */
-.events-calendar {
-    padding: 80px 5%;
-}
-
-.events-calendar h3 {
-    font-size: 2rem;
-    margin-bottom: 50px;
-    text-align: left;
-    position: relative;
-}
-
-.events-calendar h3:after {
-    content: '';
-    position: absolute;
-    bottom: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 3px;
-    background-color: var(--primary-color);
-}
-
-.event-card {
-    display: flex;
-    margin-bottom: 30px;
-    background-color: var(--light-color);
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: var(--transition);
-}
-
-.event-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-}
-
-.event-date {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--primary-color);
-    color: var(--light-color);
-    padding: 20px;
-    min-width: 100px;
-}
-
-.day {
-    font-size: 2rem;
-    font-weight: 700;
-}
-
-.month {
-    font-size: 1.2rem;
-    font-weight: 500;
-}
-
-.event-info {
-    padding: 20px;
-    flex-grow: 1;
-}
-
-.event-info h4 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: var(--primary-color);
-}
-
-.event-info p {
-    margin-bottom: 15px;
-    color: var(--gray-dark);
-}
-.event-price {
-    margin-bottom: 15px;
-    color: var(--gray-dark);
-}
-
-.view-all {
-    display: block;
-    margin: 30px auto 0;
-    text-align: center;
-    max-width: 200px;
-}
 /* Collection */
 
 .collection-grid {
@@ -1673,14 +1615,16 @@ footer {
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     font-family: var(--font-primary);
+    transition: var(--transition);
 }
 .filter-btn:hover {
     background-color: var(--primary-color);
     color: var(--light-color);
-    transform: translateY(-5px);
+    transform: translateY(-1px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-
-}.collection-item {
+    transition: var(--transition);
+}
+.collection-item {
     background-color: var(--light-color);
     border-radius: 8px;
     overflow: hidden;
@@ -1690,7 +1634,7 @@ footer {
 }
 
 .collection-item:hover {
-    transform: translateY(-10px);
+    transform: translateY(-2px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
@@ -1791,7 +1735,7 @@ footer {
 }
 
 .opportunity-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-2px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 .opportunities h3 {

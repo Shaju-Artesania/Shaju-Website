@@ -1,19 +1,13 @@
 console.log("script.js is loaded");
 function changeLanguage(language, pagename) {
-    let baseName = pagename;
-
-    // Strip extensions just in case
-    if (baseName.endsWith("-es.html")) {
-        baseName = baseName.replace("-es.html", "");
-    } else if (baseName.endsWith(".html")) {
-        baseName = baseName.replace(".html", "");
-    }
-
-    // Redirect to correct language page
+    
+    // Redirect to the corresponding language version of the page
     if (language === "es") {
-        window.location.href = baseName + "-es.html";
+        const trimmedPageName = pagename.replace(".html", "");
+        window.location.href = trimmedPageName + "-es.html"; // Spanish version
     } else {
-        window.location.href = baseName + ".html";
+        const trimmedPageName = pagename.replace("-es.html", "");
+        window.location.href = trimmedPageName + ".html";; // Default to English
     }
 }
 // Navigation toggle

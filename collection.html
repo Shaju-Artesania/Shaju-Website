@@ -295,10 +295,16 @@
                 
                 // Use the getProperImageUrl function here
                 const properImageUrl = getProperImageUrl(item.image);
+                if (!properImageUrl) {
+                    console.warn(`No valid image URL for item: ${item.title}`);
+                }
+                else {
+                    console.log('Image URL for', item.title, ':', properImageUrl); // <-- Add this line
+                }
                 
                 itemElement.innerHTML = `
                     <div class="item-image"></div>
-                    <img src="${properImageUrl}" alt="${item.title}" class="product-image" onerror="this.src='https://via.placeholder.com/300x300?text=Image+Not+Found'">
+                    <img src="${properImageUrl}" alt="${item.title}" class="product-image" >
                     <div class="item-details">
                         <p>${item.title}</p>
                         <p class="item-price">${item.price ? `$${item.price}` : ''}</p>

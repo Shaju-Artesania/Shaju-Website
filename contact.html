@@ -178,7 +178,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
     };
 
     try {
-        const response = await fetch('https://shaju-contactform.netlify.app/', {
+        const response = await fetch('https://shaju-contactform.netlify.app/.netlify/functions/send-email', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

@@ -159,50 +159,6 @@
                 </div>
             </div>
         </section>
-        <script>
-document.getElementById('contactForm').addEventListener('submit', async function (e) {
-    e.preventDefault();
-
-    const form = this;
-    const submitBtn = document.getElementById('submitBtn');
-    const messageDiv = document.getElementById('form-message');
-
-    submitBtn.disabled = true;
-    messageDiv.innerText = "Sending message...";
-
-    const formData = {
-        name: form.name.value.trim(),
-        email: form.email.value.trim(),
-        subject: form.subject.value.trim(),
-        message: form.message.value.trim()
-    };
-
-    try {
-        const response = await fetch('https://shaju-contactform.netlify.app/.netlify/functions/send-email', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(formData)
-        });
-
-        const result = await response.json();
-
-        if (result.success) {
-            messageDiv.innerText = result.message;
-            form.reset();
-        } else {
-            messageDiv.innerText = result.message || 'Something went wrong.';
-        }
-    } catch (error) {
-        messageDiv.innerText = 'An error occurred while sending the message. Please try again later.';
-        console.error(error);
-    }
-
-    submitBtn.disabled = false;
-});
-</script>
-
             </main>
 
     <footer>
@@ -249,5 +205,49 @@ document.getElementById('contactForm').addEventListener('submit', async function
             <p>&copy; <span id="current-year"></span> Shaju. All Rights Reserved.</p>
         </div>
     </footer>
+<script>
+document.getElementById('contactForm').addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const form = this;
+    const submitBtn = document.getElementById('submitBtn');
+    const messageDiv = document.getElementById('form-message');
+
+    submitBtn.disabled = true;
+    messageDiv.innerText = "Sending message...";
+
+    const formData = {
+        name: form.name.value.trim(),
+        email: form.email.value.trim(),
+        subject: form.subject.value.trim(),
+        message: form.message.value.trim()
+    };
+
+    try {
+        const response = await fetch('https://shaju-contactform.netlify.app/.netlify/functions/send-email', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+            messageDiv.innerText = result.message;
+            form.reset();
+        } else {
+            messageDiv.innerText = result.message || 'Something went wrong.';
+        }
+    } catch (error) {
+        messageDiv.innerText = 'An error occurred while sending the message. Please try again later.';
+        console.error(error);
+    }
+
+    submitBtn.disabled = false;
+});
+</script>
+
 </body>
 </html>

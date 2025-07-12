@@ -351,7 +351,7 @@ header {
     justify-content: center;
     text-align: center;
     background-image: linear-gradient(rgba(255, 255, 255, 0.781), rgba(255, 255, 255, 0.814)), 
-                      url('./Images/artesania-cusco.jpg'); /* Add the image */
+                      url('./Images/chambira.jpg'); /* Add the image */
     background-size: cover;
     background-position: center;
     position: relative;
@@ -382,6 +382,7 @@ header {
     padding: 8px 16px;
     border-radius: 50px;
     font-weight: 500;
+    font-size: 2rem;
     margin-bottom: 20px;
     box-shadow: 0 4px 10px rgba(255, 0, 255, 0.3);
     font-family: 'Poppins', sans-serif;
@@ -526,7 +527,7 @@ header {
 .about-image {
     background-color: var(--gray-medium);
     border-radius: 12px;
-    background-image: url('Images/loreto.jpg');
+    background-image: url('Images/iquitos.jpg');
     background-size: cover;
     background-position: center;
     position: relative;

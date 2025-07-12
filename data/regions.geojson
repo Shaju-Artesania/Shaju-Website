@@ -1,0 +1,107 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Puerto Prado",
+        "info": "Since 2xxx, Shaju works together with the Puerto Prado community near Nauta. This community, consisting of 17 families, uses natural materials in order to supply Shaju with the most beautifull artisanal pieces."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-73.58, -4.53],
+          [-73.57, -4.53],
+          [-73.57, -4.52],
+          [-73.58, -4.52],
+          [-73.58, -4.53]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Amazonas",
+        "info": "Historic riverside district in Illinois."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-73.02417850651695,-3.5060870760586],
+          [-73.03661905495895,-3.50608707605862],
+          [ -73.03661905495895,-3.5139885202359977],
+          [-73.02417850651695,-3.5139885202359977],
+          [-73.02417850651695,-3.50608707605862]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Manacamiri",
+        "info": "Mountain retreat in Colorado."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-106.5, 38.5],
+          [-105.7, 38.5],
+          [-105.7, 39.2],
+          [-106.5, 39.2],
+          [-106.5, 38.5]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bora Community at Pebas Pucarquillo",
+        "info": "Historic riverside district in Illinois."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-90.5, 38.5],
+          [-89.5, 38.5],
+          [-89.5, 39.3],
+          [-90.5, 39.3],
+          [-90.5, 38.5]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Centro Fuerte",
+        "info": "Historic riverside district in Illinois."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-90.5, 38.5],
+          [-89.5, 38.5],
+          [-89.5, 39.3],
+          [-90.5, 39.3],
+          [-90.5, 38.5]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Santo Tomas",
+        "info": "Historic riverside district in Illinois."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-90.5, 38.5],
+          [-89.5, 38.5],
+          [-89.5, 39.3],
+          [-90.5, 39.3],
+          [-90.5, 38.5]
+        ]]
+      }
+    }
+  ]
+}

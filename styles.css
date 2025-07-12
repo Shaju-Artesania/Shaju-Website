@@ -343,6 +343,13 @@ header {
 }
 
 /* Hero Section */
+
+.hero-logo {
+    width: 400px;
+    height: auto;
+    margin-bottom: 0px;
+}
+
 .hero {
     height: 60vh;
     background-color: var(--gray-light);
@@ -389,10 +396,11 @@ header {
 }
 
 .hero-content h2 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
     color: var(--secondary-color);
     font-family: 'Poppins', sans-serif;
+    margin-top: 0px;
+    padding-top: 0px;
 }
 
 .hero-content p {
@@ -566,6 +574,53 @@ header {
   gap: 50px;                  /* spacing between image and paragraph */
 
 }
+
+/* Upcoming events index page */
+.upcoming-events {
+    background: linear-gradient(rgba(255, 255, 255, 0.781), var(--primary-color));
+}
+.upcoming-events h2 {
+    padding: 80px 5%;
+    padding-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+.upcoming-events .events-grid {
+    padding: 0 5%;
+}
+
+.upcoming-events,
+.newsletter-banner {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.upcoming-events .btn-secondary {
+    background-color: transparent;
+    color: var(--light-color);
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: var(--transition);
+    border: 2px solid var(--light-color);
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+.upcoming-events .btn-secondary:hover {
+    background-color: var(--light-color);
+    color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: var(--transition);
+    border: 2px solid var(--light-color);
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
 /* Our Story Page Specific Styles */
 
 /* Quote Section */
@@ -982,10 +1037,9 @@ header {
 /* Newsletter Banner */
 .newsletter-banner {
     background-color: var(--primary-color);
-    padding: 60px 5%;
+    padding: 100px 5%;
     text-align: center;
     color: white;
-    margin-top: 80px;
 }
 
 .newsletter-content {

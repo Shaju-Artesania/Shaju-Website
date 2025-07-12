@@ -10,11 +10,13 @@ function changeLanguage(language, pagename) {
         window.location.href = trimmedPageName + ".html";; // Default to English
     }
 }
-// Navigation toggle
-document.querySelector('.nav-toggle').addEventListener('click', function() {
-    this.classList.toggle('active');
-    document.querySelector('.main-nav').classList.toggle('active');
-});
+const navToggle = document.querySelector('.nav-toggle');
+if (navToggle) {
+    navToggle.addEventListener('click', function() {
+        this.classList.toggle('active');
+        document.querySelector('.main-nav').classList.toggle('active');
+    });
+}
 
 // Close menu when clicking outside
 document.addEventListener('click', function(event) {
@@ -27,3 +29,4 @@ document.addEventListener('click', function(event) {
     }
 });
 
+document.getElementById('current-year').textContent = new Date().getFullYear();

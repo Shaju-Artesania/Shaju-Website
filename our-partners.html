@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Partners - Shaju</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo.png-IkmbjchCYB5E5rfVFkBDm0DAoo9PPD.jpeg" alt="Shaju Logo" class="logo-image">
+        </div>
+        
+        <div class="header-right">
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="about.html" class="active">About</a>
+                        <div class="dropdown-content">
+                            <a href="our-story.html">Our Story</a>
+                            <a href="Crafted-with-devotion.html">Crafted with devotion</a>
+                            <a href="our-partners.html" class="active">Our Partners</a>
+                        </div>
+                    </li>
+                    <li><a href="collection.html">Collection</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+    
+            <!-- Language Selector -->
+            <div class="language-selector">
+                <select id="language-dropdown" onchange="changeLanguage(this.value, window.location.pathname.split('/').pop())">
+                    <option value="en" selected>English</option>
+                    <option value="es">Español</option>
+                </select>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+        <!-- MAIN CONTENT -->
+        <main>
+            <!-- Section 1: Title with paragraph under it -->
+            <section class="page-header">
+                <h2>Our <span class="highlight">Partners</span></h2>
+                <!-- flex box-->
+                <div class="ourstory">
+                    <div class="about-image2">
+                        <img src="Images/OlgaChambira.jpg" class="olga-chambira">
+                    </div>
+                    <div class="about-ourstory">
+                        <p>We work hand in hand with local communities and individuals who are rebuilding their lives after incarceration. By teaching traditional methods of gathering and processing natural resources, we not only preserve cultural heritage and promote environmental sustainability, but also provide meaningful, dignified employment to those seeking a second chance. Every piece created through Shaju carries a story of identity, resilience, and transformation.</p> 
+                        <p>Today, more than ever, we seek partners who believe in inclusive development—foundations, institutions, companies, and individuals who recognize the power of economic reintegration and cultural empowerment. With your support, we can preserve ancestral knowledge, support more artisans and reintegrating individuals, and pave new pathways toward a fairer, more sustainable future.</p> 
+                        <p>Shaju is not just a brand. It is a movement that promotes social, environmental, and economic justice by connecting traditional craftsmanship with conscious fashion. Our goal is clear: to uplift communities and individuals through creativity, dignity, and opportunity.</p> 
+                        <p>Shaju is art with a purpose. It is territory, memory, and reinvention.</p>
+                    </div>
+                </div>
+            </section>
+    
+            <!-- Section 2: Picture and paragraph side by side -->
+            <section class="about-preview">
+                <div class="about-text">
+                    <h2>Growing <span class="highlight">together</span> as a community</h2>
+                    <p>Shajú works with 22 local artisans from 6 indigenous communities</p>
+                    <li>Puerto Prado</li>
+                    <li>Amazonas</li>
+                    <li>Manacamiri</li>
+                    <li>Bora Community at Pebas Pucarquillo</li>
+                    <li>Centro Fuerte</li>
+                    <li>Santo Tomas</li>
+                    <br></br>
+                    <p>Together with these craftmen, we offer a variety of products produced from local materials. We use materials like chambira and huambe to make sure that our products reflect the soul of the Amazone Forest and help keeping our cultural heritage alive.</p>
+                </div>
+                <div class="about-image2">
+                    <img src="Images/OlgaChambira.jpg" class="olga-chambira">
+                </div>
+            </section>
+    
+            <!-- Section 3: Quote and paragraph -->
+            <section class="quote-section">
+                <div class="container">
+                    <blockquote>
+                        <p><b>"To change the world, you only need to take the first step!"</b></p>
+                        <cite><b>— Olga Vidurrizaga, Founder</b></cite>
+                    </blockquote>
+                    <p>We aim to make sure that our raw materials are protected, ensuring longevity & sustainability in each community that we work with.</p>
+                </div>
+            </section>
+                    <!-- Section 4: Two sections side by side: Mission and Action -->
+        <section class="dual-section">
+            <div class="container">
+                <div class="mission-vision-grid">
+                    <div class="mission-box">
+                        <div class="mission-content">
+                            <h3>Our <span class="highlight">Mission</span></h3>
+                            <p>To rescue and recover traditional ancestral artisanal techniques (extractive and pigmentation). We aim to value these techniques through the creation of high-quality and unique designs and pieces.</p>
+                        </div>
+                    </div>
+                    <div class="vision-box">
+                        <div class="vision-content">
+                            <h3>Our <span class="highlight">Vision</span></h3>
+                            <p>To expand our role as a company that reflects the cultural identity of the Peruvian Amazon, and provides every client with a feeling of security, quality & trust.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Slideshow -->
+        <section class="slideshow-section">
+            <div class="container">
+                <h2>Using natural <span class="highlight">materials</span> with respect for our planet</h2>
+                <div class="slideshow-container">
+                    <div class="slide fade">
+                        <img src="./Images/chambira1.jpg" alt="The Chambira palm is the main source of fiber for our products. We source it from local communities that harvest the palm in a sustainable way.">
+                        <div class="slide-caption">The Chambira palm is the main source of fiber for our products. We source it from local communities that harvest the palm in a sustainable way.</div>
+                    </div>
+                    <div class="slide fade">
+                        <img src="./Images/chambira2.jpg" alt="Chambira">
+                        <div class="slide-caption">Spinning the chambira fiber into thread is done by hand. While seated with legs stretched out, the artisan places the thin ends of a few fibers between her toes to hold them in place.</div>
+                    </div>
+                    <div class="slide fade">
+                        <img src="./Images/waaier.jpg" alt="Fan out of chambira">
+                        <div class="slide-caption">Hand fan made with huambe fiber</div>
+                    </div>
+                    <div class="slide fade">
+                        <img src="./Images/slippers.jpg" alt="Slippers out of Chambira">
+                        <div class="slide-caption">Flipflops made with chambira, seeds, and rubber (resin from the shiringa tree).</div>
+                    </div>
+
+                </div>
+                                <!-- Navigation arrows -->
+                <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                <a class="next" onclick="changeSlide(1)">&#10095;</a>
+                
+                <!-- Dots/circles -->
+                <div class="dots-container">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                </div>
+            </div>
+        </section>
+    </main>
+        <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo.png-IkmbjchCYB5E5rfVFkBDm0DAoo9PPD.jpeg" alt="Shaju Logo" class="footer-logo-image">
+                <div class="social-icons">
+                    <a href="https://instagram.com/shaju.artesania" target="_blank" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://facebook.com/shaju.artesania" target="_blank" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="collection.html">Collection</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Information</h3>
+                <ul>
+                    <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="legal-notice.html">Legal Notice</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for the latest updates and exclusive offers.</p>
+                <form>
+                    <input type="email" placeholder="Your Email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> Shaju. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+        <!-- Scripts -->
+        <script src="script.js"></script>
+        <script>
+            // Slideshow functionality
+            let slideIndex = 1;
+            showSlides(slideIndex);
+    
+            function changeSlide(n) {
+                showSlides(slideIndex += n);
+            }
+    
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+    
+            function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("slide");
+                let dots = document.getElementsByClassName("dot");
+                
+                if (n > slides.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = slides.length}
+                
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
+            }
+    
+            // Auto-advance slides every 5 seconds
+            setInterval(function() {
+                changeSlide(1);
+            }, 10000);
+        </script>
+</body>
+</html>

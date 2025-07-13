@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos - Shaju</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo.png-IkmbjchCYB5E5rfVFkBDm0DAoo9PPD.jpeg" alt="Logo Shaju" class="logo-image">
+        </div>
+        
+        <div class="header-right">
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index-es.html">Inicio</a></li>
+                    <li class="dropdown">
+                        <a href="about-es.html">Sobre Nosotros</a>
+                        <div class="dropdown-content">
+                            <a href="our-story-es.html">Nuestra Historia</a>
+                            <a href="Crafted-with-devotion-es.html">Elaborado con devoción</a>
+                        </div>
+                    </li>
+                    <li><a href="collection-es.html">Colección</a></li>
+                    <li><a href="events-es.html">Eventos</a></li>
+                    <li><a href="contact-es.html" class="active">Contacto</a></li>
+                </ul>
+            </nav>
+    
+            <!-- Selector de idioma -->
+            <div class="language-selector">
+                <select id="language-dropdown" onchange="changeLanguage(this.value, window.location.pathname.split('/').pop())">
+                    <option value="en">English</option>
+                    <option value="es" selected>Español</option>
+                </select>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo.png-IkmbjchCYB5E5rfVFkBDm0DAoo9PPD.jpeg" alt="Logo Shaju" class="footer-logo-image">
+                <p>Hecho con pasión para generar un impacto</p>
+                <div class="social-icons">
+                    <a href="https://instagram.com/shaju.artesania" target="_blank" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://facebook.com/shaju.artesania" target="_blank" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="index-es.html">Inicio</a></li>
+                    <li><a href="about-es.html">Sobre Nosotros</a></li>
+                    <li><a href="collection-es.html">Colección</a></li>
+                    <li><a href="events-es.html">Eventos</a></li>
+                    <li><a href="contact-es.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Mantente Actualizado</h3>
+                <p>Suscríbete a nuestro boletín para recibir las últimas novedades y ofertas exclusivas.</p>
+                <form>
+                    <input type="email" placeholder="Tu correo electrónico">
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Shaju. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

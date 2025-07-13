@@ -46,7 +46,7 @@
                     </li>
                     <li><a href="collection.html">Collection</a></li>
                     <li><a href="events.html">Events</a></li>
-                    <li><a href="contact.html"class="active">Contact</a>
+                    <li><a href="contact.html"class="active">Contact</a></li>
                 </ul>
             </nav>
     
@@ -65,6 +65,47 @@
         </div>
     </header>
     <main>
+      <!-- MAIN CONTENT -->
+            <!-- Section 1: Title with paragraph under it -->
+            <section class="page-header">
+                <h2>Our <span class="highlight">Partners</span></h2>
+                <!-- flex box-->
+                <div class="ourstory">
+                    <div class="about-image2">
+                        <img src="Images/OlgaChambira.jpg" class="olga-chambira">
+                    </div>
+                    <div class="about-ourstory">
+                        <p>We work hand in hand with local communities and individuals who are rebuilding their lives after incarceration. By teaching traditional methods of gathering and processing natural resources, we not only preserve cultural heritage and promote environmental sustainability, but also provide meaningful, dignified employment to those seeking a second chance. Every piece created through Shaju carries a story of identity, resilience, and transformation.</p> 
+                        <p>Today, more than ever, we seek partners who believe in inclusive development—foundations, institutions, companies, and individuals who recognize the power of economic reintegration and cultural empowerment. With your support, we can preserve ancestral knowledge, support more artisans and reintegrating individuals, and pave new pathways toward a fairer, more sustainable future.</p> 
+                        <p>Shaju is not just a brand. It is a movement that promotes social, environmental, and economic justice by connecting traditional craftsmanship with conscious fashion. Our goal is clear: to uplift communities and individuals through creativity, dignity, and opportunity.</p> 
+                        <p>Shaju is art with a purpose. It is territory, memory, and reinvention.</p>
+                    </div>
+                </div>
+            </section>
+    
+            <!-- Section: Picture and paragraph side by side -->
+            <section class="about-preview">
+                <div class="about-text">
+                    <h2>Growing <span class="highlight">together</span> as a community</h2>
+                    <p>Shajú works with 22 local artisans from 6 indigenous communities</p>
+                    <ul>
+                    <li>Puerto Prado</li>
+                    <li>Amazonas</li>
+                    <li>Manacamiri</li>
+                    <li>Bora Community at Pebas Pucarquillo</li>
+                    <li>Centro Fuerte</li>
+                    <li>Santo Tomas</li>
+                    </ul>
+                    <br></br>
+                    <p>Together with these craftmen, we offer a variety of products produced from local materials. We use materials like chambira and huambe to make sure that our products reflect the soul of the Amazone Forest and help keeping our cultural heritage alive.</p>
+                </div>
+                <div class="about-image2">
+                    <img src="Images/OlgaChambira.jpg" class="olga-chambira">
+                </div>
+            </section>
+    <div style="text-align: center">
+    <h2>Discover the <span class="highlight">communities</span> that we work together with</h2>
+    </div>
     <!-- Map Section -->
     <section class="map-section">
       <div id="map"></div>
@@ -141,5 +182,45 @@
         }).addTo(map);
       });
   </script>  
+  <!-- Scripts -->
+        <script src="script.js"></script>
+        <script>
+            // Slideshow functionality
+            let slideIndex = 1;
+            showSlides(slideIndex);
+    
+            function changeSlide(n) {
+                showSlides(slideIndex += n);
+            }
+    
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+    
+            function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("slide");
+                let dots = document.getElementsByClassName("dot");
+                
+                if (n > slides.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = slides.length}
+                
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
+            }
+    
+            // Auto-advance slides every 5 seconds
+            setInterval(function() {
+                changeSlide(1);
+            }, 10000);
+        </script>
 </body>
 </html>

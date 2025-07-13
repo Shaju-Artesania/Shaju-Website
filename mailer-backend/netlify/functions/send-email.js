@@ -20,12 +20,12 @@ exports.handler = async function(event, context) {
     },
     body: JSON.stringify({
       from: {
-        email: 'noreply@yourdomain.com', // must match your verified MailerSend domain
+        email: 'shaju-artesania.github.io', // must match your verified MailerSend domain
         name: 'Contact Form'
       },
       to: [
         {
-          email: 'yourname@example.com', // your receiving email
+          email: 'elise.hoofteer@gmail.com', // your receiving email
           name: 'You'
         }
       ],

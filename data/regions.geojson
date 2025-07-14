@@ -5,7 +5,7 @@
       "type": "Feature",
       "properties": {
         "name": "Puerto Prado",
-        "info": "Since 2xxx, Shaju works together with the Puerto Prado community near Nauta. This community, consisting of 17 families, uses natural materials in order to supply Shaju with the most beautifull artisanal pieces."
+        "info": "Since 2xxx, Shaju works together with the Puerto Prado community near Nauta. \n This community, consisting of 17 families, uses natural materials in order to supply Shaju with the most beautifull artisanal pieces."
       },
       "geometry": {
         "type": "Polygon",

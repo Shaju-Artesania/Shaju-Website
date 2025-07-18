@@ -49,7 +49,7 @@
     <div class="center-title"> <p>Próximos eventos</p></div>
 
     <div class="search-container">
-      <input type="text" id="search-box" placeholder="Search events..." class="search-box">
+      <input type="text" id="search-box" placeholder="Buscar eventos..." class="search-box">
     </div>
     
     <div class="events-grid" id="events-grid">
@@ -156,8 +156,8 @@
       }
 
       data.forEach(row => {
-        const [id, título, descripcíon, mes, dia, hora, lugar, precio, Imagen URL] = row;
-        const imgSrc = getDriveImage(imageUrl) || 'https://via.placeholder.com/400x200?text=No+Image';
+        const [id, título, descripcíon, mes, dia, hora, lugar, precio, ImagenURL] = row;
+        const imgSrc = getDriveImage(ImagenURL) || 'https://via.placeholder.com/400x200?text=No+Image';
 
         const card = document.createElement('div');
         card.className = 'event-card';

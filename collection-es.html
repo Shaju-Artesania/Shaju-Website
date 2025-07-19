@@ -9,12 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-
     <header>
         <div class="logo-container">
             <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo.png-IkmbjchCYB5E5rfVFkBDm0DAoo9PPD.jpeg" alt="Logo Shaju" class="logo-image">
         </div>
-
+        
         <div class="header-right">
             <nav class="main-nav">
                 <ul class="nav-links">
@@ -26,12 +25,13 @@
                             <a href="Crafted-with-devotion-es.html">Elaborado con devoción</a>
                         </div>
                     </li>
-                    <li><a href="collection-es.html" class="active">Colección</a></li>
+                    <li><a href="collection-es.html">Colección</a></li>
                     <li><a href="events-es.html">Eventos</a></li>
-                    <li><a href="contact-es.html">Contacto</a></li>
+                    <li><a href="contact-es.html" class="active">Contacto</a></li>
                 </ul>
             </nav>
-
+    
+            <!-- Selector de idioma -->
             <div class="language-selector">
                 <select id="language-dropdown" onchange="changeLanguage(this.value, window.location.pathname.split('/').pop())">
                     <option value="en">English</option>
@@ -49,21 +49,31 @@
     <main>
         <section class="page-header">
             <h2>Nuestra <span class="highlight">Colección</span></h2>
-            <p>Descubre la belleza y el arte de nuestras creaciones artesanales hechas a mano. Cada pieza está diseñada con esmero y elaborada cuidadosamente, combinando tradición, pasión y creatividad para ofrecerte algo verdaderamente único. Explora nuestra colección y experimenta el arte que nos distingue.</p>
+            <div class="lefty">
+                <h3><i>Cada pieza cuenta una historia</i></h3>
+                <p>Aquí, la tradición de la Amazonía peruana cobra vida a través del arte de manos sabias y corazones comprometidos. Cada creación que ves ha sido elaborada a mano no solo con dedicación, sino también con alma: pigmentos naturales, técnicas ancestrales y un profundo respeto por la tierra y la cultura que nos inspiran.</p>
+            </div>
+            <div class="righty">
+                <h3><i>No vendemos productos — tejemos recuerdos, colores y propósito.</i></h3>
+                <p>Explora nuestra colección y descubre cómo la moda puede ser una expresión de identidad, sostenibilidad y esperanza para nuestras comunidades artesanas. Porque vestir Shajú es elegir una historia auténtica: es llevar con orgullo y conciencia el alma de un territorio.</p>
+            </div>
         </section>
+        
         <section class="collection-filter">
             <div class="filter-container">
-                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn active" data-filter="all">Todo</button>
                 <div id="dynamic-filters"></div>
             </div>
-             <div class="search-container">
-                <input type="text" id="search-box" placeholder="Search collection..." class="search-box">
+            
+            <div class="search-container">
+                <input type="text" id="search-box" placeholder="Buscar colección..." class="search-box">
             </div>
         </section>
+
         <!-- Loading indicator -->
         <div id="loading-indicator" class="loading-indicator">
             <div class="spinner"></div>
-            <p>Loading collection items...</p>
+            <p>Cargando artículos de la colección...</p>
         </div>
 
         <!-- Error message container -->
@@ -73,19 +83,21 @@
         <section id="collection-grid" class="collection-grid">
             <!-- Items will be loaded from Google Sheets -->
         </section>
+
         <section class="custom-orders">
             <div class="custom-text">
-                <h3>Pedidos Personalizados</h3>
+                <h3>Pedidos personalizados</h3>
                 <p>¿Buscas algo único? Ofrecemos piezas personalizadas hechas a medida según tus preferencias. Contáctanos para conversar sobre tus ideas y necesidades.</p>
-                <a href="contact.html" class="btn">Consulta Ahora</a>
+                <a href="contact-es.html" class="btn">Consulta ahora</a>
             </div>
         </section>
     </main>
 
-    <footer>
+        <footer>
         <div class="footer-content">
             <div class="footer-logo">
-                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo.png-IkmbjchCYB5E5rfVFkBDm0DAoo9PPD.jpeg" alt="Shaju Logo" class="footer-logo-image">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo.png-IkmbjchCYB5E5rfVFkBDm0DAoo9PPD.jpeg" alt="Logo Shaju" class="footer-logo-image">
+                <p>Hecho con pasión para generar un impacto</p>
                 <div class="social-icons">
                     <a href="https://instagram.com/shaju.artesania" target="_blank" class="social-icon">
                         <i class="fab fa-instagram"></i>
@@ -98,11 +110,11 @@
             <div class="footer-links">
                 <h3>Enlaces Rápidos</h3>
                 <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="about.html">Sobre Nosostros</a></li>
-                    <li><a href="collection.html">Coleccíon</a></li>
-                    <li><a href="events.html">Eventos</a></li>
-                    <li><a href="contact.html">Contacto</a></li>
+                    <li><a href="index-es.html">Inicio</a></li>
+                    <li><a href="about-es.html">Sobre Nosotros</a></li>
+                    <li><a href="collection-es.html">Colección</a></li>
+                    <li><a href="events-es.html">Eventos</a></li>
+                    <li><a href="contact-es.html">Contacto</a></li>
                 </ul>
             </div>
             <div class="footer-links">
@@ -124,7 +136,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; © 2025 Shaju. Todos los derechos reservados.</p>
+            <p>&copy; 2025 Shaju. Todos los derechos reservados.</p>
         </div>
     </footer>
     
@@ -154,7 +166,7 @@
         
         // Global variables to store data
         let collectionItems = [];
-        let categories = new Set(['footwear']); // Default categories based on your sheet
+        let categorías = new Set(['calzado']); // Default categories based on your sheet
         
         // Function to fetch data from Google Sheets with enhanced error handling
         async function fetchSheetData() {
@@ -164,28 +176,28 @@
                 
                 // Log the URL we're fetching from (remove in production)
                 const url = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${SHEET_RANGE}?key=${API_KEY}`;
-                console.log("Fetching from URL:", url);
+                console.log("Obteniendo desde la URL:", url);
                 
                 const response = await fetch(url);
                 
                 if (!response.ok) {
-                    let errorMessage = `HTTP error! Status: ${response.status}`;
+                    let errorMessage = `HTTP error! Estado: ${response.status}`;
                     try {
                         const errorData = await response.json();
-                        console.error("API Error Response:", errorData);
+                        console.error("Respuesta de error de la API:", errorData);
                         errorMessage = `API Error: ${errorData.error.message} (${errorData.error.status})`;
                     } catch (e) {
-                        console.error("Could not parse error response:", e);
+                        console.error("No se pudo analizar la respuesta de error:", e);
                     }
                     throw new Error(errorMessage);
                 }
                 
                 const data = await response.json();
-                console.log("Data successfully fetched:", data);
+                console.log("Datos obtenidos correctamente:", data);
                 return data.values || [];
             } catch (error) {
-                console.error("Error fetching sheet data:", error);
-                showError(true, `Error loading collection: ${error.message}`);
+                console.error("Error al obtener los datos de la hoja:", error);
+                showError(true, ` Error al cargar la colección: ${error.message}`);
                 throw error;
             } finally {
                 showLoading(false);
@@ -197,16 +209,16 @@
             return rows.map(row => {
                 const item = {
                     id: row[0],
-                    title: row[1],
-                    description: row[2],
-                    image: row[3],
-                    price: row[4],
-                    category: (row[5] || 'uncategorized').toLowerCase()
+                    título: row[1],
+                    descripción: row[2],
+                    ImagenURL: row[3],
+                    precio: row[4],
+                    categoría: (row[5] || 'uncategorized').toLowerCase()
                 };
                 
                 // Add category to our set of categories
-                if (item.category) {
-                    categories.add(item.category);
+                if (item.categoría) {
+                    categorías.add(item.categoría);
                 }
                 
                 return item;
@@ -219,16 +231,16 @@
             dynamicFilters.innerHTML = ''; // Clear existing filters
             
             // Sort categories alphabetically and remove 'all' if it exists
-            const sortedCategories = Array.from(categories)
-                .filter(category => category !== 'all')
+            const sortedCategories = Array.from(categorías)
+                .filter(categoría => categoría !== 'all')
                 .sort();
             
             // Add each category as a button
-            sortedCategories.forEach(category => {
+            sortedCategories.forEach(categoría => {
                 const button = document.createElement('button');
                 button.className = 'filter-btn';
-                button.setAttribute('data-filter', category);
-                button.textContent = category.charAt(0).toUpperCase() + category.slice(1); // Capitalize first letter
+                button.setAttribute('data-filter', categoría);
+                button.textContent = categoría.charAt(0).toUpperCase() + categoría.slice(1); // Capitalize first letter
                 dynamicFilters.appendChild(button);
             });
             
@@ -288,17 +300,23 @@
             
             items.forEach(item => {
                 const itemElement = document.createElement('div');
-                itemElement.className = `collection-item ${item.category}`;
+                itemElement.className = `collection-item ${item.categoría}`;
                 
                 // Use the getProperImageUrl function here
-                const properImageUrl = getProperImageUrl(item.image);
+                const properImageUrl = getProperImageUrl(item.ImagenURL);
+                if (!properImageUrl) {
+                    console.warn(`No valid image URL for item: ${item.título}`);
+                }
+                else {
+                    console.log('Image URL for', item.título, ':', properImageUrl); // <-- Add this line
+                }
                 
                 itemElement.innerHTML = `
                     <div class="item-image"></div>
-                    <img src="${properImageUrl}" alt="${item.title}" class="product-image" onerror="this.src='https://via.placeholder.com/300x300?text=Image+Not+Found'">
+                    <img src="${properImageUrl}" alt="${item.título}" class="product-image" >
                     <div class="item-details">
-                        <p>${item.title}</p>
-                        <p class="item-price">${item.price ? `$${item.price}` : ''}</p>
+                        <p>${item.título}</p>
+                        <p class="item-price">${item.precio ? `$${item.precio}` : ''}</p>
                     </div>
                 `;
                 
@@ -312,10 +330,10 @@
             const searchTerm = document.getElementById('search-box').value.toLowerCase();
             
             const filteredItems = collectionItems.filter(item => {
-                const matchesCategory = activeFilter === 'all' || item.category === activeFilter;
+                const matchesCategory = activeFilter === 'all' || item.categoría === activeFilter;
                 const matchesSearch = 
-                    item.title.toLowerCase().includes(searchTerm) || 
-                    item.description.toLowerCase().includes(searchTerm);
+                    item.título.toLowerCase().includes(searchTerm) || 
+                    item.descripción.toLowerCase().includes(searchTerm);
                 
                 return matchesCategory && matchesSearch;
             });
@@ -353,7 +371,7 @@
                 errorElement.innerHTML = `
                     <p>${message}</p>
                     <p>Please check your API key and Sheet ID, or try again later.</p>
-                    <button onclick="initializePage()" class="retry-button">Retry</button>
+                    <button onclick="initializePage()" class="retry-button">Reintentar</button>
                 `;
             }
         }

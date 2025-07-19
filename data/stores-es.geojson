@@ -1,0 +1,34 @@
+
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hotel Europa",
+        "info": "Puedes encontrar una parte de la colección de Shaju en el Hotel Europa, ubicado en el corazón de Iquitos."
+      },
+      "geometry": {
+        "coordinates": [
+          -73.27144063133672,
+          -3.75343433727474
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mercado La Norteñita",
+        "info": "El Mercado La Norteñita es un mercado bullicioso en Iquitos, abierto todos los días de 8 a.m. a 6 p.m"
+      },
+      "geometry": {
+        "coordinates": [
+          -73.25585719727891,
+          -3.740572864754995
+        ],
+        "type": "Point"
+      }
+    }
+  ]
+}

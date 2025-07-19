@@ -3,10 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elaborado con devoción - Shaju</title>
+    <title>Elaborado con devoción - Shajú</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!--Leaflet Styles !-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<style>
+    #map {
+      width: 100%;
+      height: 600px;
+      margin: 1rem 0;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    .leaflet-tooltip {
+      background-color: rgba(0, 0, 0, 0.75);
+      color: #fff;
+      padding: 6px 10px;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
     <header>
@@ -45,6 +64,53 @@
             </div>
         </div>
     </header>
+    <main>
+      <!-- MAIN CONTENT -->
+            <!-- Section 1: Title with paragraph under it -->
+            <section class="page-header">
+                <h2>Nuestros <span class="highlight">colaboradores</span></h2>
+                <!-- flex box-->
+                <div class="ourstory">
+                    <div class="about-image2">
+                        <img src="Images/OlgaChambira.jpg" class="olga-chambira" loading="Lazy">
+                    </div>
+                    <div class="about-ourstory">
+                        <p>Trabajamos de la mano con comunidades locales y personas que están reconstruyendo sus vidas después de haber estado privadas de libertad. Al enseñar métodos tradicionales de recolección y procesamiento de recursos naturales, no solo preservamos el patrimonio cultural y promovemos la sostenibilidad ambiental, sino que también ofrecemos empleo significativo y digno a quienes buscan una segunda oportunidad. Cada pieza creada a través de Shaju lleva consigo una historia de identidad, resiliencia y transformación.</p> 
+                        <p>Hoy, más que nunca, buscamos aliados que crean en el desarrollo inclusivo: fundaciones, instituciones, empresas y personas que reconocen el poder de la reintegración económica y el empoderamiento cultural. Con tu apoyo, podemos preservar el conocimiento ancestral, apoyar a más artesanos y personas en proceso de reintegración, y abrir nuevos caminos hacia un futuro más justo y sostenible.</p> 
+                        <p>Shaju no es solo una marca. Es un movimiento que promueve la justicia social, ambiental y económica al conectar la artesanía tradicional con la moda consciente. Nuestro objetivo es claro: empoderar a comunidades y personas a través de la creatividad, la dignidad y la oportunidad.</p> 
+                        <p>Shaju es arte con propósito. Es territorio, memoria y reinvención.</p>
+                    </div>
+                </div>
+            </section>
+    
+            <!-- Section: Picture and paragraph side by side -->
+            <section class="about-preview">
+                <div class="about-text">
+                    <h2>Creciendo <span class="highlight">juntos</span>como comunidad</h2>
+                    <p>Shajú trabaja con 22 artesanos locales de 6 comunidades indígenas.</p>
+                    <ul>
+                    <li>Puerto Prado</li>
+                    <li>Amazonas</li>
+                    <li>Manacamiri</li>
+                    <li>Bora Community en Pebas Pucarquillo</li>
+                    <li>Centro Fuerte</li>
+                    <li>Santo Tomas</li>
+                    </ul>
+                    <br></br>
+                    <p>Junto a estos artesanos, ofrecemos una variedad de productos elaborados con materiales locales. Utilizamos materiales como la chambira y el huambe para asegurarnos de que nuestros productos reflejen el alma de la selva amazónica y contribuyan a mantener viva nuestra herencia cultural.</p>
+                </div>
+                <div class="about-image2">
+                    <img src="Images/OlgaChambira.jpg" class="olga-chambira" loading="Lazy">
+                </div>
+            </section>
+    <div style="text-align: center">
+    <h2>Conoce las <span class="highlight">comunidades</span>con las que colaboramos</h2>
+    </div>
+    <!-- Map Section -->
+    <section class="map-section">
+      <div id="leaflet-map"></div>
+    </section>
+  </main>
     <footer>
         <div class="footer-content">
             <div class="footer-logo">
@@ -91,5 +157,44 @@
             <p>&copy; 2025 Shaju. Todos los derechos reservados.</p>
         </div>
     </footer>
+     <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+  const map = L.map('leaflet-map').setView([-4.5, -73.5], 7);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+
+  fetch('data/regions.geojson')
+    .then(res => res.json())
+    .then(regions => {
+      L.geoJSON(regions, {
+        style: {
+          color: "#3388ff",
+          weight: 2,
+          fillColor: "#3388ff",
+          fillOpacity: 0.4
+        },
+        onEachFeature: function (feature, layer) {
+          layer.bindPopup(
+            `<div class="custom-tooltip">
+              <strong>${feature.properties.name}</strong>
+              <p>${feature.properties.info}</p>
+            </div>`,
+          );
+
+          layer.on("mouseover", function () {
+            this.setStyle({ fillOpacity: 0.7 });
+          });
+
+          layer.on("mouseout", function () {
+            this.setStyle({ fillOpacity: 0.4 });
+          });
+        }
+      }).addTo(map);
+    });
+</script>
+
 </body>
 </html>

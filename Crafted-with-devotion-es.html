@@ -166,7 +166,7 @@
     attribution: '&copy; OpenStreetMap contributors'
   }).addTo(map);
 
-  fetch('data/regions.geojson')
+  fetch('data/regions-es.geojson')
     .then(res => res.json())
     .then(regions => {
       L.geoJSON(regions, {

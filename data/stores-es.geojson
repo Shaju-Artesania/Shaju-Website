@@ -5,13 +5,14 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Hotel Europa",
-        "info": "Puedes encontrar una parte de la colección de Shaju en el Hotel Europa, ubicado en el corazón de Iquitos."
+        "name": "Nahua Store",
+        "address": "Jr Raimondi 283, Iquitos, Peru",
+        "opening_hours": "Lun-Dom 8am - 8pm"
       },
       "geometry": {
         "coordinates": [
-          -73.27144063133672,
-          -3.75343433727474
+          -73.24291973932412,
+          -3.7483738934132873
         ],
         "type": "Point"
       }
@@ -19,16 +20,33 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Mercado La Norteñita",
-        "info": "El Mercado La Norteñita es un mercado bullicioso en Iquitos, abierto todos los días de 8 a.m. a 6 p.m"
+        "name": "Hotel de Turistas",
+        "address": "Malecón Tarapaca 128, Iquitos, Peru",
+        "opening_hours": "Lun-Sab 8am - 6pm"
       },
       "geometry": {
         "coordinates": [
-          -73.25585719727891,
-          -3.740572864754995
+          -73.2431444466135,
+          -3.7501529908466864
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Oficina iPerú Iquitos",
+        "address": "JR. Napo 161 , Iquitos, Peru",
+        "opening_hours": "Lun-Sab 9am - 6pm; Dom: 9am - 1pm"
+      },
+      "geometry": {
+        "coordinates": [
+          -73.2436095460138,
+          -3.74970790945369
         ],
         "type": "Point"
       }
     }
+    
   ]
 }

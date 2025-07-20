@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
     <header>
@@ -45,94 +46,102 @@
             </div>
         </div>
     </header>
+
     <main>
-    <div style="text-align: center; margin-top: 20px; margin-bottom: 30px">
-    <h2>Encuentra las piezas artesanales de Shaju en uno de nuestros <span class="highlight">puntos de venta</span></h2>
-    </div>
-    <!-- Map Section -->
-    <section class="map-section">
-      <div id="leaflet-map"></div>
-    </section>
+        <div style="text-align: center; margin-top: 20px; margin-bottom: 30px">
+            <h2>Encuentra las piezas artesanales de Shaju en uno de nuestros <span class="highlight">puntos de venta</span></h2>
+        </div>
+
+        <!-- Map Section -->
+        <section class="map-section">
+            <div id="leaflet-map" style="height: 500px;"></div>
+        </section>
     </main>
+
     <footer>
-    <div class="footer-content">
-        <div class="footer-logo">
-            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo.png-IkmbjchCYB5E5rfVFkBDm0DAoo9PPD.jpeg" alt="Logo Shaju" class="footer-logo-image">
-            <p>Hecho con pasión para generar impacto</p>
-            <div class="social-icons">
-                <a href="https://instagram.com/shaju.artesania" target="_blank" class="social-icon">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://facebook.com/shaju.artesania" target="_blank" class="social-icon">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo.png-IkmbjchCYB5E5rfVFkBDm0DAoo9PPD.jpeg" alt="Logo Shaju" class="footer-logo-image">
+                <p>Hecho con pasión para generar impacto</p>
+                <div class="social-icons">
+                    <a href="https://instagram.com/shaju.artesania" target="_blank" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://facebook.com/shaju.artesania" target="_blank" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="footer-links">
-            <h3>Enlaces Rápidos</h3>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="about.html">Sobre Nosotros</a></li>
-                <li><a href="collection.html">Colección</a></li>
-                <li><a href="events.html">Eventos</a></li>
-                <li><a href="contact.html">Contacto</a></li>
-            </ul>
-        </div>
-        <div class="footer-links">
-                <h3>Informacíon</h3>
+            <div class="footer-links">
+                <h3>Enlaces Rápidos</h3>
                 <ul>
-                    <li><a href="terms-of-service.html"> Términos de servicio</a></li>
-                    <li><a href="privacy-policy.html"> Política de privacidad</a></li>
-                    <li><a href="legal-notice.html"> Aviso legal</a></li>
-                    <li><a href="store-locator.html"> Localizador de tiendas</a></li>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="about.html">Sobre Nosotros</a></li>
+                    <li><a href="collection.html">Colección</a></li>
+                    <li><a href="events.html">Eventos</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
                 </ul>
             </div>
-        <div class="footer-newsletter">
-            <h3>Mantente Actualizado</h3>
-            <p>Suscríbete a nuestro boletín para recibir las últimas noticias y ofertas exclusivas.</p>
-            <form>
-                <input type="email" placeholder="Tu Correo Electrónico">
-                <button type="submit">Suscribirse</button>
-            </form>
+            <div class="footer-links">
+                <h3>Información</h3>
+                <ul>
+                    <li><a href="terms-of-service.html">Términos de servicio</a></li>
+                    <li><a href="privacy-policy.html">Política de privacidad</a></li>
+                    <li><a href="legal-notice.html">Aviso legal</a></li>
+                    <li><a href="store-locator.html">Localizador de tiendas</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Mantente Actualizado</h3>
+                <p>Suscríbete a nuestro boletín para recibir las últimas noticias y ofertas exclusivas.</p>
+                <form>
+                    <input type="email" placeholder="Tu Correo Electrónico">
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
         </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2025 Shaju. Todos los Derechos Reservados.</p>
-    </div>
-</footer>
-<!-- Leaflet JS -->
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script>
-    const map = L.map('leaflet-map').setView([-3.7437, -73.2516], 12);
+        <div class="footer-bottom">
+            <p>&copy; 2025 Shaju. Todos los Derechos Reservados.</p>
+        </div>
+    </footer>
 
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; OpenStreetMap contributors'
-    }).addTo(map);
-    fetch('data/stores-es.geojson')
-      .then(res => res.json())
-      .then(stores => {
-        L.geoJSON(stores, {
-          style: {
-            color: "#3388ff",
-            weight: 2,
-            fillColor: "#3388ff",
-            fillOpacity: 0.4
-          },
-        onEachFeature: function(feature, layer) {
-            layer.bindTooltip(
-              `<strong>${feature.properties.name}</strong><br>${feature.properties.info}`,
-              { sticky: true }
-            );
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        const map = L.map('leaflet-map').setView([-3.7437, -73.2516], 12);
 
-            layer.on("mouseover", function() {
-              this.setStyle({ fillOpacity: 0.7 });
-            });
-        layer.on("mouseout", function() {
-              this.setStyle({ fillOpacity: 0.4 });
-            });
-          }
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
         }).addTo(map);
-      });
-  </script>  
+
+        fetch('data/stores-es.geojson')
+            .then(res => res.json())
+            .then(stores => {
+                L.geoJSON(stores, {
+                    style: {
+                        color: "#ff80ff",
+                        weight: 2,
+                        fillColor: "#ff80ff",
+                        fillOpacity: 0.4
+                    },
+                    onEachFeature: function (feature, layer) {
+                        const props = feature.properties;
+                        const tooltipContent = `
+                            <strong>${props.name}</strong><br>
+                            <em>${props.address}</em><br>
+                            Horario: ${props.opening_hours}
+                        `;
+                        layer.bindTooltip(tooltipContent, { sticky: true });
+
+                        layer.on("mouseover", function () {
+                            this.setStyle({ fillOpacity: 0.7 });
+                        });
+                        layer.on("mouseout", function () {
+                            this.setStyle({ fillOpacity: 0.4 });
+                        });
+                    }
+                }).addTo(map);
+            });
+    </script>
 </body>
 </html>

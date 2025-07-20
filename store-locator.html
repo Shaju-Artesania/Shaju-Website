@@ -101,38 +101,42 @@
         </div>
     </footer>
  <!-- Leaflet JS -->
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script>
-    const map = L.map('leaflet-map').setView([-3.7437, -73.2516], 12);
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        const map = L.map('leaflet-map').setView([-3.7437, -73.2516], 12);
 
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; OpenStreetMap contributors'
-    }).addTo(map);
-    fetch('data/stores.geojson')
-      .then(res => res.json())
-      .then(stores => {
-        L.geoJSON(stores, {
-          style: {
-            color: "#3388ff",
-            weight: 2,
-            fillColor: "#3388ff",
-            fillOpacity: 0.4
-          },
-        onEachFeature: function(feature, layer) {
-            layer.bindTooltip(
-              `<strong>${feature.properties.name}</strong><br>${feature.properties.info}`,
-              { sticky: true }
-            );
-
-            layer.on("mouseover", function() {
-              this.setStyle({ fillOpacity: 0.7 });
-            });
-        layer.on("mouseout", function() {
-              this.setStyle({ fillOpacity: 0.4 });
-            });
-          }
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
         }).addTo(map);
-      });
-  </script>  
+
+        fetch('data/stores-es.geojson')
+            .then(res => res.json())
+            .then(stores => {
+                L.geoJSON(stores, {
+                    style: {
+                        color: "#ff80ff",
+                        weight: 2,
+                        fillColor: "#ff80ff",
+                        fillOpacity: 0.4
+                    },
+                    onEachFeature: function (feature, layer) {
+                        const props = feature.properties;
+                        const tooltipContent = `
+                            <strong>${props.name}</strong><br>
+                            <em>${props.address}</em><br>
+                            Opening hours: ${props.opening_hours}
+                        `;
+                        layer.bindTooltip(tooltipContent, { sticky: true });
+
+                        layer.on("mouseover", function () {
+                            this.setStyle({ fillOpacity: 0.7 });
+                        });
+                        layer.on("mouseout", function () {
+                            this.setStyle({ fillOpacity: 0.4 });
+                        });
+                    }
+                }).addTo(map);
+            });
+    </script>
 </body>
 </html>

@@ -9,51 +9,43 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- ENCABEZADO -->
+    <!-- HEADER -->
     <header>
-        <div class="logo-container">
-            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo.png-IkmbjchCYB5E5rfVFkBDm0DAoo9PPD.jpeg" alt="Logo Shaju" class="logo-image">
-        </div>
-        
-        <div class="header-right">
-            <nav class="main-nav">
-                <ul class="nav-links">
-                    <li><a href="index-es.html" class="active">Inicio</a></li>
-                    <li class="dropdown">
-                        <a href="about-es.html">Sobre Nosotros</a>
-                        <div class="dropdown-content">
-                            <a href="our-story-es.html">Nuestra Historia</a>
-                            <a href="Crafted-with-devotion-es.html">Elaborado con devoción</a>
-                        </div>
-                    </li>
-                    <li><a href="collection-es.html">Colección</a></li>
-                    <li><a href="events-es.html">Eventos</a></li>
-                    <li><a href="contact-es.html">Contacto</a></li>
-                </ul>
-            </nav>
-    
-            <!-- Selector de idioma -->
-            <div class="language-selector">
-                <select id="language-dropdown" onchange="changeLanguage(this.value, window.location.pathname.split('/').pop())">
-                    <option value="en">English</option>
-                    <option value="es" selected>Español</option>
-                </select>
+    <div class="logo-container">
+      <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo.png-IkmbjchCYB5E5rfVFkBDm0DAoo9PPD.jpeg" alt="Shaju Logo" class="logo-image">
+    </div>
+    <div class="header-right">
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li class="dropdown">
+            <a href="about.html">Sobre Nosotros</a>
+            <div class="dropdown-content">
+              <a href="our-story.html">Nuestra Historia</a>
+              <a href="Crafted-with-devotion.html">Elaborado con devoción</a>
             </div>
-            <div class="nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </header>
+          </li>
+          <li><a href="collection.html">Colección</a></li>
+          <li><a href="events.html" class="active">Eventos</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <!-- Selector de idioma -->
+      <div class="language-selector">
+        <select id="language-dropdown" onchange="changeLanguage(this.value, window.location.pathname.split('/').pop())">
+          <option value="en" selected>English</option>
+          <option value="es">Español</option>
+        </select>
+      </div>
+    </div>
+  </header>
 
     <main>
         <section class="hero">
             <div class="hero-content">
-                <div class="hero-badge">Excelencia Artesanal</div>
-                <h2>Artesania hecha <span class="highlight">moda</span></h2>
-                <p>Descubre creaciones artesanales únicas que cuentan una historia de responsabilidad social y ambiental</p>
-                <a href="collection.html" class="btn">Explorar Colección</a>
+                <img src="Images/logotrans.png" alt="Shaju" class="hero-logo">
+                <p>Descubre creaciones artesanales únicas que cuentan una historia de responsabilidad social y ambiental.</p>
+                <a href="collection.html" class="btn">Explora la colecciónn</a>
             </div>
         </section>
 
@@ -62,71 +54,49 @@
             <div class="featured-items">
                 <div class="item">
                     <div class="item-img product1-img"></div>
-                    <div class="item-tag">Material 1</div>
-                    <h3>Sombrero artesanal</h3>
-                    <p>Diseñado con materiales sostenibles</p>
+                    <h3>Sombrero hecho a mano</h3>
+                    <p>Diseñado meticulosamente con materiales sostenibles.</p>
                 </div>
                 <div class="item">
                     <div class="item-img product2-img"></div>
-                    <div class="item-tag">Material 2</div>
-                    <h3>Zapatillas peruanas</h3>
-                    <p>Cada pieza hecha con esmero</p>
+                    <h3>Pantuflas peruanas</h3>
+                    <p>Cada pieza elaborada con esmero.</p>
                 </div>
                 <div class="item">
                     <div class="item-img product3-img"></div>
-                    <div class="item-tag">Material 3</div>
-                    <h3>Bolso artesanal</h3>
-                    <p>Lleva contigo un pedacito de Perú</p>
+                    <h3>Cartera de mano adorable</h3>
+                    <p>Lleva contigo un pedacito del Perú. </p>
                 </div>
-            </div>
-        </section>
-        </div>
-            <div style="text-align:center; margin-top: 40px;">
-            <button class="btn-secondary" style="padding: 12px 40px; min-width: 220px;font-size: 24px">Visit our selling points</button>
-        </div>
 
-        <section class="about-preview">
+            </div>
+            <div style="text-align:center; margin-top: 40px;">
+            <button class="btn-secondary" style="padding: 12px 30px; min-width: 220px">Visita nuestros puntos de venta.</button>
+            </div>
+
+
+     <section class="about-preview">
             <div class="about-text">
                 <h2>Nuestra <span class="highlight">Pasión</span></h2>
                 <p>En Shaju, creemos en preservar la artesanía tradicional mientras abrazamos diseños innovadores. Cada pieza cuenta una historia de dedicación, creatividad y herencia cultural.</p>
-                <a href="our-story.html" class="btn-secondary">Conoce más</a>
+                <a href="our-story.html" class="btn-secondary">Conoce más sobre nosotros.</a>
             </div>
             <div class="about-image"></div>
         </section>
 
         <section class="upcoming-events">
             <h2>Próximos <span class="highlight">Eventos</span></h2>
-            <div class="event">
-                <div class="event-date">
-                    <span class="day">15</span>
-                    <span class="month">JUN</span>
-                </div>
-                <div class="event-details">
-                    <h3>Taller de Artesanía de Verano</h3>
-                    <p>Únete a nosotros para un día de creatividad y aprende técnicas tradicionales de artesanía.</p>
-                    <a href="events.html" class="btn-text">Detalles →</a>
-                </div>
+            <div class="events-grid" id="events-grid">
             </div>
-            <div class="event">
-                <div class="event-date">
-                    <span class="day">22</span>
-                    <span class="month">JUL</span>
-                </div>
-                <div class="event-details">
-                    <h3>Mercado Artesanal</h3>
-                    <p>Explora y compra de artesanos locales mostrando sus creaciones únicas.</p>
-                    <a href="events.html" class="btn-text">Detalles →</a>
-                </div>
-            </div>
-            <a href="events.html" class="btn-secondary view-all">Ver Todos los Eventos</a>
+            <div id="loading-indicator" class="loading-indicator">Cargando eventos...</div>
+            <div id="error-message" class="error-message">No se pudieron cargar los eventos. Por favor, inténtalo de nuevo.</div>
+            <a href="events.html" class="btn-secondary view-all">Ver todos los eventos</a>
         </section>
-
         <section class="newsletter-banner">
             <div class="newsletter-content">
-                <h3>Únete a Nuestra Comunidad</h3>
+                <h3>Únete a nuestra comunidad</h3>
                 <p>Suscríbete para recibir actualizaciones sobre nuevas colecciones, eventos y ofertas exclusivas.</p>
                 <form class="newsletter-form">
-                    <input type="email" placeholder="Tu Correo Electrónico">
+                    <input type="email" placeholder="Tu dirección de correo electrónico">
                     <button type="submit" class="btn">Suscribirse</button>
                 </form>
             </div>
@@ -137,6 +107,7 @@
         <div class="footer-content">
             <div class="footer-logo">
                 <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo.png-IkmbjchCYB5E5rfVFkBDm0DAoo9PPD.jpeg" alt="Logo Shaju" class="footer-logo-image">
+                <p>Hecho con pasión para generar un impacto</p>
                 <div class="social-icons">
                     <a href="https://instagram.com/shaju.artesania" target="_blank" class="social-icon">
                         <i class="fab fa-instagram"></i>
@@ -149,11 +120,11 @@
             <div class="footer-links">
                 <h3>Enlaces Rápidos</h3>
                 <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="about.html">Sobre Nosotros</a></li>
-                    <li><a href="collection.html">Colección</a></li>
-                    <li><a href="events.html">Eventos</a></li>
-                    <li><a href="contact.html">Contacto</a></li>
+                    <li><a href="index-es.html">Inicio</a></li>
+                    <li><a href="about-es.html">Sobre Nosotros</a></li>
+                    <li><a href="collection-es.html">Colección</a></li>
+                    <li><a href="events-es.html">Eventos</a></li>
+                    <li><a href="contact-es.html">Contacto</a></li>
                 </ul>
             </div>
             <div class="footer-links">
@@ -167,18 +138,105 @@
             </div>
             <div class="footer-newsletter">
                 <h3>Mantente Actualizado</h3>
-                <p>Suscríbete a nuestro boletín para recibir las últimas noticias y ofertas exclusivas.</p>
+                <p>Suscríbete a nuestro boletín para recibir las últimas novedades y ofertas exclusivas.</p>
                 <form>
-                    <input type="email" placeholder="Tu Correo Electrónico">
+                    <input type="email" placeholder="Tu correo electrónico">
                     <button type="submit">Suscribirse</button>
                 </form>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 Shaju. Todos los Derechos Reservados.</p>
+            <p>&copy; 2025 Shaju. Todos los derechos reservados.</p>
         </div>
     </footer>
-
+    
     <script src="script.js"></script>
+    <script>
+        const SHEET_ID = '1F4Ei3R4v4vrkNjczs0CodsSp6xp9pgkOpw_d5q0b6nA';
+        const API_KEY = 'AIzaSyCH4dn81XRgUP7KjkTUyANicwUr0bvgiSM';
+        const SHEET_RANGE = 'English!A2:I3';
+
+        const eventsGrid = document.getElementById('events-grid');
+        const loadingIndicator = document.getElementById('loading-indicator');
+        const errorMessage = document.getElementById('error-message');
+        const searchBox = document.getElementById('search-box');
+
+        let eventsData = [];
+
+        function getDriveImage(url) {
+        if (!url) return '';
+        const match = url.match(/\/d\/(.*?)\//) || url.match(/id=([^&]+)/);
+        if (match && match[1]) return `https://drive.google.com/uc?export=view&id=${match[1]}`;
+        return url.includes('uc?export=view&id=') ? url : url;
+        }
+
+        async function fetchEvents() {
+        loadingIndicator.style.display = 'block';
+        errorMessage.style.display = 'none';
+
+        const url = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${SHEET_RANGE}?key=${API_KEY}`;
+
+        try {
+            const res = await fetch(url);
+            if (!res.ok) throw new Error(`HTTP Error ${res.status}`);
+            const data = await res.json();
+            eventsData = data.values || [];
+            renderEvents(eventsData);
+        } catch (error) {
+            console.error(error);
+            errorMessage.style.display = 'block';
+        } finally {
+            loadingIndicator.style.display = 'none';
+        }
+        }
+
+        function renderEvents(data) {
+        eventsGrid.innerHTML = '';
+
+        if (data.length === 0) {
+            eventsGrid.innerHTML = '<p class="no-events">No events found.</p>';
+            return;
+        }
+
+        data.forEach(row => {
+            const [id, title, description, month, day, time, location, price, imageUrl] = row;
+            const imgSrc = getDriveImage(imageUrl) || 'https://via.placeholder.com/400x200?text=No+Image';
+
+            const card = document.createElement('div');
+            card.className = 'event-card';
+            card.innerHTML = `
+            <div class="event-content">
+                <div class="event-date">
+                <span class="day">${day || 'Date not set'}</span>
+                <span class="month">${month || 'Date not set'}</span>
+                </div>
+                <div class="event-info">
+                <div class="event-title">${title || 'Untitled Event'}</div>
+                <div class="event-time"> <b>Time: </b>${time || 'Time TBD'}</div>
+                <div class="event-location"> <b>Location: </b>${location || 'Location TBD'}</div>
+                <div class="event-price"> <b>Price: </b>S/ ${price || 'Price TBD'}</div>
+                <div class="event-description">${description || ''}</div>
+                </div>
+            </div>
+            `;
+            eventsGrid.appendChild(card);
+        });
+        }
+
+        function filterEvents() {
+        const term = searchBox.value.toLowerCase();
+        const filtered = eventsData.filter(row => {
+            const title = (row[1] || '').toLowerCase();
+            const desc = (row[2] || '').toLowerCase();
+            return title.includes(term) || desc.includes(term);
+        });
+        renderEvents(filtered);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+        fetchEvents();
+        searchBox.addEventListener('input', filterEvents);
+        });
+    </script>
 </body>
 </html>

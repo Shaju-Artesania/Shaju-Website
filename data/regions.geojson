@@ -5,102 +5,92 @@
       "type": "Feature",
       "properties": {
         "name": "Puerto Prado",
-        "info": "Since 2xxx, Shaju works together with the Puerto Prado community near Nauta. \n This community, consisting of 17 families, uses natural materials in order to supply Shaju with the most beautifull artisanal pieces."
+        "info": "Located near the town of Nauta in the Peruvian Amazon, the Puerto Prado community is home to approximately 60 families, all belonging to the Kukama Kukamiria Indigenous group. This community maintains strong cultural traditions and ecological knowledge passed down through generations. \n A key initiative within Puerto Prado is the Carhuara Horno (Victoria Regia) Artisan Association, a collective of 13 women artisans dedicated to preserving traditional crafts. These women specialize in working with Chambira palm fibers, a sustainable and locally sourced material known for its durability and beauty. \n  Shaju collaborates closely with 4 artisans from this association, supporting their craft production, cultural preservation, and economic empowerment. "
+        
       },
       "geometry": {
-        "type": "Polygon",
-        "coordinates": [[
-          [-73.58, -4.53],
-          [-73.57, -4.53],
-          [-73.57, -4.52],
-          [-73.58, -4.52],
-          [-73.58, -4.53]
-        ]]
+        "type": "Point",
+        "coordinates": [
+          -4.471895949948584, -73.5379288417281
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
         "name": "Amazonas",
-        "info": "Historic riverside district in Illinois."
+        "info": "Located near Nauta, the Amazonas Community consists of approximately 176 residents across 42 families. This community is part of the rich cultural landscape of the Peruvian Amazon and maintains strong ties to traditional ecological knowledge. \n The PaliSangre Cultural Artisan Association, based in Amazonas, includes 14 women artisans who specialize in working with Chambira and Huambe fibers—both sustainably harvested from local forest resources and used in a variety of traditional and innovative handmade crafts. \n Shaju partners with 3 artisans from this community, supporting their work in cultural preservation, sustainable practices, and income generation through artisan production."
       },
       "geometry": {
-        "type": "Polygon",
-        "coordinates": [[
-          [-73.02417850651695,-3.5060870760586],
-          [-73.03661905495895,-3.50608707605862],
-          [ -73.03661905495895,-3.5139885202359977],
-          [-73.02417850651695,-3.5139885202359977],
-          [-73.02417850651695,-3.50608707605862]
-        ]]
+        "type": "Point",
+        "coordinates": [
+            -4.459532900910048, -73.52608356595162
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
         "name": "Manacamiri",
-        "info": "Mountain retreat in Colorado."
+        "info": "Located close to Iquitos, the Manacamiri Community is home to approximately 589 residents, organized into 143 families. The community is led by a woman, showcasing strong local leadership and a commitment to gender inclusion. \n The ucacuro Artisan Association includes 12 members, both women and men, who craft a wide variety of traditional and contemporary items. Their work features natural materials such as Chambira fiber—used for sandals and shicras (woven bags)—as well as banana fiber, aguaje, huingo (calabash), and coconut. \n Shaju partners with 1 artisan and 3 craftsmen from Manacamiri, supporting their sustainable practices, cultural resilience, and income generation through handcrafted products."
       },
       "geometry": {
-        "type": "Polygon",
-        "coordinates": [[
-          [-106.5, 38.5],
-          [-105.7, 38.5],
-          [-105.7, 39.2],
-          [-106.5, 39.2],
-          [-106.5, 38.5]
-        ]]
+        "type": "Point",
+        "coordinates": [
+          -3.7177747905842304, -73.2842714896055
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
         "name": "Bora Community at Pebas Pucarquillo",
-        "info": "Historic riverside district in Illinois."
+        "info": "Located near Pebas, between the traditional territories of the Bora and Huitoto peoples, the Pebas Pucaurquillo community is nestled within a region that includes a Regional Conservation Area, reflecting its deep connection to the surrounding Amazon rainforest. \n The community consists of approximately 218 residents across 58 families. It is the most remote community Shaju partners with, requiring considerable travel to reach. \n  Shaju collaborates with 4 artisans from Pebas Pucaurquillo who specialize in working with Chambira fiber, crafting beautiful and durable shicras (woven bags), shoulder bags, and hammocks—each piece rooted in the artistic and cultural traditions of the Bora people."
       },
       "geometry": {
-        "type": "Polygon",
-        "coordinates": [[
-          [-90.5, 38.5],
-          [-89.5, 38.5],
-          [-89.5, 39.3],
-          [-90.5, 39.3],
-          [-90.5, 38.5]
-        ]]
+        "type": "Point",
+        "coordinates": [
+          -3.689850315639078, -73.27641990034155
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
         "name": "Centro Fuerte",
-        "info": "Historic riverside district in Illinois."
+        "info": "..."
       },
       "geometry": {
-        "type": "Polygon",
-        "coordinates": [[
-          [-90.5, 38.5],
-          [-89.5, 38.5],
-          [-89.5, 39.3],
-          [-90.5, 39.3],
-          [-90.5, 38.5]
-        ]]
+        "type": "Point",
+        "coordinates": [
+         -3.625034422647295, -73.32755442124943
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
         "name": "Santo Tomas",
-        "info": "Historic riverside district in Illinois."
+        "info": "..."
       },
       "geometry": {
-        "type": "Polygon",
-        "coordinates": [[
-          [-90.5, 38.5],
-          [-89.5, 38.5],
-          [-89.5, 39.3],
-          [-90.5, 39.3],
-          [-90.5, 38.5]
-        ]]
+        "type": "Point",
+        "coordinates": [
+          -3.801889531694388, -73.33964752523359
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Penal San Jacinto de Iquitos",
+        "info": "Shaju also partners with the Penal San Jacinto prison in Iquitos. Through this collaboration, Shaju provides economic opportunities to inmates, allowing them to engage in meaningful, skill-based work while serving their sentences. This initiative supports rehabilitation, dignity through craftsmanship, and income generation, helping individuals prepare for reintegration into society."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.7720073507827183, -73.2727362082975
+        ]
       }
     }
   ]

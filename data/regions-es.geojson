@@ -5,102 +5,91 @@
       "type": "Feature",
       "properties": {
         "name": "Puerto Prado",
-        "info": "Desde el año 2xxx, Shaju trabaja junto con la comunidad de Puerto Prado, cerca de Nauta. \n Esta comunidad, compuesta por 17 familias, utiliza materiales naturales para suministrar a Shaju las piezas artesanales más hermosas."
+        "info": "Ubicada cerca del pueblo de Nauta, en la Amazonía peruana, la comunidad de Puerto Prado está compuesta por aproximadamente 60 familias, todas pertenecientes al pueblo indígena Kukama Kukamiria. Esta comunidad mantiene vivas sus fuertes tradiciones culturales y conocimientos ecológicos transmitidos de generación en generación. Una iniciativa clave dentro de Puerto Prado es la Asociación de Artesanas Carhuara Horno (Victoria Regia), un colectivo formado por 13 mujeres artesanas dedicadas a preservar las técnicas artesanales tradicionales. Estas mujeres se especializan en el trabajo con fibras de chambira, un material sostenible y de origen local, reconocido por su resistencia y belleza. Shajú colabora estrechamente con 4 artesanas de esta asociación, apoyando la producción artesanal, la preservación cultural y el empoderamiento económico. "
       },
       "geometry": {
-        "type": "Polygon",
-        "coordinates": [[
-          [-73.58, -4.53],
-          [-73.57, -4.53],
-          [-73.57, -4.52],
-          [-73.58, -4.52],
-          [-73.58, -4.53]
-        ]]
+        "type": "Point",
+        "coordinates": [
+          -4.471895949948584, -73.5379288417281
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
         "name": "Amazonas",
-        "info": "Distrito histórico a orillas del río en Illinois."
+        "info": "Ubicada cerca de Nauta, la Comunidad Amazonas está compuesta por aproximadamente 176 habitantes distribuidos en 42 familias. Esta comunidad forma parte del rico paisaje cultural de la Amazonía peruana y mantiene fuertes lazos con el conocimiento ecológico tradicional. La Asociación Cultural de Artesanas PaliSangre, con sede en Amazonas, está integrada por 14 mujeres artesanas que se especializan en el trabajo con fibras de chambira y huambe —ambas recolectadas de manera sostenible en los bosques locales y utilizadas para elaborar una variedad de artesanías tradicionales e innovadoras. Shajú colabora con 3 artesanas de esta comunidad, apoyando su labor en la preservación cultural, el uso de prácticas sostenibles y la generación de ingresos a través de la producción artesanal."
       },
       "geometry": {
-        "type": "Polygon",
-        "coordinates": [[
-          [-73.02417850651695,-3.5060870760586],
-          [-73.03661905495895,-3.50608707605862],
-          [ -73.03661905495895,-3.5139885202359977],
-          [-73.02417850651695,-3.5139885202359977],
-          [-73.02417850651695,-3.50608707605862]
-        ]]
+        "type": "Point",
+        "coordinates": [
+            -4.459532900910048, -73.52608356595162
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
         "name": "Manacamiri",
-        "info": "Mountain retreat in Colorado."
+        "info": "Ubicada cerca de Iquitos, la Comunidad de Manacamiri alberga aproximadamente 589 habitantes, organizados en 143 familias. La comunidad está liderada por una mujer, lo que refleja un fuerte liderazgo local y un compromiso con la inclusión de género. La Asociación de Artesanos Ucacuro está conformada por 12 miembros, tanto mujeres como hombres, quienes elaboran una amplia variedad de productos tradicionales y contemporáneos. Su trabajo utiliza materiales naturales como la fibra de chambira —empleada para confeccionar sandalias y shicras (bolsas tejidas)—, así como fibra de plátano, aguaje, huingo (mate) y coco. Shajú colabora con una artesana y tres artesanos de Manacamiri, apoyando sus prácticas sostenibles, la resiliencia cultural y la generación de ingresos mediante productos hechos a mano."
       },
       "geometry": {
-        "type": "Polygon",
-        "coordinates": [[
-          [-106.5, 38.5],
-          [-105.7, 38.5],
-          [-105.7, 39.2],
-          [-106.5, 39.2],
-          [-106.5, 38.5]
-        ]]
+        "type": "Point",
+        "coordinates": [
+          -3.7177747905842304, -73.2842714896055
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
         "name": "Bora Community at Pebas Pucarquillo",
-        "info": "Historic riverside district in Illinois."
+        "info": "Ubicada cerca de Pebas, entre los territorios tradicionales de los pueblos Bora y Huitoto, la comunidad de Pebas Pucaurquillo se encuentra en una región que incluye una Área de Conservación Regional, lo que refleja su profunda conexión con la selva amazónica que la rodea. La comunidad está compuesta por aproximadamente 218 habitantes, distribuidos en 58 familias. Es la comunidad más remota con la que trabaja Shajú, lo que requiere un viaje considerable para llegar hasta allí. Shajú colabora con 4 artesanas y artesanos de Pebas Pucaurquillo que se especializan en el trabajo con fibra de chambira, elaborando shicras (bolsas tejidas), bolsos de hombro y hamacas—cada pieza enraizada en las tradiciones artísticas y culturales del pueblo Bora."
       },
       "geometry": {
-        "type": "Polygon",
-        "coordinates": [[
-          [-90.5, 38.5],
-          [-89.5, 38.5],
-          [-89.5, 39.3],
-          [-90.5, 39.3],
-          [-90.5, 38.5]
-        ]]
+        "type": "Point",
+        "coordinates": [
+          -3.689850315639078, -73.27641990034155
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
         "name": "Centro Fuerte",
-        "info": "Historic riverside district in Illinois."
+        "info": "..."
       },
       "geometry": {
-        "type": "Polygon",
-        "coordinates": [[
-          [-90.5, 38.5],
-          [-89.5, 38.5],
-          [-89.5, 39.3],
-          [-90.5, 39.3],
-          [-90.5, 38.5]
-        ]]
+        "type": "Point",
+        "coordinates": [
+         -3.625034422647295, -73.32755442124943
+        ]
       }
     },
     {
       "type": "Feature",
       "properties": {
         "name": "Santo Tomas",
-        "info": "Historic riverside district in Illinois."
+        "info": "..."
       },
       "geometry": {
-        "type": "Polygon",
-        "coordinates": [[
-          [-90.5, 38.5],
-          [-89.5, 38.5],
-          [-89.5, 39.3],
-          [-90.5, 39.3],
-          [-90.5, 38.5]
-        ]]
+        "type": "Point",
+        "coordinates": [
+          -3.801889531694388, -73.33964752523359
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Penal San Jacinto de Iquitos",
+        "info": "Shajú también colabora con el penal San Jacinto en Iquitos. A través de esta colaboración, Shajú ofrece oportunidades económicas a las personas privadas de libertad, permitiéndoles participar en un trabajo significativo y basado en habilidades mientras cumplen sus condenas. Esta iniciativa promueve la rehabilitación, la dignidad a través de la artesanía y la generación de ingresos, ayudando a que los internos se preparen para su reinserción en la sociedad."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.7720073507827183, -73.2727362082975
+        ]
       }
     }
   ]

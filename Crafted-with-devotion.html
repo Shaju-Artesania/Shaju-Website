@@ -168,21 +168,27 @@
   }).addTo(map);
 
   fetch('data/regions.geojson')
-    .then(res => res.json())
-    .then(regions => {
-      L.geoJSON(regions, {
-        style: {
-          color: "#3388ff",
-          weight: 2,
-          fillColor: "#3388ff",
-          fillOpacity: 0.4
-        },
-        onEachFeature: function (feature, layer) {
+  .then(res => res.json())
+  .then(regions => {
+    L.geoJSON(regions, {
+      pointToLayer: function (feature, latlng) {
+        return L.marker(latlng).bindPopup(
+          `<strong>${feature.properties.name}</strong><br>${feature.properties.info}`
+        );
+      },
+      style: {
+        color: "#3388ff",
+        weight: 2,
+        fillColor: "#3388ff",
+        fillOpacity: 0.4
+      },
+      onEachFeature: function (feature, layer) {
+        if (feature.geometry.type !== "Point") {
           layer.bindPopup(
             `<div class="custom-tooltip">
               <strong>${feature.properties.name}</strong>
               <p>${feature.properties.info}</p>
-            </div>`,
+            </div>`
           );
 
           layer.on("mouseover", function () {
@@ -193,6 +199,7 @@
             this.setStyle({ fillOpacity: 0.4 });
           });
         }
-      }).addTo(map);
-    });
+      }
+    }).addTo(map);
+  });
 </script>

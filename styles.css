@@ -11,6 +11,7 @@
     --gray-dark: #888888;
     --font-primary: 'Poppins', sans-serif;
     --transition: all 0.3s ease;
+    --white: #ffffff;
 }
 
 * {
@@ -1267,7 +1268,7 @@ footer {
     text-align: justify;
     width: 100%;
     padding: 80px 5%;
-    position: relative;
+    position: center;
 }
 
 .page-header::before {

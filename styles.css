@@ -462,13 +462,13 @@ header {
     background-position: center;
 }
 .product1-img{
-    background-image: url('Images/hoed.jpg');
+    background-image: url('Images/Earring.jpg');
 }
 .product2-img{
-    background-image: url('Images/slippers.jpg');
+    background-image: url('Images/Wallets.jpg');
 }
 .product3-img{
-    background-image: url('Images/tas.jpg');
+    background-image: url('Images/Slippers.jpg');
 }
 .item-tag {
     position: absolute;

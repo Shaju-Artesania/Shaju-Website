@@ -556,9 +556,47 @@ header {
     border-radius: 8px;
     z-index: -1;
 }
+
+.about-image2 {
+    width: 3000px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+@media (max-width: 1300px) {
+  .ourstory {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    width: auto;
+  }
+
+  .about-image2 {
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-ourstory {
+    width: 100vw; /* Full viewport width */
+    max-width: 100% !important; /* Force override any inherited max-width */
+    margin: 0 !important;
+    padding: 0 16px; /* Optional safety padding */
+    box-sizing: border-box;
+    text-align: center;
+  }
+}
+
+
+
 .olga-image {
     width: 100%;
-    height: 100%;
     object-fit: cover;
     border-radius: 20px;
 }
@@ -608,7 +646,7 @@ header {
 .upcoming-events .btn-secondary {
     background-color: transparent;
     color: var(--light-color);
-    padding: 10px 20px;
+    padding: 10px 10px;
     border-radius: 4px;
     font-weight: 500;
     transition: var(--transition);
@@ -620,7 +658,7 @@ header {
 .upcoming-events .btn-secondary:hover {
     background-color: var(--light-color);
     color: var(--primary-color);
-    padding: 10px 20px;
+    padding: 10px 10px;
     border-radius: 4px;
     font-weight: 500;
     transition: var(--transition);
@@ -845,9 +883,7 @@ header {
     position: absolute;
     top: 50%;
     width: auto;
-    margin-left: 120px;
     margin-top: -22px;
-    margin-right: 120px;
     padding: 16px;
     color: white;
     font-weight: bold;

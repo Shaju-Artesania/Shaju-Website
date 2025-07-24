@@ -17,7 +17,7 @@
     <div class="header-right">
       <nav class="main-nav">
         <ul class="nav-links">
-          <li><a href="index.html">Inicio</a></li>
+          <li><a href="index.html" class="active">Inicio</a></li>
           <li class="dropdown">
             <a href="about.html">Sobre Nosotros</a>
             <div class="dropdown-content">
@@ -26,15 +26,15 @@
             </div>
           </li>
           <li><a href="collection.html">Colección</a></li>
-          <li><a href="events.html" class="active">Eventos</a></li>
+          <li><a href="events.html" >Eventos</a></li>
           <li><a href="contact.html">Contacto</a></li>
         </ul>
       </nav>
       <!-- Selector de idioma -->
       <div class="language-selector">
         <select id="language-dropdown" onchange="changeLanguage(this.value, window.location.pathname.split('/').pop())">
-          <option value="en" selected>English</option>
-          <option value="es">Español</option>
+          <option value="en" >English</option>
+          <option value="es"selected>Español</option>
         </select>
       </div>
     </div>
@@ -70,15 +70,15 @@
 
             </div>
             <div style="text-align:center; margin-top: 40px;">
-            <button class="btn-secondary" style="padding: 12px 30px; min-width: 220px">Visita nuestros puntos de venta.</button>
+            <a href="store-locator-es.html" class="btn-secondary" style="padding: 12px 30px; min-width: 220px">Visita nuestros puntos de venta</a>
             </div>
-
+        </section>
 
      <section class="about-preview">
             <div class="about-text">
                 <h2>Nuestra <span class="highlight">Pasión</span></h2>
                 <p>En Shaju, creemos en preservar la artesanía tradicional mientras abrazamos diseños innovadores. Cada pieza cuenta una historia de dedicación, creatividad y herencia cultural.</p>
-                <a href="our-story.html" class="btn-secondary">Conoce más sobre nosotros.</a>
+                <a href="our-story.html" class="btn-secondary">Conoce más sobre nosotros</a>
             </div>
             <div class="about-image"></div>
         </section>

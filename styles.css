@@ -828,7 +828,7 @@ header {
 .slideshow-section .container {
     position: relative;
     z-index: 1;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -857,16 +857,19 @@ header {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     overflow: hidden;
+    height:fit-content;
 }
 
 .slide {
+    aspect-ratio: 2 / 1; /* or 16 / 9 for widescreen */
     display: none;
     width: 100%;
 }
 
 .slide img {
     width: 100%;
-    height: auto;
+    aspect-ratio: 2 / 1; /* or 16 / 9 for widescreen */
+    object-fit: cover;
     display: block;
 }
 
@@ -876,6 +879,16 @@ header {
     height: 80px;
     background-color: var(--light-color);
     color: var(--text-color);
+}
+
+@media (max-width: 860px) {
+    .slide-caption {
+    text-align: center;
+    padding: 15px;
+    height: 130px;
+    background-color: var(--light-color);
+    color: var(--text-color);
+}
 }
 
 .prev, .next {

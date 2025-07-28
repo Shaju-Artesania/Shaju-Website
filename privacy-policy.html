@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaju - Artisanal Creations</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>/* Center the article and constrain its width */
+#privacy-policy {
+  max-width: 700px;         /* don’t let it get wider than 700px */
+  margin: 2rem auto;        /* 2rem top/bottom, auto left/right to center */
+  padding: 1.5rem;          /* inner padding */
+  background: #fafafa;      /* subtle background */
+  border-radius: 8px;       /* rounded corners */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* gentle lift */
+}
+
+/* Improve line length and spacing */
+#privacy-policy p,
+#privacy-policy ul,
+#privacy-policy li {
+  line-height: 1.65;
+  margin-bottom: 1rem;
+}
+
+/* Tweak headings */
+#privacy-policy h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+#privacy-policy h2 {
+  font-size: 1.25rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Style lists inside the article */
+#privacy-policy ul {
+  list-style: disc inside;
+}
+#privacy-policy ul li {
+  margin-left: 1rem;  /* indent bullets */
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  #privacy-policy {
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+  #privacy-policy h1 {
+    font-size: 1.5rem;
+  }
+  #privacy-policy h2 {
+    font-size: 1.1rem;
+  }
+}
+</style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="logo-container">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo.png-IkmbjchCYB5E5rfVFkBDm0DAoo9PPD.jpeg" alt="Shaju Logo" class="logo-image">
+        </div>
+        
+        <div class="header-right">
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a>
+                    <li class="dropdown">
+                        <a href="about.html">About</a>
+                        <div class="dropdown-content">
+                            <a href="our-story.html">Our story</a>
+                            <a href="Crafted-with-devotion.html">Crafted with devotion</a>
+                        </div>
+                    </li>
+                    <li><a href="collection.html">Collection</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+    
+            <!-- Language Selector -->
+            <div class="language-selector">
+                <select id="language-dropdown" onchange="changeLanguage(this.value, window.location.pathname.split('/').pop())">
+                    <option value="en" selected>English</option>
+                    <option value="es">Español</option>
+                </select>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+          
+    <main>
+        <section class="page-header">
+            <h2>Privacy <span class="highlight">Policy</span></h2>
+        </section>
+          <article id="privacy-policy">
+                <p><em>Last updated: July 28, 2025</em></p>
+
+                <p>Welcome to <strong>[Your Website Name]</strong> (“we,” “our,” “us”). Your privacy is important to us. This Privacy Policy explains how we handle your information when you visit or interact with our website.</p>
+
+                <h2>1. No Collection of Personal Data</h2>
+                <ul>
+                <li><strong>Zero Personal Data</strong><br>
+                    We do <strong>not</strong> collect, process, store, or share any personally identifiable information (PII). We never ask for your name, email address, phone number, postal address, or any other personal details.</li>
+                <li><strong>No Account or Login</strong><br>
+                    We do not offer user accounts, registration, or authentication features.</li>
+                </ul>
+
+                <h2>2. No Tracking or Analytics</h2>
+                <ul>
+                <li><strong>No Cookies for Analytics</strong><br>
+                    We do not use cookies, web beacons, or similar technologies to track your activity across our website.</li>
+                <li><strong>No Third-Party Analytics</strong><br>
+                    We do not integrate with Google Analytics, Facebook Pixel, or any other analytics services.</li>
+                </ul>
+
+                <h2>3. No Advertising or Third-Party Sharing</h2>
+                <ul>
+                <li><strong>No Targeted Advertising</strong><br>
+                    We do not display personalized ads or engage in behavioral advertising.</li>
+                <li><strong>No Data Sharing</strong><br>
+                    Since we collect no personal information, we share nothing with third parties.</li>
+                </ul>
+
+                <h2>4. External Links</h2>
+                <p>Our website may contain links to other sites. We are not responsible for the privacy practices of those external sites. Please review their privacy policies when you visit them.</p>
+
+                <h2>5. Children’s Privacy</h2>
+                <p>We do not knowingly collect information from children under 16. If you believe a child has provided personal data to us, please contact us and we will promptly delete any such information.</p>
+
+                <h2>6. Data Security</h2>
+                <p>Since we hold no personal data, there is nothing to secure. However, we follow industry-standard practices to protect the integrity of our website.</p>
+
+                <h2>7. Changes to This Policy</h2>
+                <p>We may update this Privacy Policy as needed. Any changes will be posted here with a revised “Last updated” date. Your continued use of the site constitutes acceptance of any changes.</p>
+
+                <h2>8. Contact Us</h2>
+                <p>If you have questions or concerns about this policy, please contact us at <a href="ovidurrizaga@gmail.com">ovidurrizaga@gmail.com</a>.</p>
+
+                <p>Thank you for visiting <strong>[Your Website Name]</strong>. We respect your privacy and are committed to keeping it simple: we don’t collect any of your data—ever.</p>
+            </article>
+    
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo.png-IkmbjchCYB5E5rfVFkBDm0DAoo9PPD.jpeg" alt="Shaju Logo" class="footer-logo-image">
+                <div class="social-icons">
+                    <a href="https://instagram.com/shaju.artesania" target="_blank" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://facebook.com/shaju.artesania" target="_blank" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://wa.me/c/51949917932" target="_blank" class="social-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="collection.html">Collection</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Information</h3>
+                <ul>
+                    <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="legal-notice.html">Legal Notice</a></li>
+                    <li><a href="store-locator.html"> Store Locator</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for the latest updates and exclusive offers.</p>
+                <form>
+                    <input type="email" placeholder="Your Email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> Shaju. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>

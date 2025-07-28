@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shajú – Creaciones Artesanales</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- ENCABEZADO -->
+    <header>
+        <div class="logo-container">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo.png-IkmbjchCYB5E5rfVFkBDm0DAoo9PPD.jpeg" alt="Logotipo Shajú" class="logo-image">
+        </div>
+        
+        <div class="header-right">
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index-es.html">Inicio</a></li>
+                    <li class="dropdown">
+                        <a href="about-es.html">Sobre nosotros</a>
+                        <div class="dropdown-content">
+                            <a href="our-story-es.html">Nuestra historia</a>
+                            <a href="Crafted-with-devotion-es.html">Elaborado con devoción</a>
+                        </div>
+                    </li>
+                    <li><a href="collection-es.html">Colección</a></li>
+                    <li><a href="events-es.html">Eventos</a></li>
+                    <li><a href="contact-es.html" class="active">Contacto</a></li>
+                </ul>
+            </nav>
+    
+            <!-- Selector de idioma -->
+            <div class="language-selector">
+                <select id="language-dropdown" onchange="changeLanguage(this.value, window.location.pathname.split('/').pop())">
+                    <option value="en">English</option>
+                    <option value="es" selected>Español</option>
+                </select>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+          
+    <main>
+        <section class="page-header">
+            <h2>Política de <span class="highlight">Privacidad</span></h2>
+        </section>
+        <article id="privacy-policy">
+            <p><em>Última actualización: 28 de julio de 2025</em></p>
+
+            <p>Bienvenido a <strong>[Nombre de tu sitio]</strong> (“nosotros”, “nuestro”). Tu privacidad es importante para nosotros. Esta Política de Privacidad explica cómo tratamos tu información cuando visitas o interactúas con nuestro sitio web.</p>
+
+            <h2>1. No recopilamos datos personales</h2>
+            <ul>
+                <li><strong>Sin datos personales</strong><br>
+                    No recopilamos, procesamos, almacenamos ni compartimos ningún dato personal identificable (PII). Nunca solicitamos tu nombre, correo electrónico, teléfono, dirección postal ni ningún otro dato personal.</li>
+                <li><strong>Sin cuentas de usuario</strong><br>
+                    No ofrecemos registro de usuarios ni funcionalidades de inicio de sesión.</li>
+            </ul>
+
+            <h2>2. Sin seguimiento ni analítica</h2>
+            <ul>
+                <li><strong>Sin cookies para analítica</strong><br>
+                    No utilizamos cookies, balizas web ni tecnologías similares para rastrear tu actividad en nuestro sitio.</li>
+                <li><strong>Sin herramientas de terceros</strong><br>
+                    No integramos Google Analytics, Facebook Pixel ni ningún otro servicio de analítica.</li>
+            </ul>
+
+            <h2>3. Sin publicidad ni compartición de datos</h2>
+            <ul>
+                <li><strong>Sin publicidad personalizada</strong><br>
+                    No mostramos anuncios personalizados ni llevamos a cabo publicidad basada en comportamiento.</li>
+                <li><strong>Sin compartición de datos</strong><br>
+                    Dado que no recopilamos datos personales, no compartimos nada con terceros.</li>
+            </ul>
+
+            <h2>4. Enlaces externos</h2>
+            <p>Nuestro sitio puede contener enlaces a otros portales. No somos responsables por las prácticas de privacidad de esos sitios. Te recomendamos revisar sus políticas de privacidad.</p>
+
+            <h2>5. Privacidad infantil</h2>
+            <p>No recopilamos conscientemente información de menores de 16 años. Si crees que un menor nos ha proporcionado datos personales, contáctanos y los eliminaremos.</p>
+
+            <h2>6. Seguridad de datos</h2>
+            <p>Como no almacenamos datos personales, no hay datos que asegurar. Aun así, seguimos prácticas estándar para proteger la integridad de nuestro sitio.</p>
+
+            <h2>7. Cambios en esta política</h2>
+            <p>Podemos actualizar esta Política de Privacidad cuando sea necesario. Cualquier cambio será publicado aquí con la fecha de “Última actualización” revisada. Tu uso continuo del sitio implica aceptación de los cambios.</p>
+
+            <h2>8. Contáctanos</h2>
+            <p>Si tienes preguntas o inquietudes, por favor escríbenos a <a href="mailto: ovidurrizaga@gmail.com">ovidurrizaga@gmail.com</a>.</p>
+
+            <p>Gracias por visitar <strong>[Nombre de tu sitio]</strong>. Respetamos tu privacidad y mantenemos las cosas simples: nunca recopilamos tus datos.</p>
+        </article>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo.png-IkmbjchCYB5E5rfVFkBDm0DAoo9PPD.jpeg" alt="Logotipo Shajú" class="footer-logo-image">
+                <div class="social-icons">
+                    <a href="https://instagram.com/shaju.artesania" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://facebook.com/shaju.artesania" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/c/51949917932" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="index-es.html">Inicio</a></li>
+                    <li><a href="about-es.html">Sobre nosotros</a></li>
+                    <li><a href="collection-es.html">Colección</a></li>
+                    <li><a href="events-es.html">Eventos</a></li>
+                    <li><a href="contact-es.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Información</h3>
+                <ul>
+                    <li><a href="terms-of-service-es.html">Términos de servicio</a></li>
+                    <li><a href="privacy-policy-es.html">Política de Privacidad</a></li>
+                    <li><a href="legal-notice-es.html">Aviso Legal</a></li>
+                    <li><a href="store-locator-es.html">Localizador de Tiendas</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Mantente actualizado</h3>
+                <p>Suscríbete a nuestro boletín para novedades y ofertas exclusivas.</p>
+                <form>
+                    <input type="email" placeholder="Tu correo electrónico">
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> Shajú. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1708,6 +1708,7 @@ footer {
     padding: 40px 5%;
     font-weight: normal;
     margin-bottom: 50px;
+    
 }
 
 .custom-orders {
@@ -1722,17 +1723,22 @@ footer {
 .custom-orders h3 {
     position: relative;
     font-size: 1.5rem;
-    margin-top: 1px;
+    margin-top: 50px;
     margin-bottom: 20px;
     color: var(--primary-color);
     font-family: 'Poppins', sans-serif;
 }
 .custom-orders p {
     font-size: 1.2rem;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     color: var(--text-color);
     font-family: 'Poppins', sans-serif;
 }
+
+.order-whatsapp {
+    text-align: right;
+}
+
 .filter-container {
     margin-top: 50px;
     display: flex;
@@ -1765,26 +1771,73 @@ footer {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: var(--transition);
     position: relative;
+    overflow: visible;
 }
+
+
+.collection-item .item-extra {
+  display: none;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  padding: 1rem;
+  border: 1px solid #eee;
+  border-top: none;              /* no double-border at the seam */
+  border-radius: 0 0 8px 8px;  /* only round bottom corners */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+.collection-item.expanded {
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  transition: var(--transition);
+}
+
+.collection-item.expanded .item-extra {
+  display: block;              /* show when expanded */
+  position: absolute;
+  top: 100%;
+  left: -1px; /* align with the item */
+  width: 100.65%;
+  z-index: 10;    
+  transition: var(--transition);           /* ensure it covers all other items */
+}
+
+.collection-item .item-extra p {
+    color: var(--gray-dark);
+    margin-top: 5px;
+}   
 
 .collection-item:hover {
     transform: translateY(-2px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);         /* show when expanded */
+    z-index: 9999;
+    transition: var(--transition);
+}
+
+.collection-item.expanded:hover {
+  transform: none !important;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important; /* no hover effect when expanded */
 }
 
 .item-details p {
     color: var(--gray-dark);
-    padding: 0 10px 10px;
-    text-align: center;
+    padding: 0 5px 5px;
+    text-align: left;
 }
 .product-image {
-    width: 350px; /* Set the desired width */
+    width: 100%; /* Set the desired width */
     height: 350px; /* Set the desired height */
     object-fit: cover; /* Crop the image to fit the dimensions */
-    border-radius: 5px; /* Optional: Add rounded corners */
+    border-radius: 5px 5px 0 0; /* Optional: Add rounded corners */
     display: block; /* Ensure proper alignment */
     margin: 0 auto; /* Center the image horizontally */
 }
+
+
 .workshop-info {
     background-color: var(--gray-light);
     text-align: justify;

@@ -86,6 +86,17 @@
         </section>
 
         <section class="custom-orders">
+            <div class="find-retailers">
+                <h3>Find Retailers</h3>
+                <p>Discover our collection in stores near you. Visit our store locator to find retailers that carry Shaju products.</p>
+                <a href="store-locator.html" class="btn">Store Locator</a>
+            </div>  
+            <div class="order-whatsapp">
+                <h3>Order via WhatsApp</h3>
+                <p>Prefer to order directly? Contact us on WhatsApp for personalized assistance and to place your order.</p>
+                <a href="https://wa.me/c/51949917932" class="btn">Order Now</a>
+            </div>
+
             <div class="custom-text">
                 <h3>Custom Orders</h3>
                 <p>Looking for something unique? We offer custom-made pieces tailored to your preferences. Contact us to discuss your ideas and requirements.</p>
@@ -145,6 +156,10 @@
     
     <script src="script.js"></script>
     <script>
+        // slideshow state
+        let slideshowInterval = null;
+        let slideshowImgEl    = null;
+        let slideshowImageUrls = [];
         // Navigation toggle
         document.querySelector('.nav-toggle').addEventListener('click', function() {
             this.classList.toggle('active');
@@ -165,7 +180,7 @@
         // Google Sheets Integration
         const SHEET_ID = '1sr8KmlhHWJGA5Jq747ORQdy888wD3YPrHKrbjRRNgkM'; // Sheet ID
         const API_KEY = 'AIzaSyAjRUZbE-kmkSTmAkA7Adq4GPJeinkEZIE';   //API Key
-        const SHEET_RANGE = 'English!A2:F'; // Range
+        const SHEET_RANGE = 'English!A2:I'; // Range
         
         // Global variables to store data
         let collectionItems = [];
@@ -216,7 +231,10 @@
                     description: row[2],
                     image: row[3],
                     price: row[4],
-                    category: (row[5] || 'uncategorized').toLowerCase()
+                    category: (row[5] || 'uncategorized').toLowerCase(),
+                    description2: row[6],
+                    image2: row[7],
+                    image3: row[8]
                 };
                 
                 // Add category to our set of categories
@@ -288,44 +306,90 @@
         }
 
         // Update the renderCollection function to use the new function
+        // ...existing code...
         function renderCollection(items) {
             const collectionGrid = document.getElementById('collection-grid');
             collectionGrid.innerHTML = '';
-            
+
             if (items.length === 0) {
                 collectionGrid.innerHTML = `
-                    <div class="no-items-message">
-                        No items found matching your criteria.
-                    </div>
+                <div class="no-items-message">
+                    No items found matching your criteria.
+                </div>
                 `;
                 return;
             }
-            
+
             items.forEach(item => {
+                const properImageUrl = getProperImageUrl(item.image);
+
+                // build the card
                 const itemElement = document.createElement('div');
                 itemElement.className = `collection-item ${item.category}`;
-                
-                // Use the getProperImageUrl function here
-                const properImageUrl = getProperImageUrl(item.image);
-                if (!properImageUrl) {
-                    console.warn(`No valid image URL for item: ${item.title}`);
-                }
-                else {
-                    console.log('Image URL for', item.title, ':', properImageUrl); // <-- Add this line
-                }
-                
                 itemElement.innerHTML = `
-                    <div class="item-image"></div>
-                    <img src="${properImageUrl}" alt="${item.title}" class="product-image" >
-                    <div class="item-details">
-                        <p>${item.title}</p>
-                        <p class="item-price">${item.price ? `$${item.price}` : ''}</p>
-                    </div>
+                <img src="${properImageUrl}" alt="${item.title}" class="product-image">
+                <div class="item-details">
+                    <p class="item-title">${item.title}</p>
+                    <p class="item-price">${item.price ? `$${item.price}` : ''}</p>
+                </div>
+                <div class="item-extra">
+                    <p><strong>Description:</strong> ${item.description2}</p>
+                </div>
                 `;
-                
+
+                const extraPanel = itemElement.querySelector('.item-extra');
+
+            itemElement.addEventListener('click', () => {
+                const allCards      = document.querySelectorAll('.collection-item');
+                const customSection = document.querySelector('.custom-orders');
+
+                // 1) stop any running slideshow & collapse all cards
+                if (slideshowInterval) {
+                    clearInterval(slideshowInterval);
+                    slideshowInterval = null;
+                    if (slideshowImgEl && slideshowImageUrls.length) {
+                    slideshowImgEl.src = slideshowImageUrls[0];
+                    }
+                }
+                allCards.forEach(c => c.classList.remove('expanded'));
+                if (customSection) customSection.style.marginTop = '';
+
+                // 2) toggle this one open
+                const opening = !itemElement.classList.contains('expanded');
+                if (opening) {
+                    itemElement.classList.add('expanded');
+
+                    // 3) measure panel height
+                    const h = extraPanel.offsetHeight;
+
+                    // 4) push only the section *below* the grid
+                    if (customSection) {
+                    customSection.style.marginTop = `${h}px`;
+                    }
+
+                    // 5) (optional) restart slideshow on this card
+                    const imgEl = itemElement.querySelector('.product-image');
+                    const urls  = [item.image, item.image2, item.image3]
+                                .map(getProperImageUrl)
+                                .filter(Boolean);
+                    if (urls.length > 1) {
+                    let idx = 0;
+                    slideshowImgEl     = imgEl;
+                    slideshowImageUrls = urls;
+                    slideshowInterval  = setInterval(() => {
+                        idx = (idx + 1) % urls.length;
+                        imgEl.src = urls[idx];
+                    }, 2000);
+                    }
+                }
+            });
+
+
                 collectionGrid.appendChild(itemElement);
             });
         }
+
+
         
         // Function to filter items based on category and search
         function filterItems() {
@@ -411,9 +475,16 @@
     
     <style>
         .item-price {
-            color: var(--primary-color);
+            color: var(--text-color);
             font-weight: 600;
-            margin-top: 5px;
+            margin-top: 0px;
+            text-align: left;
+        }
+        .item-title {
+            color: var(--text-color);
+            margin-top: 10px;
+            font-size: 1rem;
+            margin-bottom: 0px;
         }
         
         .loading-indicator {
@@ -423,6 +494,11 @@
             justify-content: center;
             padding: 2rem;
             display: none;
+        }
+        .item-details {
+            text-align: left;
+            padding: 1rem;
+            align-items: left;
         }
         
         .spinner {

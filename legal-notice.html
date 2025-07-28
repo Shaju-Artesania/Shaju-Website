@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Legal Notice – Shajú</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    #legal-notice {
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      background: #fafafa;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    #legal-notice h2 {
+      font-size: 1.25rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+    #legal-notice p,
+    #legal-notice ul,
+    #legal-notice li {
+      line-height: 1.65;
+      margin-bottom: 1rem;
+    }
+    #legal-notice ul {
+      list-style: disc inside;
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="logo-container">
+      <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo.png-IkmbjchCYB5E5rfVFkBDm0DAoo9PPD.jpeg"
+           alt="Shajú Logo" class="logo-image">
+    </div>
+    <div class="header-right">
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="about.html">About</a>
+            <div class="dropdown-content">
+              <a href="our-story.html">Our story</a>
+              <a href="Crafted-with-devotion.html">Crafted with devotion</a>
+            </div>
+          </li>
+          <li><a href="collection.html">Collection</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="language-selector">
+        <select id="language-dropdown"
+                onchange="changeLanguage(this.value, window.location.pathname.split('/').pop())">
+          <option value="en" selected>English</option>
+          <option value="es">Español</option>
+        </select>
+      </div>
+      <div class="nav-toggle"><span></span><span></span><span></span></div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <section class="page-header">
+      <h2>Legal <span class="highlight">Notice</span></h2>
+    </section>
+
+    <article id="legal-notice">
+      <p><em>Last updated: July 28, 2025</em></p>
+
+      <h2>1. Publisher</h2>
+      <p><strong>Shajú Artesanía S.A.</strong><br>
+      123 Amazon Ave, Lima, Peru<br>
+      Registered in the Commercial Registry of Lima, RUC 20301234567</p>
+
+      <h2>2. Responsible Party</h2>
+      <p>Site Director: María García<br>
+      Contact: <a href="mailto:ovidurrizaga@gmail.com">ovidurrizaga@gmail.com</a><br>
+      Phone: +51 9 1234 5678</p>
+
+      <h2>3. Hosting Provider</h2>
+      <p>Hosted by Vercel Inc.<br>
+      340 S Lemon Ave #4133, Walnut, CA 91789, USA<br>
+      <a href="https://vercel.com/legal/privacy-policy" target="_blank">Vercel Privacy Policy</a></p>
+
+      <h2>4. Intellectual Property</h2>
+      <p>All content on this Site—including text, images, logos, designs, and code—is owned or licensed by Shajú Artesanía S.A. and protected by international copyright and trademark laws. Unauthorized use, reproduction, or distribution is prohibited.</p>
+
+      <h2>5. Disclaimer</h2>
+      <p>The information on this Site is provided “as is” for general informational purposes only. Shajú Artesanía S.A. makes no warranties, express or implied, regarding accuracy or completeness.</p>
+
+      <h2>6. Limitation of Liability</h2>
+      <p>In no event shall Shajú Artesanía S.A. be liable for any indirect, incidental, or consequential damages arising from your use of the Site or reliance on its content.</p>
+
+      <h2>7. Applicable Law & Jurisdiction</h2>
+      <p>These terms are governed by the laws of the Republic of Peru. Any dispute shall be subject to the exclusive jurisdiction of the courts of Lima, Peru.</p>
+
+      <h2>8. Contact Information</h2>
+      <p>For legal inquiries, please contact us at:<br>
+      <a href="mailto: ovidurrizaga@gmail.com">ovidurrizaga@gmail.com</a></p>
+    </article>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo.png-IkmbjchCYB5E5rfVFkBDm0DAoo9PPD.jpeg"
+             alt="Shajú Logo" class="footer-logo-image">
+        <div class="social-icons">
+          <a href="https://instagram.com/shaju.artesania" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://facebook.com/shaju.artesania" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://wa.me/c/51949917932" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="collection.html">Collection</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h3>Information</h3>
+        <ul>
+          <li><a href="terms-of-service.html">Terms of Service</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="legal-notice.html" >Legal Notice</a></li>
+          <li><a href="store-locator.html">Store Locator</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter">
+        <h3>Stay Updated</h3>
+        <p>Subscribe to our newsletter for the latest updates and exclusive offers.</p>
+        <form>
+          <input type="email" placeholder="Your Email">
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="current-year"></span> Shajú Artesanía S.A. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

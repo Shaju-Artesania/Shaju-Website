@@ -116,29 +116,33 @@
             .then(res => res.json())
             .then(stores => {
                 L.geoJSON(stores, {
-                    style: {
-                        color: "#ff80ff",
-                        weight: 2,
-                        fillColor: "#ff80ff",
-                        fillOpacity: 0.4
-                    },
+                pointToLayer: function (feature, latlng) {
+                return L.circleMarker(latlng, {
+                radius: 8,
+                fillColor: "#ff80ff",
+                color: "#ff00ff",
+                weight: 1,
+                opacity: 1,
+                fillOpacity: 0.4
+                });
+                },
                     onEachFeature: function (feature, layer) {
-                        const props = feature.properties;
-                        const tooltipContent = `
-                            <strong>${props.name}</strong><br>
-                            <em>${props.address}</em><br>
-                            Opening hours: ${props.opening_hours}
-                        `;
-                        layer.bindTooltip(tooltipContent, { sticky: true });
+        const props = feature.properties;
+        const tooltipContent = `
+            <strong>${props.name}</strong><br>
+            <em>${props.address}</em><br>
+            Opening hours: ${props.opening_hours}
+        `;
+        layer.bindTooltip(tooltipContent, { sticky: true });
 
-                        layer.on("mouseover", function () {
-                            this.setStyle({ fillOpacity: 0.7 });
-                        });
-                        layer.on("mouseout", function () {
-                            this.setStyle({ fillOpacity: 0.4 });
-                        });
-                    }
-                }).addTo(map);
+        layer.on("mouseover", function () {
+            this.setStyle({ fillOpacity: 0.7 });
+        });
+        layer.on("mouseout", function () {
+            this.setStyle({ fillOpacity: 0.4 });
+        });
+        }
+        }).addTo(map);
             });
     </script>
 </body>

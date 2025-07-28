@@ -613,13 +613,58 @@ header {
 
 }
 /* Our Partners Page */
-.olga-chambira {
-    width: 5000px;
-    height: 730px;
-    object-fit: cover;
-    border-radius: 20px;
+.ourdevotion{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem; /* space between image and text */
+    align-items: flex-start;
+    flex-wrap: wrap; /* ensure it stacks on small screens */
 }
-
+.image-ourdevotion{
+    flex: 1 1 300px; /* grows/shrinks with a min width */
+}
+.about-ourdevotion{
+    flex: 2 1 500px; /* more space for text */
+}
+.olga-chambira{
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* optional: make image corners rounded */
+}
+@media (max-width: 768px) {
+    .ourdevotion {
+        flex-direction: column;
+    }
+}
+.about-communities {
+    display: flex;
+    gap: 2rem;
+    align-items: stretch;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    margin-right: 2rem;
+}
+.about-communitiestext {
+    flex: 1; /* Text area takes more space */
+    margin-left: 2rem;
+}
+.image-communities {
+    flex: 1; /* Image area takes less space */
+    display: flex;
+    align-items: stretch;
+}
+.CentroFuerte {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* fills the container without distortion */
+    border-radius: 8px;
+    display: block;
+}
+@media (max-width: 768px) {
+    .about-communities {
+        flex-direction: column;
+    }
+}
 
 /* Upcoming events index page */
 .upcoming-events {

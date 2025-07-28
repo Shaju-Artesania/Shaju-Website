@@ -85,10 +85,21 @@
         </section>
 
         <section class="custom-orders">
+            <div class="find-retailers">
+                <h3>Encuentra minoristas</h3>
+                <p>Descubre nuestra colección en tiendas cercanas a ti. Visita nuestro localizador de tiendas para encontrar puntos de venta que ofrezcan productos Shajú.</p>
+                <a href="store-locator.html" class="btn">Localizador de tiendas</a>
+            </div>  
+            <div class="order-whatsapp">
+                <h3>Ordenar vía WhatsApp</h3>
+                <p>¿Prefieres ordenar directamente? Contáctanos por WhatsApp para asistencia personalizada y realiza tu pedido.</p>
+                <a href="https://wa.me/c/51949917932" class="btn">Ordenar ahora</a>
+            </div>
+
             <div class="custom-text">
                 <h3>Pedidos personalizados</h3>
-                <p>¿Buscas algo único? Ofrecemos piezas personalizadas hechas a medida según tus preferencias. Contáctanos para conversar sobre tus ideas y necesidades.</p>
-                <a href="contact-es.html" class="btn">Consulta ahora</a>
+                <p>¿Buscas algo único? Ofrecemos piezas hechas a medida según tus preferencias. Contáctanos para discutir tus ideas y requisitos.</p>
+                <a href="contact.html" class="btn">Consultar ahora</a>
             </div>
         </section>
     </main>
@@ -145,6 +156,10 @@
     
     <script src="script.js"></script>
     <script>
+                // slideshow state
+        let slideshowInterval = null;
+        let slideshowImgEl    = null;
+        let slideshowImageUrls = [];
         // Navigation toggle
         document.querySelector('.nav-toggle').addEventListener('click', function() {
             this.classList.toggle('active');
@@ -165,7 +180,7 @@
         // Google Sheets Integration
         const SHEET_ID = '1sr8KmlhHWJGA5Jq747ORQdy888wD3YPrHKrbjRRNgkM'; // Sheet ID
         const API_KEY = 'AIzaSyAjRUZbE-kmkSTmAkA7Adq4GPJeinkEZIE';   //API Key
-        const SHEET_RANGE = 'Español!A2:F'; // Range
+        const SHEET_RANGE = 'Español!A2:I'; // Range
         
         // Global variables to store data
         let collectionItems = [];
@@ -216,7 +231,10 @@
                     descripción: row[2],
                     ImagenURL: row[3],
                     precio: row[4],
-                    categoría: (row[5] || 'uncategorized').toLowerCase()
+                    categoría: (row[5] || 'uncategorized').toLowerCase(),
+                    description2: row[6],
+                    imagen2: row[7],
+                    imagen3: row[8]
                 };
                 
                 // Add category to our set of categories
@@ -291,57 +309,103 @@
         function renderCollection(items) {
             const collectionGrid = document.getElementById('collection-grid');
             collectionGrid.innerHTML = '';
-            
+
             if (items.length === 0) {
                 collectionGrid.innerHTML = `
-                    <div class="no-items-message">
-                        No items found matching your criteria.
-                    </div>
+                <div class="no-items-message">
+                    No items found matching your criteria.
+                </div>
                 `;
                 return;
             }
-            
+
             items.forEach(item => {
+                const properImageUrl = getProperImageUrl(item.ImagenURL);
+
+                // build the card
                 const itemElement = document.createElement('div');
                 itemElement.className = `collection-item ${item.categoría}`;
-                
-                // Use the getProperImageUrl function here
-                const properImageUrl = getProperImageUrl(item.ImagenURL);
-                if (!properImageUrl) {
-                    console.warn(`No valid image URL for item: ${item.título}`);
-                }
-                else {
-                    console.log('Image URL for', item.título, ':', properImageUrl); // <-- Add this line
-                }
-                
                 itemElement.innerHTML = `
-                    <div class="item-image"></div>
-                    <img src="${properImageUrl}" alt="${item.título}" class="product-image" >
-                    <div class="item-details">
-                        <p>${item.título}</p>
-                        <p class="item-price">${item.precio ? `$${item.precio}` : ''}</p>
-                    </div>
+                <img src="${properImageUrl}" alt="${item.título}" class="product-image">
+                <div class="item-details">
+                    <p class="item-title">${item.título}</p>
+                    <p class="item-price">${item.precio ? `$${item.precio}` : ''}</p>
+                </div>
+                <div class="item-extra">
+                    <p><strong>Description:</strong> ${item.description2}</p>
+                </div>
                 `;
-                
+
+                const extraPanel = itemElement.querySelector('.item-extra');
+
+            itemElement.addEventListener('click', () => {
+                const allCards      = document.querySelectorAll('.collection-item');
+                const customSection = document.querySelector('.custom-orders');
+
+                // 1) stop any running slideshow & collapse all cards
+                if (slideshowInterval) {
+                    clearInterval(slideshowInterval);
+                    slideshowInterval = null;
+                    if (slideshowImgEl && slideshowImageUrls.length) {
+                    slideshowImgEl.src = slideshowImageUrls[0];
+                    }
+                }
+                allCards.forEach(c => c.classList.remove('expanded'));
+                if (customSection) customSection.style.marginTop = '';
+
+                // 2) toggle this one open
+                const opening = !itemElement.classList.contains('expanded');
+                if (opening) {
+                    itemElement.classList.add('expanded');
+
+                    // 3) measure panel height
+                    const h = extraPanel.offsetHeight;
+
+                    // 4) push only the section *below* the grid
+                    if (customSection) {
+                    customSection.style.marginTop = `${h}px`;
+                    }
+
+                    // 5) (optional) restart slideshow on this card
+                    const imgEl = itemElement.querySelector('.product-image');
+                    const urls  = [item.ImagenURL, item.imagen2, item.imagen3]
+                                .map(getProperImageUrl)
+                                .filter(Boolean);
+                    if (urls.length > 1) {
+                    let idx = 0;
+                    slideshowImgEl     = imgEl;
+                    slideshowImageUrls = urls;
+                    slideshowInterval  = setInterval(() => {
+                        idx = (idx + 1) % urls.length;
+                        imgEl.src = urls[idx];
+                    }, 2000);
+                    }
+                }
+            });
+
+
                 collectionGrid.appendChild(itemElement);
             });
         }
+
+
         
         // Function to filter items based on category and search
         function filterItems() {
-            const activeFilter = document.querySelector('.filter-btn.active').getAttribute('data-filter');
-            const searchTerm = document.getElementById('search-box').value.toLowerCase();
-            
-            const filteredItems = collectionItems.filter(item => {
-                const matchesCategory = activeFilter === 'all' || item.categoría === activeFilter;
-                const matchesSearch = 
-                    item.título.toLowerCase().includes(searchTerm) || 
-                    item.descripción.toLowerCase().includes(searchTerm);
-                
-                return matchesCategory && matchesSearch;
-            });
-            
-            renderCollection(filteredItems);
+        const activeFilter = document.querySelector('.filter-btn.active').getAttribute('data-filter');
+        const searchTerm   = document.getElementById('search-box').value.toLowerCase();
+
+        const filtered = collectionItems.filter(item => {
+            // use the Spanish property names:
+            const matchesCategory = activeFilter === 'all'
+            || item.categoría === activeFilter;
+            const matchesSearch = item.título.toLowerCase().includes(searchTerm)
+            || item.descripción.toLowerCase().includes(searchTerm);
+
+            return matchesCategory && matchesSearch;
+        });
+
+        renderCollection(filtered);
         }
         
         // Function to attach event listeners to filter buttons
@@ -374,7 +438,7 @@
                 errorElement.innerHTML = `
                     <p>${message}</p>
                     <p>Please check your API key and Sheet ID, or try again later.</p>
-                    <button onclick="initializePage()" class="retry-button">Reintentar</button>
+                    <button onclick="initializePage()" class="retry-button">Retry</button>
                 `;
             }
         }
@@ -411,9 +475,16 @@
     
     <style>
         .item-price {
-            color: var(--primary-color);
+            color: var(--text-color);
             font-weight: 600;
-            margin-top: 5px;
+            margin-top: 0px;
+            text-align: left;
+        }
+        .item-title {
+            color: var(--text-color);
+            margin-top: 10px;
+            font-size: 1rem;
+            margin-bottom: 0px;
         }
         
         .loading-indicator {
@@ -423,6 +494,11 @@
             justify-content: center;
             padding: 2rem;
             display: none;
+        }
+        .item-details {
+            text-align: left;
+            padding: 1rem;
+            align-items: left;
         }
         
         .spinner {
@@ -468,5 +544,37 @@
             font-style: italic;
         }
     </style>
+    <!-- Add this just before </body> -->
+    <button id="skip-to-bottom"
+    style="
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 99999;
+        background: var(--primary-color, #e6683c);
+        color: #fff;
+        border: none;
+        border-radius: 50px;
+        padding: 12px 24px;
+        font-size: 1rem;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+        cursor: pointer;
+        transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+    ">
+    Ir al final de la página
+    </button>
+        <style>
+    #skip-to-bottom:hover {
+        background: #c94d1c;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+        transform: translateY(-2px);
+        transition: var(--transition, 0.2s);
+    }
+    </style>
+    <script>
+    document.getElementById('skip-to-bottom').addEventListener('click', function() {
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    });
+    </script>
 </body>
 </html>

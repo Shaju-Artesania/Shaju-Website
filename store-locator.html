@@ -112,7 +112,7 @@
             attribution: '&copy; OpenStreetMap contributors'
         }).addTo(map);
 
-        fetch('data/stores-es.geojson')
+        fetch('data/stores.geojson')
             .then(res => res.json())
             .then(stores => {
                 L.geoJSON(stores, {

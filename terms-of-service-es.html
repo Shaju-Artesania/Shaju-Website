@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Términos de Servicio – Shajú</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    #terms-of-service {
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      background: #fafafa;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    #terms-of-service p,
+    #terms-of-service ul,
+    #terms-of-service li {
+      line-height: 1.65;
+      margin-bottom: 1rem;
+    }
+    #terms-of-service h2 {
+      font-size: 1.25rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+    #terms-of-service ul {
+      list-style: disc inside;
+    }
+  </style>
+</head>
+<body>
+  <!-- ENCABEZADO -->
+  <header>
+    <div class="logo-container">
+      <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo.png-IkmbjchCYB5E5rfVFkBDm0DAoo9PPD.jpeg"
+           alt="Logo de Shajú" class="logo-image">
+    </div>
+    <div class="header-right">
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li class="dropdown">
+            <a href="about.html">Nosotros</a>
+            <div class="dropdown-content">
+              <a href="our-story.html">Nuestra historia</a>
+              <a href="Crafted-with-devotion.html">Hecho con devoción</a>
+            </div>
+          </li>
+          <li><a href="collection.html">Colección</a></li>
+          <li><a href="events.html">Eventos</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="language-selector">
+        <select id="language-dropdown"
+                onchange="changeLanguage(this.value, window.location.pathname.split('/').pop())">
+          <option value="en">English</option>
+          <option value="es" selected>Español</option>
+        </select>
+      </div>
+      <div class="nav-toggle"><span></span><span></span><span></span></div>
+    </div>
+  </header>
+
+  <!-- PRINCIPAL -->
+  <main>
+    <section class="page-header">
+      <h2>Términos <span class="highlight">de Servicio</span></h2>
+    </section>
+
+    <article id="terms-of-service">
+      <p><em>Última actualización: 28 de julio de 2025</em></p>
+
+      <h2>1. Aceptación de los Términos</h2>
+      <p>Al acceder o usar el sitio web de Shajú (“el Sitio”), aceptas quedar sujeto a estos Términos de Servicio (“Términos”). Si no estás de acuerdo, por favor deja de usarlo inmediatamente.</p>
+
+      <h2>2. Cambios en los Términos</h2>
+      <p>Podemos actualizar estos Términos en cualquier momento. Publicaremos la fecha actualizada aquí. El uso continuado implica la aceptación de los cambios.</p>
+
+      <h2>3. Uso del Sitio</h2>
+      <ul>
+        <li><strong>Solo informativo.</strong> El Sitio es solo para explorar y aprender sobre las creaciones artesanales de Shajú. No puedes realizar pedidos ni compras aquí.</li>
+        <li><strong>Apto para menores.</strong> Todo el contenido es adecuado para todas las edades; no hay material maduro o inapropiado.</li>
+        <li><strong>Conducta permitida.</strong> Puedes navegar por las páginas, leer descripciones y ver imágenes según lo previsto.</li>
+        <li><strong>Conducta prohibida.</strong> No hackees, extraigas datos, hagas ingeniería inversa, envíes spam ni abuses del Sitio.</li>
+      </ul>
+
+      <h2>4. Propiedad Intelectual</h2>
+      <p>Todo el texto, imágenes, logotipos, diseños y código en el Sitio son propiedad o están licenciados por Shajú y están protegidos por leyes de derechos de autor y marcas registradas. No puedes copiar, modificar, distribuir ni mostrar públicamente ningún contenido sin nuestro permiso expreso.</p>
+
+      <h2>5. Enlaces Externos</h2>
+      <p>Nuestro Sitio puede contener enlaces a sitios web de terceros (por ejemplo, redes sociales, localizadores de tiendas). No somos responsables por su contenido o prácticas; por favor revisa sus propios términos y políticas de privacidad.</p>
+
+      <h2>6. Renuncias y Limitación de Responsabilidad</h2>
+      <ul>
+        <li><strong>Renuncia “Tal cual”.</strong> El Sitio y su contenido se proporcionan “tal cual”, sin garantías de ningún tipo.</li>
+        <li><strong>Sin asesoramiento profesional.</strong> La información en nuestro Sitio es solo para fines generales y no constituye asesoramiento profesional.</li>
+        <li><strong>Limitación de responsabilidad.</strong> Shajú y sus afiliados no serán responsables por daños indirectos o consecuentes derivados del uso del Sitio, en la máxima medida permitida por la ley.</li>
+      </ul>
+
+      <h2>7. Indemnización</h2>
+      <p>Aceptas defender, indemnizar y eximir de responsabilidad a Shajú y sus afiliados por cualquier reclamo, daño o gasto (incluidos honorarios legales) que surja de tu incumplimiento de estos Términos o del uso indebido del Sitio.</p>
+
+      <h2>8. Ley Aplicable y Resolución de Conflictos</h2>
+      <p>Estos Términos se rigen por las leyes de Perú. Cualquier disputa se resolverá exclusivamente en los tribunales de Perú.</p>
+
+      <h2>9. Contáctanos</h2>
+      <p>Si tienes preguntas sobre estos Términos, por favor escríbenos a <a href="mailto:shaju.artesania@gmail.com">shaju.artesania@gmail.com</a>.</p>
+    </article>
+  </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo.png-IkmbjchCYB5E5rfVFkBDm0DAoo9PPD.jpeg" alt="Logo Shaju" class="footer-logo-image">
+                <p>Hecho con pasión para generar un impacto</p>
+                <div class="social-icons">
+                    <a href="https://instagram.com/shaju.artesania" target="_blank" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://facebook.com/shaju.artesania" target="_blank" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://wa.me/c/51949917932" target="_blank" class="social-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="mailto:shaju.artesania@gmail.com" target="_blank" class="social-icon" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="index-es.html">Inicio</a></li>
+                    <li><a href="about-es.html">Sobre Nosotros</a></li>
+                    <li><a href="collection-es.html">Colección</a></li>
+                    <li><a href="events-es.html">Eventos</a></li>
+                    <li><a href="contact-es.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Informacíon</h3>
+                <ul>
+                    <li><a href="terms-of-service-es.html"> Términos de servicio</a></li>
+                    <li><a href="privacy-policy-es.html"> Política de privacidad</a></li>
+                    <li><a href="legal-notice-es.html"> Aviso legal</a></li>
+                    <li><a href="store-locator-es.html"> Localizador de tiendas</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Shaju. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+</html>

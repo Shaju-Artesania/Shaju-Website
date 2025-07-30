@@ -33,38 +33,43 @@
   </style>
 </head>
 <body>
-  <!-- ENCABEZADO -->
-  <header>
-    <div class="logo-container">
-      <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo.png-IkmbjchCYB5E5rfVFkBDm0DAoo9PPD.jpeg"
-           alt="Logo de Shajú" class="logo-image">
-    </div>
-    <div class="header-right">
-      <nav class="main-nav">
-        <ul class="nav-links">
-          <li><a href="index.html">Inicio</a></li>
-          <li class="dropdown">
-            <a href="about.html">Nosotros</a>
-            <div class="dropdown-content">
-              <a href="our-story.html">Nuestra historia</a>
-              <a href="Crafted-with-devotion.html">Hecho con devoción</a>
+    <!-- ENCABEZADO -->
+    <header>
+        <div class="logo-container">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo.png-IkmbjchCYB5E5rfVFkBDm0DAoo9PPD.jpeg" alt="Logotipo Shajú" class="logo-image">
+        </div>
+        
+        <div class="header-right">
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index-es.html">Inicio</a></li>
+                    <li class="dropdown">
+                        <a href="about-es.html">Sobre nosotros</a>
+                        <div class="dropdown-content">
+                            <a href="our-story-es.html">Nuestra historia</a>
+                            <a href="Crafted-with-devotion-es.html">Elaborado con devoción</a>
+                        </div>
+                    </li>
+                    <li><a href="collection-es.html">Colección</a></li>
+                    <li><a href="events-es.html">Eventos</a></li>
+                    <li><a href="contact-es.html">Contacto</a></li>
+                </ul>
+            </nav>
+    
+            <!-- Selector de idioma -->
+            <div class="language-selector">
+                <select id="language-dropdown" onchange="changeLanguage(this.value, window.location.pathname.split('/').pop())">
+                    <option value="en">English</option>
+                    <option value="es" selected>Español</option>
+                </select>
             </div>
-          </li>
-          <li><a href="collection.html">Colección</a></li>
-          <li><a href="events.html">Eventos</a></li>
-          <li><a href="contact.html">Contacto</a></li>
-        </ul>
-      </nav>
-      <div class="language-selector">
-        <select id="language-dropdown"
-                onchange="changeLanguage(this.value, window.location.pathname.split('/').pop())">
-          <option value="en">English</option>
-          <option value="es" selected>Español</option>
-        </select>
-      </div>
-      <div class="nav-toggle"><span></span><span></span><span></span></div>
-    </div>
-  </header>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
 
   <!-- PRINCIPAL -->
   <main>

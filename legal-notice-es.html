@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aviso Legal – Shajú</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    #legal-notice {
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      background: #fafafa;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    #legal-notice h2 {
+      font-size: 1.25rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+    #legal-notice p,
+    #legal-notice ul,
+    #legal-notice li {
+      line-height: 1.65;
+      margin-bottom: 1rem;
+    }
+    #legal-notice ul {
+      list-style: disc inside;
+    }
+  </style>
+</head>
+<body>
+    <!-- ENCABEZADO -->
+    <header>
+        <div class="logo-container">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo.png-IkmbjchCYB5E5rfVFkBDm0DAoo9PPD.jpeg" alt="Logotipo Shajú" class="logo-image">
+        </div>
+        
+        <div class="header-right">
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index-es.html">Inicio</a></li>
+                    <li class="dropdown">
+                        <a href="about-es.html">Sobre nosotros</a>
+                        <div class="dropdown-content">
+                            <a href="our-story-es.html">Nuestra historia</a>
+                            <a href="Crafted-with-devotion-es.html">Elaborado con devoción</a>
+                        </div>
+                    </li>
+                    <li><a href="collection-es.html">Colección</a></li>
+                    <li><a href="events-es.html">Eventos</a></li>
+                    <li><a href="contact-es.html">Contacto</a></li>
+                </ul>
+            </nav>
+    
+            <!-- Selector de idioma -->
+            <div class="language-selector">
+                <select id="language-dropdown" onchange="changeLanguage(this.value, window.location.pathname.split('/').pop())">
+                    <option value="en">English</option>
+                    <option value="es" selected>Español</option>
+                </select>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+  <!-- PRINCIPAL -->
+  <main>
+    <section class="page-header">
+      <h2>Aviso <span class="highlight">Legal</span></h2>
+    </section>
+
+    <article id="legal-notice">
+      <p><em>Última actualización: 28 de julio de 2025</em></p>
+
+      <h2>1. Editor</h2>
+      <p><strong>SHAJU INVESTMENTS EIRL</strong><br>
+      Calle Morona 586, Iquitos 16001<br>
+      Registrada en el Registro Mercantil de Lima, RUC 20606588110</p>
+
+      <h2>2. Responsable</h2>
+      <p>Directora del sitio: Olga Vidurrizaga<br>
+      Contacto: <a href="mailto:shaju.artesania@gmail.com">shaju.artesania@gmail.com</a><br>
+      Teléfono: +51 949 917 932</p>
+
+      <h2>3. Proveedor de Hosting</h2>
+      <p>Alojado por GitHub Inc.<br>
+      88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, EE. UU.<br>
+      <a href="https://docs.github.com/es/site-policy/privacy-policies/github-privacy-statement" target="_blank">Política de privacidad de GitHub</a></p>
+
+      <h2>4. Propiedad Intelectual</h2>
+      <p>Todo el contenido de este Sitio —incluyendo textos, imágenes, logotipos, diseños y código— es propiedad o está licenciado por SHAJU INVESTMENTS EIRL y está protegido por leyes internacionales de derechos de autor y marcas registradas. Se prohíbe el uso, reproducción o distribución no autorizados.</p>
+
+      <h2>5. Descargo de responsabilidad</h2>
+      <p>La información en este Sitio se proporciona “tal cual” con fines exclusivamente informativos. SHAJU INVESTMENTS EIRL no ofrece garantías, expresas ni implícitas, sobre su exactitud o integridad.</p>
+
+      <h2>6. Limitación de responsabilidad</h2>
+      <p>SHAJU INVESTMENTS EIRL no será responsable en ningún caso por daños indirectos, incidentales o consecuentes que surjan del uso del Sitio o de la confianza en su contenido.</p>
+
+      <h2>7. Legislación aplicable y jurisdicción</h2>
+      <p>Estos términos se rigen por las leyes de la República del Perú. Cualquier disputa estará sujeta a la jurisdicción exclusiva de los tribunales peruanos.</p>
+
+      <h2>8. Información de contacto</h2>
+      <p>Para consultas legales, por favor contáctanos en:<br>
+      <a href="mailto:shaju.artesania@gmail.com">shaju.artesania@gmail.com</a></p>
+    </article>
+  </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo.png-IkmbjchCYB5E5rfVFkBDm0DAoo9PPD.jpeg" alt="Logo Shaju" class="footer-logo-image">
+                <p>Hecho con pasión para generar un impacto</p>
+                <div class="social-icons">
+                    <a href="https://instagram.com/shaju.artesania" target="_blank" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://facebook.com/shaju.artesania" target="_blank" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://wa.me/c/51949917932" target="_blank" class="social-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="mailto:shaju.artesania@gmail.com" target="_blank" class="social-icon" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="index-es.html">Inicio</a></li>
+                    <li><a href="about-es.html">Sobre Nosotros</a></li>
+                    <li><a href="collection-es.html">Colección</a></li>
+                    <li><a href="events-es.html">Eventos</a></li>
+                    <li><a href="contact-es.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Informacíon</h3>
+                <ul>
+                    <li><a href="terms-of-service-es.html"> Términos de servicio</a></li>
+                    <li><a href="privacy-policy-es.html"> Política de privacidad</a></li>
+                    <li><a href="legal-notice-es.html"> Aviso legal</a></li>
+                    <li><a href="store-locator-es.html"> Localizador de tiendas</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Shaju. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+</html>
+

@@ -655,7 +655,7 @@ header {
 }
 .CentroFuerte {
     width: 100%;
-    height: 100%;
+    height: 450px;
     object-fit: cover; /* fills the container without distortion */
     border-radius: 8px;
     display: block;
@@ -664,6 +664,30 @@ header {
     .about-communities {
         flex-direction: column;
     }
+}
+.MarcaLoreto{
+    display: flex;
+    gap: 2rem;
+    align-items: stretch;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    margin-right: 2rem;
+}
+.about-MarcaLoretotext {
+    flex: 1; /* Text area takes more space */
+    margin-left: 2rem;
+}
+.image-MarcaLoreto {
+    flex: 1; /* Image area takes less space */
+    display: flex;
+    align-items: stretch;
+}
+.LoretoMarcaImage{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* fills the container without distortion */
+    border-radius: 8px;
+    display: block;
 }
 
 /* Upcoming events index page */

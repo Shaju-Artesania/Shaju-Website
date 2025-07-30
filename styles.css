@@ -945,7 +945,7 @@ header {
 .slide-caption {
     text-align: center;
     padding: 15px;
-    height: 80px;
+    height: 90px;
     background-color: var(--light-color);
     color: var(--text-color);
 }

@@ -394,8 +394,8 @@
             const filteredItems = collectionItems.filter(item => {
                 const matchesCategory = activeFilter === 'all' || item.category === activeFilter;
                 const matchesSearch = 
-                    item.title.toLowerCase().includes(searchTerm) || 
-                    item.description.toLowerCase().includes(searchTerm);
+                    (item.title || '').toLowerCase().includes(searchTerm) || 
+                    (item.description2 || '').toLowerCase().includes(searchTerm);
                 
                 return matchesCategory && matchesSearch;
             });

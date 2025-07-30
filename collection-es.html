@@ -223,7 +223,7 @@
                 const item = {
                     id: row[0],
                     título: row[1],
-                    description2: row[2],
+                    descripcíon2: row[2],
                     categoría: (row[3] || 'uncategorized').toLowerCase(),
                     precio: row[4],
                     ImagenURL: row[5],
@@ -326,7 +326,7 @@
                     <p class="item-price">${item.precio ? `$${item.precio}` : ''}</p>
                 </div>
                 <div class="item-extra">
-                    <p><strong>Description:</strong> ${item.description2}</p>
+                    <p><strong>Description:</strong> ${item.descripcíon2}</p>
                 </div>
                 `;
 
@@ -386,20 +386,19 @@
         
         // Function to filter items based on category and search
         function filterItems() {
-        const activeFilter = document.querySelector('.filter-btn.active').getAttribute('data-filter');
-        const searchTerm   = document.getElementById('search-box').value.toLowerCase();
-
-        const filtered = collectionItems.filter(item => {
-            // use the Spanish property names:
-            const matchesCategory = activeFilter === 'all'
-            || item.categoría === activeFilter;
-            const matchesSearch = item.título.toLowerCase().includes(searchTerm)
-            || item.descripción.toLowerCase().includes(searchTerm);
-
-            return matchesCategory && matchesSearch;
-        });
-
-        renderCollection(filtered);
+            const activeFilter = document.querySelector('.filter-btn.active').getAttribute('data-filter');
+            const searchTerm = document.getElementById('search-box').value.toLowerCase();
+            
+            const filteredItems = collectionItems.filter(item => {
+                const matchesCategory = activeFilter === 'all' || item.categoría === activeFilter;
+                const matchesSearch = 
+                    (item.título || '').toLowerCase().includes(searchTerm) || 
+                    (item.descripcíon2 || '').toLowerCase().includes(searchTerm);
+                
+                return matchesCategory && matchesSearch;
+            });
+            
+            renderCollection(filteredItems);
         }
         
         // Function to attach event listeners to filter buttons

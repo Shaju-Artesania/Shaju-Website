@@ -174,7 +174,7 @@
         // Google Sheets Integration
         const SHEET_ID = '1sr8KmlhHWJGA5Jq747ORQdy888wD3YPrHKrbjRRNgkM'; // Sheet ID
         const API_KEY = 'AIzaSyAjRUZbE-kmkSTmAkA7Adq4GPJeinkEZIE';   //API Key
-        const SHEET_RANGE = 'English!A2:I'; // Range
+        const SHEET_RANGE = 'English!A2:H'; // Range
         
         // Global variables to store data
         let collectionItems = [];
@@ -222,13 +222,12 @@
                 const item = {
                     id: row[0],
                     title: row[1],
-                    description: row[2],
-                    image: row[3],
+                    description2: row[2],
+                    category: (row[3] || 'uncategorized').toLowerCase(),
                     price: row[4],
-                    category: (row[5] || 'uncategorized').toLowerCase(),
-                    description2: row[6],
-                    image2: row[7],
-                    image3: row[8]
+                    image: row[5],
+                    image2: row[6],
+                    image3: row[7],
                 };
                 
                 // Add category to our set of categories

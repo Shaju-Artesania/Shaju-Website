@@ -220,13 +220,12 @@
                 const item = {
                     id: row[0],
                     título: row[1],
-                    descripción: row[2],
-                    ImagenURL: row[3],
+                    description2: row[2],
+                    categoría: (row[3] || 'uncategorized').toLowerCase(),
                     precio: row[4],
-                    categoría: (row[5] || 'uncategorized').toLowerCase(),
-                    description2: row[6],
-                    imagen2: row[7],
-                    imagen3: row[8]
+                    ImagenURL: row[5],
+                    imagen2: row[6],
+                    imagen3: row[7]
                 };
                 
                 // Add category to our set of categories

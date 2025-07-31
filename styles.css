@@ -671,15 +671,77 @@ header {
   width: 90%;
 }
 
-.community-item {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    padding: 80px 5%;
-    background-color: var(--);
-    position: relative;
+.community-item1 {
+  display: grid;
+  grid-template-columns: 3fr 1fr; /* Left column twice as wide */
+  gap: 50px;
+  padding: 80px 5%;
+  background-color: var(--your-background-color); /* replace with a real variable */
+  position: relative;
 }
 
+.community-item2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Left column twice as wide */
+  gap: 50px;
+  padding: 80px 5%;
+  background-color: var(--your-background-color); /* replace with a real variable */
+  position: relative;
+}
+
+.community-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.community-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.video-container {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* keeps it proportional */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+@media (max-width: 1302px) {
+    .community-item1 {
+        grid-template-columns: 1fr; /* Stack columns on smaller screens */
+        text-align: center; /* Center text */
+    }
+    .video-container {
+        margin-bottom: 20px; /* Add space below video on small screens */
+    }
+}
+
+.text-map {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.map-container2 {
+    max-width: 1100px;
+    margin: 30px auto;
+    margin-top: 30px;
+    height: 500px;
+    background-color: var(--gray-medium);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    align-items: center;
+}
 
 .MarcaLoreto{
     display: flex;

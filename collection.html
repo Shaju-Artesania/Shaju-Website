@@ -267,37 +267,13 @@
         
         // Add this function to your existing JavaScript
         function getProperImageUrl(url) {
-            // Check if it's a Google Drive URL
-            if (url && url.includes('drive.google.com')) {
-                // Extract the file ID
-                let fileId = '';
-                
-                // Pattern 1: https://drive.google.com/file/d/FILE_ID/view
-                if (url.includes('/file/d/')) {
-                    const match = url.match(/\/file\/d\/([^\/]+)/);
-                    if (match && match[1]) {
-                        fileId = match[1];
-                    }
-                } 
-                // Pattern 2: https://drive.google.com/open?id=FILE_ID
-                else if (url.includes('open?id=')) {
-                    const match = url.match(/open\?id=([^&]+)/);
-                    if (match && match[1]) {
-                        fileId = match[1];
-                    }
-                }
-                // Pattern 3: Already in the correct format
-                else if (url.includes('uc?export=view&id=')) {
-                    return url; // Already in the correct format
-                }
-                
-                // If we found a file ID, convert to the proper format
-                if (fileId) {
-                    return `https://drive.google.com/uc?export=view&id=${fileId}`;
-                }
+            // Handle GitHub blob URLs
+            if (url && url.includes('github.com') && url.includes('/blob/')) {
+                return url
+                    .replace('github.com', 'raw.githubusercontent.com')
+                    .replace('/blob/', '/');
             }
-            
-            // Return the original URL if it's not a Google Drive URL or we couldn't parse it
+            // Return original URL if nothing matched
             return url;
         }
 

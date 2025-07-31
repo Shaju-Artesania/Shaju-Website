@@ -13,18 +13,19 @@
 
 <style>
     #leaflet-map {
-      width: 100%;
+      background-color: #fff;
+      width: auto;
       height: 600px;
-      margin: 1rem 0;
       border-radius: 12px;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
     .leaflet-tooltip {
-      background-color: rgba(0, 0, 0, 0.75);
+      margin-top: 40px;
       color: #fff;
       padding: 6px 10px;
       border-radius: 4px;
       font-size: 14px;
+      background-color: #fff;
     }
   </style>
 </head>
@@ -85,31 +86,59 @@
             </section>
     
             <!-- Section: Picture and paragraph side by side -->
-            <section class="about-communities">
-                <div class="about-communitiestext">
-                    <h2 style= "margin-bottom: 1.5rem;">Growing <span class="highlight">together</span> as a community</h2>
+            <section class="about-preview">
+                <div class="about-text">
+                    <h2>Growing <span class="highlight">together</span> as a community</h2>
                     <p>Shajú works with 22 local artisans from 6 indigenous communities</p>
-                    <ul>
                     <li>Puerto Prado</li>
                     <li>Amazonas</li>
                     <li>Manacamiri</li>
                     <li>Bora Community at Pebas Pucarquillo</li>
                     <li>Centro Fuerte</li>
                     <li>Santo Tomas</li>
-                    </ul>
-                    <br />
-                    <p>Together with these craftsmen, we offer a variety of products produced from local materials. We use materials like chambira and huambe to make sure that our products reflect the soul of the Amazon Forest and help keeping our cultural heritage alive.</p>
+                    <br></br>
+                    <p>Together with these craftmen, we offer a variety of products produced from local materials. We use materials like chambira and huambe to make sure that our products reflect the soul of the Amazone Forest and help keeping our cultural heritage alive.</p>
                 </div>
-                <div class="image-communities">
-                    <img src="Images/CentroFuerte.jpeg" class="CentroFuerte" loading="lazy">
+                <div class="about-image3"></div>
+              </section>
+              <hr class="section-divider">
+              <section class="communities">
+                <div class="community-item1">
+                  <div class="video-container">
+                    <iframe 
+                      src="https://www.youtube.com/embed/DL2rvGFshBQ?cc_load_policy=1&cc_lang_pref=en&hl=en"
+                      title="Centro Fuerte Visit"
+                      frameborder="0"
+                      allowfullscreen>
+                    </iframe>
+                  </div>
+                  <div class="community-text">
+                    <h2>A visit to <span class="highlight">Centro Fuerte</span></h2>
+                    <p>We visited the Centro Fuerte community, accessible only via the Momón River, where we were guided by Jairo, a joyful and respected local. He gave us a tour of the village and surrounding forest, where we encountered the Shiringa tree. Jairo explained its historical importance and demonstrated how latex is still extracted, dyed, and transformed into rubber fabric used in Shajú’s products.</p>
+                  </div>
                 </div>
-            </section>
-    <div style="text-align: center">
-    <h2>Discover the <span class="highlight">communities</span> that we work together with</h2>
+                <hr class="section-divider">
+                <div class="community-item2">
+                  <div class="community-text">
+                    <h2>Making Chambira thread with <span class="highlight">the Bora Community</span></h2>
+                    <p>We visited the Centro Fuerte community, which is only accessible via the Momón River. There, we were warmly welcomed by Jairo, a prominent and jovial figure in the village, who guided us on an extensive tour through Centro Fuerte and its surrounding Amazon forest.</p>
+                    <p>Deep within the jungle, we encountered a rubber tree known as Shiringa. Jairo shared a fascinating story about the tree, its colonial history, and its lasting impact on Amazonian communities and livelihoods. He then gave us a live demonstration of how the natural latex is carefully extracted, a practice still used today in the production of various goods.</p>
+                    <p>Jairo also showed us how the latex is dyed and applied to create rubberized fabric, a material commonly featured in Shajú’s products. His knowledge and energy made this experience both educational and unforgettable.</p>
+                  </div>
+                  <div class="community-image">
+                    <img src="Images/Chambira.jpg" alt="Chambira" class="community-image">
+                  </div>
+                </div>
+              </section>
+              <hr class="section-divider">
+    <div class="text-map">
+    <h2>Discover all the <span class="highlight">communities</span> that we work together with</h2>
     </div>
     <!-- Map Section -->
-    <section class="map-section">
-      <div id="leaflet-map"></div>
+    <section class="map-container2">
+      <div class="map-section1">
+        <div id="leaflet-map"></div>
+      </div>
     </section>
     <section class="MarcaLoreto">
                 <div class="about-MarcaLoretotext">

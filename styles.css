@@ -545,6 +545,7 @@ header {
     min-height: 500px;
 }
 
+
 .about-image::after {
     content: '';
     position: absolute;
@@ -612,7 +613,9 @@ header {
   gap: 50px;                  /* spacing between image and paragraph */
 
 }
-/* Our Partners Page */
+
+
+/* Crafted with devotion page */
 .ourdevotion{
     display: flex;
     flex-direction: row;
@@ -636,35 +639,110 @@ header {
         flex-direction: column;
     }
 }
-.about-communities {
-    display: flex;
-    gap: 2rem;
-    align-items: stretch;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-    margin-right: 2rem;
+
+.about-image3 {
+    background-color: var(--gray-medium);
+    border-radius: 12px;
+    background-image: url('Images/CentroFuerte.jpeg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    height: 500px;
+    min-height: 500px;
 }
-.about-communitiestext {
-    flex: 1; /* Text area takes more space */
-    margin-left: 2rem;
-}
-.image-communities {
-    flex: 1; /* Image area takes less space */
-    display: flex;
-    align-items: stretch;
-}
-.CentroFuerte {
+
+.about-image3::after {
+    content: '';
+    position: absolute;
+    top: 30px;
+    right: -20px;
     width: 100%;
-    height: 450px;
-    object-fit: cover; /* fills the container without distortion */
+    height: 100%;
+    border: 3px solid var(--primary-color);
     border-radius: 8px;
-    display: block;
+    z-index: -1;
 }
-@media (max-width: 768px) {
-    .about-communities {
-        flex-direction: column;
+.section-divider {
+  border: none;
+  border-top: 1px solid #ccc;  /* Light gray thin line */
+  margin: 0rem auto;
+  width: 90%;
+}
+
+.community-item1 {
+  display: grid;
+  grid-template-columns: 3fr 1fr; /* Left column twice as wide */
+  gap: 50px;
+  padding: 80px 5%;
+  background-color: var(--your-background-color); /* replace with a real variable */
+  position: relative;
+}
+
+.community-item2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Left column twice as wide */
+  gap: 50px;
+  padding: 80px 5%;
+  background-color: var(--your-background-color); /* replace with a real variable */
+  position: relative;
+}
+
+.community-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.community-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.video-container {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* keeps it proportional */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+@media (max-width: 1302px) {
+    .community-item1 {
+        grid-template-columns: 1fr; /* Stack columns on smaller screens */
+        text-align: center; /* Center text */
+    }
+    .video-container {
+        margin-bottom: 20px; /* Add space below video on small screens */
     }
 }
+
+.text-map {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.map-container2 {
+    max-width: 1100px;
+    margin: 30px auto;
+    margin-top: 30px;
+    height: 500px;
+    background-color: var(--gray-medium);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    align-items: center;
+}
+
 .MarcaLoreto{
     display: flex;
     gap: 2rem;

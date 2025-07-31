@@ -1159,53 +1159,6 @@ header {
     text-align: center;
     max-width: 200px;
 }
-
-/* Newsletter Banner */
-.newsletter-banner {
-    background-color: var(--primary-color);
-    padding: 100px 5%;
-    text-align: center;
-    color: white;
-}
-
-.newsletter-content {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.newsletter-content h3 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-}
-
-.newsletter-content p {
-    margin-bottom: 25px;
-}
-
-.newsletter-form {
-    display: flex;
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-.newsletter-form input {
-    flex-grow: 1;
-    padding: 12px 15px;
-    border: none;
-    border-radius: 4px 0 0 4px;
-    font-family: var(--font-primary);
-}
-
-.newsletter-form .btn {
-    border-radius: 0 4px 4px 0;
-    background-color: var(--secondary-color);
-    box-shadow: none;
-}
-
-.newsletter-form .btn:hover {
-    background-color: #222;
-}
-
 /* Footer */
 footer {
     background-color: var(--secondary-color);
@@ -1263,16 +1216,14 @@ footer {
     transform: translateY(-3px);
 }
 
-.footer-links h3,
-.footer-newsletter h3 {
+.footer-links h3 {
     font-size: 1.2rem;
     margin-bottom: 20px;
     position: relative;
     color: var(--primary-light);
 }
 
-.footer-links h3:after,
-.footer-newsletter h3:after {
+.footer-links h3:after {
     content: '';
     position: absolute;
     bottom: -10px;
@@ -1294,36 +1245,6 @@ footer {
     color: var(--primary-light);
     padding-left: 5px;
 }
-
-.footer-newsletter p {
-    margin-bottom: 20px;
-}
-
-.footer-newsletter form {
-    display: flex;
-}
-
-.footer-newsletter input {
-    flex-grow: 1;
-    padding: 10px;
-    border: none;
-    border-radius: 4px 0 0 4px;
-}
-
-.footer-newsletter button {
-    background-color: var(--primary-color);
-    color: var(--light-color);
-    border: none;
-    padding: 10px 15px;
-    border-radius: 0 4px 4px 0;
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-.footer-newsletter button:hover {
-    background-color: var(--primary-dark);
-}
-
 .footer-bottom {
     text-align: center;
     padding-top: 20px;

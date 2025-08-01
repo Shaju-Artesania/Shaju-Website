@@ -40,3 +40,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+toggle.addEventListener('click', () => {
+  console.log('NAV BUTTON CLICKED');
+  toggle.classList.toggle('active');
+  nav.classList.toggle('active');
+});

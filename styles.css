@@ -96,37 +96,6 @@ img {
     text-decoration: underline;
 }
 
-/* Form Message Styles */
-.form-message {
-    margin-bottom: 20px;
-}
-
-.success-message {
-    background-color: #d4edda;
-    color: #155724;
-    padding: 15px;
-    border-radius: 4px;
-    margin-bottom: 20px;
-    border-left: 4px solid #28a745;
-}
-
-.error-message {
-    background-color: #f8d7da;
-    color: #721c24;
-    padding: 15px;
-    border-radius: 4px;
-    margin-bottom: 20px;
-    border-left: 4px solid #dc3545;
-}
-
-/* Disabled button style */
-.btn:disabled {
-    background-color: var(--gray-dark);
-    cursor: not-allowed;
-    transform: none;
-    box-shadow: none;
-}
-
 /* Header */
 header {
     display: flex;

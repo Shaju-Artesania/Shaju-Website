@@ -5,7 +5,7 @@
       "type": "Feature",
       "properties": {
         "name": "Puerto Prado",
-        "info": "Ubicada cerca del pueblo de Nauta, en la Amazonía peruana, la comunidad de Puerto Prado está compuesta por aproximadamente 60 familias, todas pertenecientes al pueblo indígena Kukama Kukamiria. Esta comunidad mantiene vivas sus fuertes tradiciones culturales y conocimientos ecológicos transmitidos de generación en generación. Una iniciativa clave dentro de Puerto Prado es la Asociación de Artesanas Carhuara Horno (Victoria Regia), un colectivo formado por 13 mujeres artesanas dedicadas a preservar las técnicas artesanales tradicionales. Estas mujeres se especializan en el trabajo con fibras de chambira, un material sostenible y de origen local, reconocido por su resistencia y belleza. Shajú colabora estrechamente con 4 artesanas de esta asociación, apoyando la producción artesanal, la preservación cultural y el empoderamiento económico. "
+        "info": "Situada en la cuenca del Marañón, la comunidad de Puerto Prado es una Comunidad que trabaja la fibra de chambira y se especializan en la elaboración de animalitos de la selva armados con fibra vegetal y alambres. Y con los platos y maneras de fibra vegetal pigmentadas y con tejidos típicos de su etnia kukama kukamiria. "
       },
       "geometry": {
         "type": "Point",
@@ -18,7 +18,7 @@
       "type": "Feature",
       "properties": {
         "name": "Amazonas",
-        "info": "Ubicada cerca de Nauta, la Comunidad Amazonas está compuesta por aproximadamente 176 habitantes distribuidos en 42 familias. Esta comunidad forma parte del rico paisaje cultural de la Amazonía peruana y mantiene fuertes lazos con el conocimiento ecológico tradicional. La Asociación Cultural de Artesanas PaliSangre, con sede en Amazonas, está integrada por 14 mujeres artesanas que se especializan en el trabajo con fibras de chambira y huambe —ambas recolectadas de manera sostenible en los bosques locales y utilizadas para elaborar una variedad de artesanías tradicionales e innovadoras. Shajú colabora con 3 artesanas de esta comunidad, apoyando su labor en la preservación cultural, el uso de prácticas sostenibles y la generación de ingresos a través de la producción artesanal."
+        "info": "Ubicada cerca de Nauta, la comunidad de Amazonas se dedica a la elaboración de animalitos amazónicos, como mariposas, entre otros, utilizando alambres y fibras vegetales."
       },
       "geometry": {
         "type": "Point",
@@ -31,7 +31,7 @@
       "type": "Feature",
       "properties": {
         "name": "Manacamiri",
-        "info": "Ubicada cerca de Iquitos, la Comunidad de Manacamiri alberga aproximadamente 589 habitantes, organizados en 143 familias. La comunidad está liderada por una mujer, lo que refleja un fuerte liderazgo local y un compromiso con la inclusión de género. La Asociación de Artesanos Ucacuro está conformada por 12 miembros, tanto mujeres como hombres, quienes elaboran una amplia variedad de productos tradicionales y contemporáneos. Su trabajo utiliza materiales naturales como la fibra de chambira —empleada para confeccionar sandalias y shicras (bolsas tejidas)—, así como fibra de plátano, aguaje, huingo (mate) y coco. Shajú colabora con una artesana y tres artesanos de Manacamiri, apoyando sus prácticas sostenibles, la resiliencia cultural y la generación de ingresos mediante productos hechos a mano."
+        "info": "Ubicada en el río Nanay, la comunidad de Manacamiri se dedica al tejido con fibras de chambira y se especializa en bisutería y tallado en madera de topa."
       },
       "geometry": {
         "type": "Point",
@@ -44,7 +44,7 @@
       "type": "Feature",
       "properties": {
         "name": "Bora Community at Pebas Pucarquillo",
-        "info": "Ubicada cerca de Pebas, entre los territorios tradicionales de los pueblos Bora y Huitoto, la comunidad de Pebas Pucaurquillo se encuentra en una región que incluye una Área de Conservación Regional, lo que refleja su profunda conexión con la selva amazónica que la rodea. La comunidad está compuesta por aproximadamente 218 habitantes, distribuidos en 58 familias. Es la comunidad más remota con la que trabaja Shajú, lo que requiere un viaje considerable para llegar hasta allí. Shajú colabora con 4 artesanas y artesanos de Pebas Pucaurquillo que se especializan en el trabajo con fibra de chambira, elaborando shicras (bolsas tejidas), bolsos de hombro y hamacas—cada pieza enraizada en las tradiciones artísticas y culturales del pueblo Bora."
+        "info": "Situada en la cuenca del río Ampiyacu, la comunidad de Pebas Pucarquillo se dedica a la elaboración de bolsos y shicras de fibra de chambira, reflejando los saberes tradicionales del pueblo indígena Bora."
       },
       "geometry": {
         "type": "Point",
@@ -57,7 +57,7 @@
       "type": "Feature",
       "properties": {
         "name": "Centro Fuerte",
-        "info": "..."
+        "info": "Situada en el Río Momón, es una comunidad que se especializan en trabajar la resina de la shiringa para la elaboración de los mantos de caucho con pigmentos naturales."
       },
       "geometry": {
         "type": "Point",

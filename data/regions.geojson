@@ -5,7 +5,7 @@
       "type": "Feature",
       "properties": {
         "name": "Puerto Prado",
-        "info": "Located near the town of Nauta in the Peruvian Amazon, the Puerto Prado community is home to approximately 60 families, all belonging to the Kukama Kukamiria Indigenous group. This community maintains strong cultural traditions and ecological knowledge passed down through generations. \n A key initiative within Puerto Prado is the Carhuara Horno (Victoria Regia) Artisan Association, a collective of 13 women artisans dedicated to preserving traditional crafts. These women specialize in working with Chambira palm fibers, a sustainable and locally sourced material known for its durability and beauty. \n  Shaju collaborates closely with 4 artisans from this association, supporting their craft production, cultural preservation, and economic empowerment. "
+        "info": "Located in the Marañón River basin, the Puerto Prado community is a community that works with chambira fiber and specializes in crafting jungle animals made from plant fiber and wire. They also create plates and baskets from plant fiber, dyed and woven with patterns typical of their Kukama Kukamiria ethnicity. "
         
       },
       "geometry": {
@@ -19,7 +19,7 @@
       "type": "Feature",
       "properties": {
         "name": "Amazonas",
-        "info": "Located near Nauta, the Amazonas Community consists of approximately 176 residents across 42 families. This community is part of the rich cultural landscape of the Peruvian Amazon and maintains strong ties to traditional ecological knowledge. \n The PaliSangre Cultural Artisan Association, based in Amazonas, includes 14 women artisans who specialize in working with Chambira and Huambe fibers—both sustainably harvested from local forest resources and used in a variety of traditional and innovative handmade crafts. \n Shaju partners with 3 artisans from this community, supporting their work in cultural preservation, sustainable practices, and income generation through artisan production."
+        "info": "Located near Nauta, the Amazonas Community is dedicated to crafting Amazonian animals such as butterflies, among others, using wire and plant fibers."
       },
       "geometry": {
         "type": "Point",
@@ -32,7 +32,7 @@
       "type": "Feature",
       "properties": {
         "name": "Manacamiri",
-        "info": "Located close to Iquitos, the Manacamiri Community is home to approximately 589 residents, organized into 143 families. The community is led by a woman, showcasing strong local leadership and a commitment to gender inclusion. \n The ucacuro Artisan Association includes 12 members, both women and men, who craft a wide variety of traditional and contemporary items. Their work features natural materials such as Chambira fiber—used for sandals and shicras (woven bags)—as well as banana fiber, aguaje, huingo (calabash), and coconut. \n Shaju partners with 1 artisan and 3 craftsmen from Manacamiri, supporting their sustainable practices, cultural resilience, and income generation through handcrafted products."
+        "info": "Located on the Nanay River, the Manacamiri community is dedicated to weaving with chambira fibers and specializes in jewelry and topa wood carving."
       },
       "geometry": {
         "type": "Point",
@@ -45,7 +45,7 @@
       "type": "Feature",
       "properties": {
         "name": "Bora Community at Pebas Pucarquillo",
-        "info": "Located near Pebas, between the traditional territories of the Bora and Huitoto peoples, the Pebas Pucaurquillo community is nestled within a region that includes a Regional Conservation Area, reflecting its deep connection to the surrounding Amazon rainforest. \n The community consists of approximately 218 residents across 58 families. It is the most remote community Shaju partners with, requiring considerable travel to reach. \n  Shaju collaborates with 4 artisans from Pebas Pucaurquillo who specialize in working with Chambira fiber, crafting beautiful and durable shicras (woven bags), shoulder bags, and hammocks—each piece rooted in the artistic and cultural traditions of the Bora people."
+        "info": "Located in the Ampiyacu River basin, the artisans of the Pebas Pucarquillo community are dedicated to making bags and shicras from chambira fiber, reflecting the traditional knowledge of the Bora ethnic group."
       },
       "geometry": {
         "type": "Point",
@@ -58,7 +58,7 @@
       "type": "Feature",
       "properties": {
         "name": "Centro Fuerte",
-        "info": "..."
+        "info": "Located on the Momón River, the Centro Fuerte community specializes in working with shiringa resin to produce rubber sheets using natural pigments."
       },
       "geometry": {
         "type": "Point",

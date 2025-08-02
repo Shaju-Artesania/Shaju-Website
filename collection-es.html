@@ -156,22 +156,6 @@
         let slideshowInterval = null;
         let slideshowImgEl    = null;
         let slideshowImageUrls = [];
-        // Navigation toggle
-        document.querySelector('.nav-toggle').addEventListener('click', function() {
-            this.classList.toggle('active');
-            document.querySelector('.main-nav').classList.toggle('active');
-        });
-
-        // Close menu when clicking outside
-        document.addEventListener('click', function(event) {
-            const isClickInsideNav = document.querySelector('.main-nav').contains(event.target);
-            const isClickOnToggle = document.querySelector('.nav-toggle').contains(event.target);
-            
-            if (!isClickInsideNav && !isClickOnToggle && document.querySelector('.main-nav').classList.contains('active')) {
-                document.querySelector('.nav-toggle').classList.remove('active');
-                document.querySelector('.main-nav').classList.remove('active');
-            }
-        });
 
         // Google Sheets Integration
         const SHEET_ID = '1sr8KmlhHWJGA5Jq747ORQdy888wD3YPrHKrbjRRNgkM'; // Sheet ID

@@ -1,48 +1,43 @@
 console.log("script.js is loaded");
 function changeLanguage(language, pagename) {
-    
-    // Redirect to the corresponding language version of the page
+    // Fallback to index.html if pagename is empty (homepage)
+    if (!pagename || pagename === "") {
+        pagename = "index.html";
+    }
+
     if (language === "es") {
         const trimmedPageName = pagename.replace(".html", "");
         window.location.href = trimmedPageName + "-es.html"; // Spanish version
     } else {
         const trimmedPageName = pagename.replace("-es.html", "");
-        window.location.href = trimmedPageName + ".html";; // Default to English
+        window.location.href = trimmedPageName + ".html"; // Default to English
     }
 }
-const navToggle = document.querySelector('.nav-toggle');
-if (navToggle) {
-    navToggle.addEventListener('click', function() {
-        this.classList.toggle('active');
-        document.querySelector('.main-nav').classList.toggle('active');
-    });
-}
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const nav = document.querySelector('.main-nav');
   const toggle = document.querySelector('.nav-toggle');
-  const year = document.getElementById('current-year');
 
-  if (year) year.textContent = new Date().getFullYear();
-  if (!nav || !toggle) return;
+  if (!nav || !toggle) {
+    console.error('Nav or toggle not found');
+    return;
+  }
 
-  // Detect whether it's a phone (touch) or desktop
-  const clickEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
+  // ✅ THIS IS WHERE YOU ADD THE LOG
+  toggle.addEventListener('click', () => {
+    console.log('TOGGLE WORKS');  // this confirms if the button is working
+    toggle.classList.toggle('active');
+    nav.classList.toggle('active');
+  });
 
-  // Close menu when clicking outside
-  document.addEventListener(clickEvent, (event) => {
+  document.addEventListener('click', (event) => {
     const isClickInsideNav = nav.contains(event.target);
     const isClickOnToggle = toggle.contains(event.target);
 
     if (!isClickInsideNav && !isClickOnToggle && nav.classList.contains('active')) {
-      nav.classList.remove('active');
       toggle.classList.remove('active');
+      nav.classList.remove('active');
     }
   });
-});
-
-toggle.addEventListener('click', () => {
-  console.log('NAV BUTTON CLICKED');
-  toggle.classList.toggle('active');
-  nav.classList.toggle('active');
 });

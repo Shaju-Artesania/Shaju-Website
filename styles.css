@@ -651,7 +651,16 @@ header {
 
 .community-item2 {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Left column twice as wide */
+  grid-template-columns: 2fr 1fr; /* Left column twice as wide */
+  gap: 50px;
+  padding: 80px 5%;
+  background-color: var(--your-background-color); /* replace with a real variable */
+  position: relative;
+}
+
+.community-item3 {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Left column twice as wide */
   gap: 50px;
   padding: 80px 5%;
   background-color: var(--your-background-color); /* replace with a real variable */
@@ -685,6 +694,20 @@ header {
   border: none;
 }
 
+.video-container-short {
+  width: 100%;
+  aspect-ratio: 9 / 16; /* keeps it proportional for short videos */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.video-container-short iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
 @media (max-width: 1302px) {
     .community-item1 {
         grid-template-columns: 1fr; /* Stack columns on smaller screens */
@@ -693,6 +716,21 @@ header {
     .video-container {
         margin-bottom: 20px; /* Add space below video on small screens */
     }
+}
+
+@media (max-width: 921px) {
+    .community-item2 {
+        grid-template-columns: 1fr; /* Stack columns on smaller screens */
+        text-align: center; /* Center text */
+    }
+    .community-item3 {
+        grid-template-columns: 1fr; /* Stack columns on smaller screens */
+        text-align: center; /* Center text */
+    }
+    .video-container-short {
+        margin-bottom: 20px; /* Add space below video on small screens */
+    }
+
 }
 
 .text-map {

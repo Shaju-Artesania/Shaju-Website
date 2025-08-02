@@ -645,7 +645,6 @@ header {
   grid-template-columns: 3fr 1fr; /* Left column twice as wide */
   gap: 50px;
   padding: 80px 5%;
-  background-color: var(--your-background-color); /* replace with a real variable */
   position: relative;
 }
 
@@ -654,7 +653,6 @@ header {
   grid-template-columns: 2fr 1fr; /* Left column twice as wide */
   gap: 50px;
   padding: 80px 5%;
-  background-color: var(--your-background-color); /* replace with a real variable */
   position: relative;
 }
 
@@ -663,7 +661,6 @@ header {
   grid-template-columns: 1fr 2fr; /* Left column twice as wide */
   gap: 50px;
   padding: 80px 5%;
-  background-color: var(--your-background-color); /* replace with a real variable */
   position: relative;
 }
 

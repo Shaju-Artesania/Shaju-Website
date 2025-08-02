@@ -643,7 +643,7 @@ header {
 .about-image3 {
     background-color: var(--gray-medium);
     border-radius: 12px;
-    background-image: url('Images/CentroFuerte.jpeg');
+    background-image: url('Images/CentroFuerte.jpg');
     background-size: cover;
     background-position: center;
     position: relative;

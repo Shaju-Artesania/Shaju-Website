@@ -1407,8 +1407,7 @@ footer {
     padding: 80px 5%;
 }
 
-.contact-info h3,
-.contact-form h3 {
+.contact-info h3 {
     font-size: 2rem;
     margin-bottom: 30px;
 }
@@ -1421,51 +1420,6 @@ footer {
     color: var(--primary-color);
     margin-bottom: 10px;
     font-size: 1.2rem;
-}
-/* Add these styles to your existing CSS file */
-
-/* Form Message Styles */
-.form-message {
-    margin-bottom: 20px;
-}
-
-.success-message {
-    background-color: #d4edda;
-    color: #155724;
-    padding: 15px;
-    border-radius: 4px;
-    margin-bottom: 20px;
-    border-left: 4px solid #28a745;
-}
-
-.error-message {
-    background-color: #f8d7da;
-    color: #721c24;
-    padding: 15px;
-    border-radius: 4px;
-    margin-bottom: 20px;
-    border-left: 4px solid #dc3545;
-}
-
-/* Form Validation Styles */
-.error-text {
-    color: #dc3545;
-    font-size: 0.85rem;
-    margin-top: 5px;
-    text-align: left;
-}
-
-.form-group input.error,
-.form-group textarea.error {
-    border-color: #dc3545;
-}
-
-/* Disabled button style */
-.btn:disabled {
-    background-color: var(--gray-dark);
-    cursor: not-allowed;
-    transform: none;
-    box-shadow: none;
 }
 
 /* Social Media Icons Section */
@@ -1509,45 +1463,6 @@ footer {
 }
 .social-media-icon.whatsapp {
     background-color: #25D366; 
-}
-
-/* Contact Form Styles */
-.form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 500;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid var(--gray-medium);
-    border-radius: 4px;
-    font-family: var(--font-primary);
-    transition: all 0.3s ease;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(255, 0, 255, 0.2);
-    outline: none;
-}
-
-.form-group textarea {
-    resize: vertical;
-    min-height: 150px;
 }
 
 /* Map Section */

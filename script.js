@@ -18,15 +18,31 @@ if (navToggle) {
     });
 }
 
-// Close menu when clicking outside
-document.addEventListener('click', function(event) {
-    const isClickInsideNav = document.querySelector('.main-nav').contains(event.target);
-    const isClickOnToggle = document.querySelector('.nav-toggle').contains(event.target);
-    
-    if (!isClickInsideNav && !isClickOnToggle && document.querySelector('.main-nav').classList.contains('active')) {
-        document.querySelector('.nav-toggle').classList.remove('active');
-        document.querySelector('.main-nav').classList.remove('active');
+document.addEventListener('DOMContentLoaded', () => {
+  const nav = document.querySelector('.main-nav');
+  const toggle = document.querySelector('.nav-toggle');
+  const year = document.getElementById('current-year');
+
+  if (year) year.textContent = new Date().getFullYear();
+  if (!nav || !toggle) return;
+
+  // Detect whether it's a phone (touch) or desktop
+  const clickEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
+
+  // Close menu when clicking outside
+  document.addEventListener(clickEvent, (event) => {
+    const isClickInsideNav = nav.contains(event.target);
+    const isClickOnToggle = toggle.contains(event.target);
+
+    if (!isClickInsideNav && !isClickOnToggle && nav.classList.contains('active')) {
+      nav.classList.remove('active');
+      toggle.classList.remove('active');
     }
+  });
 });
 
-document.getElementById('current-year').textContent = new Date().getFullYear();
+toggle.addEventListener('click', () => {
+  console.log('NAV BUTTON CLICKED');
+  toggle.classList.toggle('active');
+  nav.classList.toggle('active');
+});

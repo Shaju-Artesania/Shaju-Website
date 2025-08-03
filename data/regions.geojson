@@ -71,7 +71,7 @@
       "type": "Feature",
       "properties": {
         "name": "Santo Tomas",
-        "info": "..."
+        "info": "Located in the southern part of the San Juan Bautista district,  these highly renowned artisans work, even at the regional level, with plant fibers, black ceramics, and wood carvings."
       },
       "geometry": {
         "type": "Point",
@@ -84,7 +84,7 @@
       "type": "Feature",
       "properties": {
         "name": "Penal San Jacinto de Iquitos",
-        "info": "Shaju also partners with the Penal San Jacinto prison in Iquitos. Through this collaboration, Shaju provides economic opportunities to inmates, allowing them to engage in meaningful, skill-based work while serving their sentences. This initiative supports rehabilitation, dignity through craftsmanship, and income generation, helping individuals prepare for reintegration into society."
+        "info": "Previously known as Guayabamba, this penitentiary is located in the city of Iquitos. It offers vocational workshops in areas such as shoemaking, baking, carpentry, metalwork, and other manual trades, aiming to support the social and professional reintegration of a population that is often marginalized."
       },
       "geometry": {
         "type": "Point",

@@ -70,7 +70,7 @@
       "type": "Feature",
       "properties": {
         "name": "Santo Tomas",
-        "info": "..."
+        "info": "Ubicada al sur del distrito de San Juan Bautista, se encuentran artesanos muy destacados a nivel regional que trabajan con fibras vegetales, cerámica negra y tallados en madera."
       },
       "geometry": {
         "type": "Point",
@@ -83,7 +83,7 @@
       "type": "Feature",
       "properties": {
         "name": "Penal San Jacinto de Iquitos",
-        "info": "Shajú también colabora con el penal San Jacinto en Iquitos. A través de esta colaboración, Shajú ofrece oportunidades económicas a las personas privadas de libertad, permitiéndoles participar en un trabajo significativo y basado en habilidades mientras cumplen sus condenas. Esta iniciativa promueve la rehabilitación, la dignidad a través de la artesanía y la generación de ingresos, ayudando a que los internos se preparen para su reinserción en la sociedad."
+        "info": "Anteriormente conocida como Guayabamba, esta penitenciaría está ubicada en la ciudad de Iquitos. Ofrece talleres vocacionales en áreas como zapatería, panadería, carpintería, metalurgia y otros oficios manuales, con el objetivo de apoyar la reinserción social y laboral de una población que a menudo es marginada."
       },
       "geometry": {
         "type": "Point",

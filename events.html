@@ -122,7 +122,7 @@
   <script>
     const SHEET_ID = '1F4Ei3R4v4vrkNjczs0CodsSp6xp9pgkOpw_d5q0b6nA';
     const API_KEY = 'AIzaSyCH4dn81XRgUP7KjkTUyANicwUr0bvgiSM';
-    const SHEET_RANGE = 'English!A2:I';
+    const SHEET_RANGE = 'English!A2:H';
 
     const eventsGrid = document.getElementById('events-grid');
     const loadingIndicator = document.getElementById('loading-indicator');
@@ -130,13 +130,6 @@
     const searchBox = document.getElementById('search-box');
 
     let eventsData = [];
-
-    function getDriveImage(url) {
-      if (!url) return '';
-      const match = url.match(/\/d\/(.*?)\//) || url.match(/id=([^&]+)/);
-      if (match && match[1]) return `https://drive.google.com/uc?export=view&id=${match[1]}`;
-      return url.includes('uc?export=view&id=') ? url : url;
-    }
 
     async function fetchEvents() {
       loadingIndicator.style.display = 'block';
@@ -167,8 +160,7 @@
       }
 
       data.forEach(row => {
-        const [id, title, description, month, day, time, location, price, imageUrl] = row;
-        const imgSrc = getDriveImage(imageUrl) || 'https://via.placeholder.com/400x200?text=No+Image';
+        const [id, title, description, month, day, time, location, price] = row;
 
         const card = document.createElement('div');
         card.className = 'event-card';
@@ -182,7 +174,7 @@
             <div class="event-title">${title || 'Untitled Event'}</div>
             <div class="event-time"> <b>Time: </b>${time || 'Time TBD'}</div>
             <div class="event-location"> <b>Location: </b>${location || 'Location TBD'}</div>
-            <div class="event-price"> <b>Price: </b>S/ ${price || 'Price TBD'}</div>
+            <div class="event-price"> <b>Price: </b>S/${price || 'Price TBD'}</div>
             <div class="event-description">${description || ''}</div>
             </div>
           </div>

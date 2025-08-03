@@ -1526,6 +1526,18 @@ footer {
     font-size: 2rem;
     margin-bottom: 30px;
 }
+.contact-info,
+.map-section {
+  flex: 1 1 100%; /* default to 100% width on small screens */
+}
+
+@media (min-width: 768px) {
+  .contact-info,
+  .map-section {
+    flex: 1 1 45%;
+  }
+}
+
 .info-item {
     margin-bottom: 30px;
 }
@@ -1544,6 +1556,7 @@ footer {
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
+    justify-content: flex-start;
 }
 .social-media-icon {
     display: flex;
@@ -1577,6 +1590,21 @@ footer {
     background-color: var(--light-color);
     width: auto;
 }
+.map-placeholder {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.map-placeholder iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .map-section h3 {
     font-size: 2rem;
     margin-bottom: 30px;
@@ -1600,6 +1628,8 @@ footer {
     color: var(--gray-dark);
     width: 100%;
 }
+
+
 /* FAQ Section */
 .faq-section {
     padding: 80px 5%;
@@ -1642,6 +1672,9 @@ footer {
     .workshop-info,
     .contact-content {
         grid-template-columns: 1fr;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
     }
     .about-image,
     .join-image,
@@ -1715,11 +1748,12 @@ footer {
         padding: 6px 12px;
     }
     .social-media-icons {
-        justify-content: center;
+         justify-content: flex-start;
     }
     .contact-info, 
     .contact-form {
-        text-align: center;
+        text-align: left;
+        align-items: left;
     }
     .info-item {
         padding: 0 10px;
